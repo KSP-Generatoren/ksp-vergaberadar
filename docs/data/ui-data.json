@@ -1,33 +1,33 @@
 {
- "generated_at": "2026-08-19T11:39:08+00:00",
+ "generated_at": "2026-08-19T15:52:16+00:00",
  "sources": [
   {
    "name": "TED",
    "ok": true,
    "count": 54,
    "error": "",
-   "last": "2026-08-19T11:38:52"
+   "last": "2026-08-19T15:52:03"
   },
   {
    "name": "Datenservice Bund",
    "ok": true,
    "count": 123,
    "error": "",
-   "last": "2026-08-19T11:38:52"
+   "last": "2026-08-19T15:52:03"
   },
   {
    "name": "Vergabe.NRW",
    "ok": true,
    "count": 8,
    "error": "",
-   "last": "2026-08-19T11:38:52"
+   "last": "2026-08-19T15:52:03"
   },
   {
    "name": "cosinex",
    "ok": true,
    "count": 10,
    "error": "",
-   "last": "2026-08-19T11:38:52"
+   "last": "2026-08-19T15:52:03"
   }
  ],
  "notices": [
@@ -12764,6 +12764,132 @@
   }
  ],
  "changes": [
+  {
+   "id": "32e6a80216cd1e83",
+   "sev": "info",
+   "when": "2026-08-19 15:52:16",
+   "file": "298502",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b5172ebce3365d14",
+   "sev": "info",
+   "when": "2026-08-19 15:52:13",
+   "file": "121016296",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b3bd342a5023ae44",
+   "sev": "info",
+   "when": "2026-08-19 15:52:11",
+   "file": "TenderingProcedureDetails",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b947ac2751746ae4",
+   "sev": "info",
+   "when": "2026-08-19 15:52:08",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "8b2e345002ef0043",
+   "sev": "info",
+   "when": "2026-08-19 15:52:08",
+   "file": "CXW1YYDDYYNNYZE5",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "cc1de1898c70f18d",
+   "sev": "info",
+   "when": "2026-08-19 15:52:07",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "6518e5d06ab9e4f6",
+   "sev": "info",
+   "when": "2026-08-19 15:52:06",
+   "file": "zustellweg-auswaehlen",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "a9b65d1298df3e14",
+   "sev": "info",
+   "when": "2026-08-19 15:52:05",
+   "file": "CXPTY6DDGYN",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32c6556bc3a86e9d",
+   "sev": "info",
+   "when": "2026-08-19 15:52:04",
+   "file": "documents",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
   {
    "id": "32e6a80216cd1e83",
    "sev": "info",
