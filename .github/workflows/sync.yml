@@ -31,6 +31,9 @@ concurrency:
 jobs:
   sync-and-build:
     runs-on: ubuntu-latest
+    env:
+      # secrets sind in step-if nicht erlaubt; Umweg ueber env
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -52,9 +55,7 @@ jobs:
         run: python -m ksp_radar.cli watch || true
 
       - name: KI-Dossiers fuer Top-Treffer
-        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        if: ${{ env.ANTHROPIC_API_KEY != '' }}
         run: |
           python - <<'PY'
           import json, sqlite3, subprocess
