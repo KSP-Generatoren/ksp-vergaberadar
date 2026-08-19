@@ -27,16 +27,17 @@ FIELDS = [
 ]
 
 
-def _query(cpvs: list[str], since: date, country: str = "DEU") -> str:
+def _query(cpvs: list[str], days: int, country: str = "DEU") -> str:
     """TED Expert Query.
 
     CPV ist hierarchisch: 31127000 trifft auch Unterknoten.
+    publication-date verlangt YYYYMMDD oder today(-N) - kein ISO-Datum.
     """
     cpv_expr = " OR ".join(f"classification-cpv={c}" for c in cpvs)
     return (
         f"({cpv_expr}) "
         f"AND place-of-performance IN ({country}) "
-        f"AND publication-date >= {since.isoformat()}"
+        f"AND publication-date >= today(-{days})"
     )
 
 
@@ -49,7 +50,7 @@ def fetch(days: int = 7, include_wide: bool = True, page_size: int = 100) -> lis
     with httpx.Client(timeout=60, headers={"User-Agent": USER_AGENT}) as client:
         while True:
             payload = {
-                "query": _query(cpvs, since),
+                "query": _query(cpvs, days),
                 "fields": FIELDS,
                 "page": page,
                 "limit": page_size,
@@ -88,29 +89,32 @@ def _first(value):
     return str(value)
 
 
+def _parse_dt(value: str) -> datetime | None:
+    """TED liefert Daten mit Offset, teils ohne Uhrzeit: '2026-08-05+02:00'.
+
+    Der Offset ist Berliner Ortszeit; er wird verworfen, die Wandzeit bleibt.
+    """
+    s = (value or "").strip().replace("Z", "+00:00")
+    for cand in (s, s[:19], s[:10]):
+        if not cand:
+            continue
+        try:
+            return datetime.fromisoformat(cand).replace(tzinfo=None)
+        except ValueError:
+            continue
+    return None
+
+
 def _to_notice(raw: dict) -> Notice:
     pub = _first(raw.get("publication-number"))
     cpv = raw.get("classification-cpv") or []
     if isinstance(cpv, (str, dict)):
         cpv = [cpv]
 
-    published = None
-    if raw.get("publication-date"):
-        try:
-            published = datetime.fromisoformat(
-                _first(raw["publication-date"]).replace("Z", "+00:00")
-            ).date()
-        except ValueError:
-            pass
+    published_dt = _parse_dt(_first(raw.get("publication-date")))
+    published = published_dt.date() if published_dt else None
 
-    deadline = None
-    if raw.get("deadline-receipt-request"):
-        try:
-            deadline = datetime.fromisoformat(
-                _first(raw["deadline-receipt-request"]).replace("Z", "+00:00")
-            )
-        except ValueError:
-            pass
+    deadline = _parse_dt(_first(raw.get("deadline-receipt-request")))
 
     value = None
     try:

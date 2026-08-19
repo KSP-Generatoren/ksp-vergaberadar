@@ -11,14 +11,16 @@ Ausbau des Dienstes noch aendert.
 """
 from __future__ import annotations
 
+import io
 import logging
 import os
+import zipfile
 from datetime import date, datetime, timedelta
 
 import httpx
 from lxml import etree
 
-from ..config import CPV_CORE, CPV_WIDE, USER_AGENT
+from ..config import CPV_CORE, CPV_WIDE, KEYWORDS_STRONG, KEYWORDS_WEAK, USER_AGENT
 from ..models import Notice
 
 log = logging.getLogger(__name__)
@@ -35,38 +37,55 @@ NS = {
 
 
 def fetch(days: int = 7) -> list[Notice]:
-    """Holt die Bekanntmachungen der letzten N Tage als eForms:DE XML."""
-    since = date.today() - timedelta(days=days)
+    """Holt die Bekanntmachungen der letzten N Tage.
+
+    Die API liefert je Kalendertag (pubDay) ein ZIP mit einer eForms-XML pro
+    Bekanntmachung. Der aktuelle Tag ist nicht abrufbar (400), deshalb beginnt
+    die Schleife bei gestern. Zurueckgegeben wird nur, was per CPV oder
+    Schluesselbegriff zum Profil passt - der Dienst publiziert bundesweit
+    ~1000 Bekanntmachungen pro Tag, das meiste davon fachfremd.
+    """
     out: list[Notice] = []
+    total = 0
 
-    with httpx.Client(timeout=90, headers={"User-Agent": USER_AGENT}) as client:
-        r = client.get(BASE, params={"from": since.isoformat(), "format": "xml"})
-        r.raise_for_status()
-        # Der Dienst liefert je nach Parametrierung ein Sammel-XML oder eine
-        # Liste von Einzel-URLs. Beides wird unterstuetzt.
-        ctype = r.headers.get("content-type", "")
-        if "json" in ctype:
-            for entry in r.json().get("notices", []):
-                doc = client.get(entry["url"]).content
-                n = parse_eforms(doc)
-                if n:
+    with httpx.Client(timeout=120, headers={"User-Agent": USER_AGENT},
+                      follow_redirects=True) as client:
+        for back in range(1, days + 1):
+            day = date.today() - timedelta(days=back)
+            r = client.get(BASE, params={"pubDay": day.isoformat(),
+                                         "format": "eforms.zip"})
+            if r.status_code == 400:
+                log.warning("DOE: pubDay %s nicht abrufbar (400)", day)
+                continue
+            r.raise_for_status()
+            try:
+                zf = zipfile.ZipFile(io.BytesIO(r.content))
+            except zipfile.BadZipFile:
+                log.warning("DOE: pubDay %s lieferte kein ZIP", day)
+                continue
+            for name in zf.namelist():
+                if not name.endswith(".xml"):
+                    continue
+                total += 1
+                n = parse_eforms(zf.read(name))
+                if n and _relevant(n):
                     out.append(n)
-        else:
-            root = etree.fromstring(r.content)
-            for el in root.iter():
-                if etree.QName(el).localname == "ContractNotice":
-                    n = parse_eforms(etree.tostring(el))
-                    if n:
-                        out.append(n)
 
-    relevant = [n for n in out if _cpv_hit(n)]
-    log.info("DOE: %s Bekanntmachungen, davon %s mit passendem CPV", len(out), len(relevant))
+    log.info("DOE: %s Bekanntmachungen geprueft, %s zum Profil passend", total, len(out))
     return out
 
 
 def _cpv_hit(n: Notice) -> bool:
     allow = set(CPV_CORE) | set(CPV_WIDE)
     return any(c[:8] in allow for c in n.cpv)
+
+
+def _relevant(n: Notice) -> bool:
+    """CPV-Treffer oder Schluesselbegriff im Text - nie nur CPV."""
+    if _cpv_hit(n):
+        return True
+    text = f"{n.title} {n.description}".lower()
+    return any(k in text for k in KEYWORDS_STRONG) or any(k in text for k in KEYWORDS_WEAK)
 
 
 def parse_eforms(xml: bytes) -> Notice | None:

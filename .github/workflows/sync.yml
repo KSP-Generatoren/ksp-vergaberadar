@@ -45,6 +45,14 @@ jobs:
       - name: Abhaengigkeiten
         run: pip install -r requirements.txt
 
+      - name: Datenbank-Cache (Gedaechtnis des Waechters zwischen den Laeufen)
+        uses: actions/cache@v4
+        with:
+          path: data/radar.sqlite3
+          key: radar-db-${{ github.run_id }}
+          restore-keys: |
+            radar-db-
+
       - name: Quellen abrufen und bewerten
         # Auf GitHub-Runnern ist api.ted.europa.eu erreichbar.
         # Faellt eine Quelle aus, laeuft der Rest weiter; die Site zeigt den

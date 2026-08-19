@@ -14,6 +14,7 @@ from __future__ import annotations
 import logging
 import re
 from datetime import datetime
+from urllib.parse import urljoin
 
 import httpx
 from lxml import html as lxml_html
@@ -28,12 +29,22 @@ log = logging.getLogger(__name__)
 INSTANCES = {
     "dtvp":            "https://www.dtvp.de/Satellite",
     "evergabe-online": "https://www.evergabe-online.de/Satellite",
-    "nrw":             "https://www.evergabe.nrw.de/VMPCenter",
     "niedersachsen":   "https://vergabe.niedersachsen.de/Satellite",
     "brandenburg":     "https://vergabemarktplatz.brandenburg.de/VMPCenter",
-    "rheinland":       "https://www.vmp-rheinland.de/VMPSatellite",
-    "metropoleruhr":   "https://www.vergabe.metropoleruhr.de/VMPCenter",
     "bw":              "https://www.vergabe.landbw.de/VMPCenter",
+}
+
+# NRW laeuft vollstaendig ueber cosinex-Satelliten (die alte Open-Data-REST-API
+# unter daten.vergabe.nrw.de existiert nicht mehr). Quelle der Liste: CKAN-
+# Datensatz "Ausschreibungen Vergabemarktplatz NRW" auf open.nrw.
+# Wird vom NRW-Adapter abgefragt, nicht von fetch_all().
+NRW_INSTANCES = {
+    "nrw":            "https://www.evergabe.nrw.de/VMPCenter",
+    "westfalen":      "https://www.vergabe-westfalen.de/VMPSatellite",
+    "rheinland":      "https://www.vmp-rheinland.de/VMPSatellite",
+    "metropoleruhr":  "https://www.vergabe.metropoleruhr.de/VMPCenter",
+    "koeln":          "https://vergabe.stadt-koeln.de/VMPSatellite",
+    "aachen":         "https://www.vergaben-wirtschaftsregion-aachen.de/VMPSatellite",
 }
 
 LIST_PATH = "/company/announcements/categoryOverview.do"
@@ -41,7 +52,8 @@ DATE_RE = re.compile(r"(\d{2})\.(\d{2})\.(\d{4})(?:\s+(\d{2}):(\d{2}))?")
 
 
 def fetch(instance: str, cpv: str = "31127000-2", timeout: int = 45) -> list[Notice]:
-    base = INSTANCES.get(instance, instance).rstrip("/")
+    base = INSTANCES.get(instance) or NRW_INSTANCES.get(instance) or instance
+    base = base.rstrip("/")
     url = f"{base}{LIST_PATH}"
     params = {"method": "showTable", "cpvCode": cpv}
 
@@ -51,33 +63,35 @@ def fetch(instance: str, cpv: str = "31127000-2", timeout: int = 45) -> list[Not
         r.raise_for_status()
         doc = lxml_html.fromstring(r.text)
 
+    # Spalten der Bekanntmachungsuebersicht (Stand 2026):
+    # Veroeffentlicht | Angebots-/Teilnahmefrist ("nv" = ohne) | Kurzbezeichnung
+    # | Typ | Vergabeplattform/Veroeffentlicher | Aktion (Link projectForwarding)
     rows = doc.xpath("//table//tr[td]")
     out: list[Notice] = []
     for row in rows:
         cells = [" ".join(c.text_content().split()) for c in row.xpath("./td")]
-        if len(cells) < 3:
+        if len(cells) < 5:
+            continue
+        published = _parse_dt(cells[0])
+        deadline = _parse_dt(cells[1])
+        title, procedure, buyer = cells[2], cells[3], cells[4]
+        if not title:
             continue
         link = row.xpath(".//a/@href")
-        href = link[0] if link else ""
-        if href and not href.startswith("http"):
-            href = f"{base}/{href.lstrip('/')}"
-
-        buyer, title = cells[0], cells[1]
-        procedure = cells[2] if len(cells) > 2 else ""
-        deadline = _parse_dt(cells[3]) if len(cells) > 3 else None
-        published = _parse_dt(cells[4]) if len(cells) > 4 else None
+        href = urljoin(f"{base}/", link[0]) if link else ""
 
         out.append(Notice(
             source=f"cosinex:{instance}",
-            source_id=_id_from_href(href) or f"{buyer}|{title}",
+            source_id=_id_from_href(href) or f"{buyer}|{title}"[:80],
             title=title,
             buyer=buyer,
             procedure=procedure,
             kind="award" if "Vergebener Auftrag" in procedure else "notice",
+            # Die Uebersicht ist bereits nach diesem CPV gefiltert.
+            cpv=[cpv.split("-")[0]],
             deadline=deadline,
             published=published.date() if published else None,
             notice_url=href,
-            documents_url=f"{href.rstrip('/')}/documents" if href else "",
         ))
 
     log.info("cosinex/%s: %s Eintraege fuer CPV %s", instance, len(out), cpv)
@@ -104,5 +118,8 @@ def _parse_dt(text: str) -> datetime | None:
 
 
 def _id_from_href(href: str) -> str:
+    m = re.search(r"[?&]pid=(\d+)", href or "")
+    if m:
+        return m.group(1)
     m = re.search(r"/notice/([A-Z0-9]+)", href or "")
     return m.group(1) if m else ""

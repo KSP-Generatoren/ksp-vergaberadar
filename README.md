@@ -20,7 +20,7 @@ ICS-Kalender inklusive. Die Oberfläche läuft identisch als lokale Datei.
 |---|---|
 | `sources/ted.py` | TED Search API v3, EU-weit, ohne Authentifizierung |
 | `sources/doe.py` | Datenservice Öffentlicher Einkauf — ober- **und unterschwellig** |
-| `sources/nrw.py` | Vergabe.NRW Open-Data-REST, Vorlage für weitere Länder |
+| `sources/nrw.py` | Vergabe.NRW — bündelt die sechs cosinex-Portale des Landes |
 | `sources/cosinex.py` | **Ein** Adapter für DTVP, eVergabe-Online und alle Länder-VMPs |
 | `score.py` | Dreischichtige Bewertung, jede Zeile begründet |
 | `documents.py` | Vergabeunterlagen über eForms BT-15 ziehen und Text extrahieren |

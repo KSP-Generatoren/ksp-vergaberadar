@@ -5,3 +5,4 @@ data/*.sqlite3
 data/docs/
 node_modules/
 shots/
+docs/backlink-leads.html

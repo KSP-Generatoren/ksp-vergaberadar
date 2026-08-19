@@ -1,58 +1,33 @@
-"""Vergabe.NRW Open-Data-Schnittstelle.
+"""Vergabe.NRW - gebuendelt ueber die cosinex-Satelliten des Landes.
 
-Vollstaendig dokumentiert ueber open.nrw. Elasticsearch-Syntax, JSON,
-Delta-Abfragen - der sauberste Laender-Zugang, den es gibt. Vorlage fuer
-weitere Bundeslaender.
+Die alte Open-Data-REST-API (daten.vergabe.nrw.de, Elasticsearch) wurde
+abgeschaltet; die Domain existiert nicht mehr. Der aktuelle CKAN-Datensatz
+"Ausschreibungen Vergabemarktplatz NRW" auf open.nrw verweist stattdessen auf
+die opendata-Endpunkte der cosinex-Portale (evergabe.nrw.de, vergabe-westfalen,
+vmp-rheinland, metropoleruhr, stadt-koeln, aachen). Diese Portale deckt der
+cosinex-Adapter ab - dieser Modul buendelt sie unter der Quelle "Vergabe.NRW".
 """
 from __future__ import annotations
 
 import logging
 
-import httpx
-
-from ..config import USER_AGENT
 from ..models import Notice
+from .cosinex import NRW_INSTANCES, fetch as cosinex_fetch
 
 log = logging.getLogger(__name__)
-BASE = "https://daten.vergabe.nrw.de/rest/evergabe"
 
 
-def fetch(query: str = "Netzersatzanlage OR Notstromaggregat OR Stromerzeuger",
-          days: int = 7, size: int = 100) -> list[Notice]:
-    params = {
-        "q": query,
-        "size": size,
-        "page": 1,
-        "range_must[CREATED_AT][gte]": f"now-{days}d/d",
-        "sort[CREATED_AT]": "DESC",
-    }
+def fetch(days: int = 7, **_ignored) -> list[Notice]:
+    """Alle NRW-Portale. Ein einzelner Portalausfall stoppt den Lauf nicht."""
     out: list[Notice] = []
-    with httpx.Client(timeout=45, headers={
-        "User-Agent": USER_AGENT, "Accept": "application/json",
-    }) as client:
-        while True:
-            r = client.get(BASE, params=params)
-            r.raise_for_status()
-            data = r.json()
-            hits = data.get("hits", data.get("results", []))
-            if not hits:
-                break
-            for h in hits:
-                src = h.get("_source", h)
-                out.append(Notice(
-                    source="nrw",
-                    source_id=str(h.get("_id") or src.get("ID", "")),
-                    title=src.get("TITLE", ""),
-                    description=src.get("DESCRIPTION", ""),
-                    buyer=src.get("AUTHORITY", ""),
-                    buyer_city=src.get("CITY", ""),
-                    cpv=[str(c) for c in (src.get("CPV_CODES") or [])],
-                    procedure=src.get("PROCEDURE_TYPE", ""),
-                    notice_url=src.get("URL", ""),
-                    documents_url=src.get("DOCUMENTS_URL", ""),
-                ))
-            if len(hits) < size:
-                break
-            params["page"] += 1
-    log.info("NRW: %s Treffer", len(out))
+    errors: list[str] = []
+    for name in NRW_INSTANCES:
+        try:
+            out.extend(cosinex_fetch(name))
+        except Exception as exc:                      # noqa: BLE001
+            log.warning("NRW/%s uebersprungen: %s", name, exc)
+            errors.append(f"{name}: {exc}")
+    if errors and not out:
+        raise RuntimeError("; ".join(errors)[:300])
+    log.info("NRW: %s Treffer aus %s Portalen", len(out), len(NRW_INSTANCES))
     return out
