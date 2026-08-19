@@ -1,0 +1,17 @@
+[
+ {"id":"11.81.01.0020","sev":"kritisch","when":"2026-08-05T06:04:00","file":"Bieterinformation_3.pdf",
+  "what":"Neue Datei in den Vergabeunterlagen",
+  "diff":[["ctx"," LV Nr. 3.2 Zulassung"],["del","-Zulassung wird vom Auftragnehmer beantragt."],
+          ["add","+Zulassung wird vom Auftraggeber in Stormarn beantragt, der Auftragnehmer liefert die Unterlagen."]],
+  "impact":"Verantwortung für die Zulassung wechselt. <b>Der Auftragnehmer schuldet weiterhin die vollständigen Unterlagen</b> — im Angebot entsprechend formulieren, sonst entsteht eine Lücke zwischen Angebot und Vertrag."},
+ {"id":"11.81.01.0020","sev":"kritisch","when":"2026-07-30T06:02:00","file":"LV.pdf",
+  "what":"Abschnitt 1.6 geändert",
+  "diff":[["del","-LV Nr. 1.6 Schallleistungspegel LWA maximal 90 dB(A)."],
+          ["add","+LV Nr. 1.6 Schalldruckpegel in 7 m maximal 65 dB(A). Angabe als LWA wird nicht akzeptiert."]],
+  "impact":"Die Messgröße wurde ausgetauscht. <b>Ein Angebot mit LWA-Angabe wäre jetzt formal angreifbar.</b> KSP liegt mit 65 dB(A) in 7 m exakt auf dem neuen Grenzwert — Messprotokoll vor Abgabe verifizieren, es gibt keinen Puffer."},
+ {"id":"11.81.01.0020","sev":"wichtig","when":"2026-08-04T06:03:00","file":"LV.pdf",
+  "what":"Abschnitt 1.9 präzisiert",
+  "diff":[["del","-LV Nr. 1.9 Stauraum für Zubehör vorhanden."],
+          ["add","+LV Nr. 1.9 Stauraum für Zubehör vorhanden, abschließbar."]],
+  "impact":"Der Stauraum muss im Angebot ausdrücklich als <b>abschließbar</b> bezeichnet werden. Der KSP-50Y erfüllt das, die Formulierung im Angebotstext ist anzupassen."}
+]

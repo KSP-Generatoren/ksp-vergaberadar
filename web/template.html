@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KSP Vergaberadar</title>
+<link rel="alternate" type="application/rss+xml" title="KSP Vergaberadar" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --housing:#15191c; --panel:#1b2126; --panel-hi:#232b31; --panel-lo:#12161a;
+  --rule:#2e383f; --rule-lo:#232c32;
+  --ink:#e9eef1; --ink-dim:#b3c0c9; --muted:#8797a3; --muted-lo:#5f6f7a;
+  --amber:#f0a63c; --amber-lo:#3a2c14;
+  --go:#5bc48c; --go-lo:#14301f;
+  --alarm:#e5544f; --alarm-lo:#3a1a19;
+  --mains:#57a0f5;
+  --paper:#eef1f2; --paper-2:#e2e7e9; --paper-ink:#1d2529; --paper-rule:#c6d0d4;
+  --f-disp:'Barlow Condensed',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,sans-serif;
+  --f-data:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--housing);color:var(--ink);font-family:var(--f-body);
+  font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input,textarea,select{font:inherit}
+a{color:var(--mains)}
+
+.shell{max-width:1440px;margin:0 auto;padding:0 20px 64px}
+.masthead{display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  padding:18px 0 14px;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand .mark{font-family:var(--f-disp);font-weight:700;font-size:26px;
+  letter-spacing:.055em;text-transform:uppercase}
+.brand .mark b{color:var(--amber);font-weight:700}
+.brand .sub{font-family:var(--f-data);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted-lo)}
+.statusstrip{margin-left:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  font-family:var(--f-data);font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted)}
+.lamp{display:inline-flex;align-items:center;gap:6px;cursor:default}
+.lamp i{width:7px;height:7px;border-radius:50%;background:var(--go);
+  box-shadow:0 0 0 2px rgba(91,196,140,.16)}
+.lamp.warn i{background:var(--amber);box-shadow:0 0 0 2px rgba(240,166,60,.16)}
+.lamp.err i{background:var(--alarm);box-shadow:0 0 0 2px rgba(229,84,79,.16)}
+.lamp.off i{background:var(--muted-lo);box-shadow:none}
+.headlinks{display:flex;gap:10px}
+.headlinks a{font-family:var(--f-data);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;
+  border:1px solid var(--rule);padding:5px 9px}
+.headlinks a:hover{color:var(--ink);border-color:var(--muted)}
+
+nav.channels{display:flex;gap:0;border-bottom:1px solid var(--rule);
+  margin-bottom:26px;overflow-x:auto}
+nav.channels button{font-family:var(--f-disp);font-size:15px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  padding:13px 20px;border-bottom:2px solid transparent;margin-bottom:-1px;
+  white-space:nowrap;transition:color .15s,border-color .15s}
+nav.channels button:hover{color:var(--ink-dim)}
+nav.channels button[aria-current="true"]{color:var(--ink);border-bottom-color:var(--amber)}
+nav.channels .badge{font-family:var(--f-data);font-size:10px;background:var(--alarm);
+  color:#fff;border-radius:8px;padding:1px 6px;margin-left:7px;vertical-align:2px}
+nav.channels .badge:empty{display:none}
+
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+  gap:1px;background:var(--rule-lo);border:1px solid var(--rule);margin-bottom:26px}
+.readout{background:var(--panel);padding:15px 17px 14px}
+.readout .lbl{font-family:var(--f-data);font-size:10px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted-lo);margin-bottom:7px}
+.readout .val{font-family:var(--f-disp);font-size:38px;font-weight:600;line-height:.95}
+.readout .note{font-family:var(--f-data);font-size:10.5px;color:var(--muted);margin-top:6px}
+.readout.go .val{color:var(--go)} .readout.warn .val{color:var(--amber)}
+.readout.alarm .val{color:var(--alarm)}
+
+.meter{display:flex;align-items:center;gap:9px}
+.meter .segs{display:flex;gap:1.5px;position:relative}
+.meter .segs i{width:5px;height:15px;background:var(--rule);border-radius:.5px;
+  transform-origin:bottom}
+.meter.lit .segs i.on{background:var(--amber)}
+.meter.lit.go .segs i.on{background:var(--go)}
+.meter.lit.low .segs i.on{background:var(--muted-lo)}
+.meter .segs .notch{position:absolute;top:-4px;bottom:-4px;width:1px;
+  background:var(--ink-dim);opacity:.5}
+.meter .num{font-family:var(--f-disp);font-size:20px;font-weight:600;
+  min-width:30px;text-align:right}
+.meter.go .num{color:var(--go)} .meter.mid .num{color:var(--amber)}
+.meter.low .num{color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){
+  .meter .segs i{animation:selftest .34s ease-out backwards}
+  @keyframes selftest{from{transform:scaleY(.15);opacity:.2}to{transform:scaleY(1);opacity:1}}
+}
+
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.search{flex:1;min-width:260px;display:flex;align-items:center;gap:9px;
+  background:var(--panel-lo);border:1px solid var(--rule);padding:9px 13px}
+.search input{flex:1;background:none;border:none;outline:none;color:var(--ink);font-size:13.5px}
+.search input::placeholder{color:var(--muted-lo)}
+.search .k{font-family:var(--f-data);font-size:10px;color:var(--muted-lo);letter-spacing:.1em}
+.chips{display:flex;gap:5px;flex-wrap:wrap}
+.chip{font-family:var(--f-data);font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;padding:7px 11px;border:1px solid var(--rule);
+  color:var(--muted);background:var(--panel-lo)}
+.chip[aria-pressed="true"]{border-color:var(--amber);color:var(--amber);background:var(--amber-lo)}
+.chip.act{border-color:var(--go);color:var(--go)}
+.btn{font-family:var(--f-data);font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;padding:8px 13px;border:1px solid var(--rule);
+  color:var(--ink-dim);background:var(--panel)}
+.btn:hover{border-color:var(--muted);color:var(--ink)}
+.btn.primary{border-color:var(--amber);color:var(--amber);background:var(--amber-lo)}
+.btn.small{padding:5px 9px;font-size:9.5px}
+
+.profilebar{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.profilebar .lbl{font-family:var(--f-data);font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted-lo);margin-right:3px}
+.sprofile{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-data);
+  font-size:10.5px;letter-spacing:.05em;padding:7px 11px;
+  border:1px solid var(--rule);color:var(--ink-dim);background:var(--panel)}
+.sprofile[aria-pressed="true"]{border-color:var(--go);color:var(--go);background:var(--go-lo)}
+.sprofile .cnt{background:var(--rule);border-radius:8px;padding:0 6px;font-size:9.5px;color:var(--ink-dim)}
+.sprofile[aria-pressed="true"] .cnt{background:rgba(91,196,140,.25);color:var(--go)}
+.sprofile .x{color:var(--muted-lo);margin-left:2px}
+.sprofile .x:hover{color:var(--alarm)}
+table.rows{width:100%;border-collapse:collapse}
+table.rows th{font-family:var(--f-data);font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted-lo);text-align:left;font-weight:500;
+  padding:0 12px 9px;border-bottom:1px solid var(--rule)}
+table.rows td{padding:13px 12px;border-bottom:1px solid var(--rule-lo);vertical-align:top}
+table.rows tr.row{cursor:pointer;transition:background .12s}
+table.rows tr.row:hover{background:var(--panel)}
+table.rows tr.row.dim td{opacity:.46}
+.t-title{font-weight:600;font-size:13.5px;line-height:1.4;margin-bottom:3px}
+.t-buyer{font-size:12px;color:var(--muted)}
+.t-meta{font-family:var(--f-data);font-size:10.5px;color:var(--muted-lo);
+  margin-top:4px;letter-spacing:.03em}
+.t-when{font-family:var(--f-data);font-size:12px;white-space:nowrap}
+.t-when.urgent{color:var(--alarm)} .t-when.soon{color:var(--amber)}
+.t-when small{display:block;font-size:10px;color:var(--muted-lo);letter-spacing:.06em}
+.tag{font-family:var(--f-data);font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;padding:2px 6px;border:1px solid var(--rule);
+  color:var(--muted);white-space:nowrap}
+.tag.go{border-color:var(--go);color:var(--go)}
+.tag.warn{border-color:var(--amber);color:var(--amber)}
+.tag.alarm{border-color:var(--alarm);color:var(--alarm);background:var(--alarm-lo)}
+.tag.mains{border-color:var(--mains);color:var(--mains)}
+.tag.st{border-style:dashed}
+@media(max-width:760px){
+  table.rows th:nth-child(4),table.rows td:nth-child(4){display:none}
+  .t-meta{display:none}
+  table.rows{table-layout:fixed}
+  table.rows th:nth-child(1),table.rows td:nth-child(1){width:52px}
+  table.rows th:nth-child(3),table.rows td:nth-child(3){width:86px}
+  table.rows td{padding:11px 7px}
+  .meter .segs{display:none}
+  .t-when{white-space:normal}
+  nav.channels button{padding:12px 12px;font-size:14px}
+  .t-title{font-size:12.5px}
+}
+
+.sheetwrap{position:fixed;inset:0;background:rgba(8,11,13,.72);z-index:60;
+  display:none;overflow-y:auto;padding:34px 20px}
+.sheetwrap.open{display:block}
+.sheet{max-width:920px;margin:0 auto;background:var(--paper);color:var(--paper-ink);
+  border:1px solid var(--paper-rule);box-shadow:0 24px 70px rgba(0,0,0,.55)}
+.sheet-head{background:var(--panel);color:var(--ink);padding:20px 30px;
+  display:flex;align-items:flex-start;gap:18px;border-bottom:2px solid var(--amber)}
+.sheet-head h2{font-family:var(--f-disp);font-size:24px;font-weight:600;
+  margin:0 0 5px;line-height:1.16}
+.sheet-head .who{font-size:12.5px;color:var(--ink-dim)}
+.sheet-head .nr{font-family:var(--f-data);font-size:10.5px;color:var(--muted);
+  letter-spacing:.09em;margin-top:5px}
+.sheet-close{margin-left:auto;font-family:var(--f-data);font-size:11px;
+  letter-spacing:.1em;color:var(--muted);border:1px solid var(--rule);
+  padding:6px 11px;flex-shrink:0}
+.sheet-close:hover{color:var(--ink);border-color:var(--muted)}
+.sheet-body{padding:0 30px 34px}
+.sheet-actions{display:flex;gap:8px;flex-wrap:wrap;padding:16px 0 0}
+.sheet-actions .btn{background:#fff;border-color:var(--paper-rule);color:#41525b}
+.sheet-actions .btn:hover{border-color:#8c9aa2;color:var(--paper-ink)}
+.sheet-actions select{background:#fff;border:1px solid var(--paper-rule);
+  color:var(--paper-ink);padding:7px 10px;font-family:var(--f-data);font-size:10.5px;
+  letter-spacing:.06em;text-transform:uppercase}
+.sec{padding:24px 0;border-bottom:1px solid var(--paper-rule)}
+.sec:last-child{border-bottom:none}
+.sec>h3{font-family:var(--f-data);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:#6a7a83;margin:0 0 13px;font-weight:600}
+.sec p{margin:0 0 11px}
+.lede{font-size:15px;line-height:1.62}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+ul.check{list-style:none;padding:0;margin:0}
+ul.check li{padding:7px 0 7px 24px;position:relative;font-size:13px;
+  line-height:1.5;border-bottom:1px solid var(--paper-2)}
+ul.check li:last-child{border-bottom:none}
+ul.check li::before{position:absolute;left:0;top:7px;font-family:var(--f-data);
+  font-size:12px;font-weight:600}
+ul.check li.ok::before{content:"+";color:#2c8757}
+ul.check li.warn::before{content:"~";color:#b57a15}
+ul.check li.no::before{content:"×";color:#c0403c}
+ul.check li b{font-weight:600}
+.risk{background:#fff;border-left:3px solid #c0403c;padding:13px 16px;margin-bottom:11px}
+.risk.mid{border-left-color:#d99a20}
+.risk h4{margin:0 0 5px;font-size:13.5px;font-weight:600}
+.risk .src{font-family:var(--f-data);font-size:10.5px;color:#6a7a83;
+  letter-spacing:.05em;margin-bottom:7px}
+.risk p{margin:0;font-size:12.5px;color:#33424a}
+.risk p b{color:#1d2529}
+table.weight{width:100%;border-collapse:collapse;font-size:12.5px}
+table.weight th{text-align:left;font-family:var(--f-data);font-size:9.5px;
+  letter-spacing:.12em;text-transform:uppercase;color:#6a7a83;
+  padding:0 10px 7px;border-bottom:1px solid var(--paper-rule)}
+table.weight td{padding:9px 10px;border-bottom:1px solid var(--paper-2);vertical-align:top}
+table.weight td.pct{font-family:var(--f-disp);font-size:19px;font-weight:600;width:62px}
+table.weight tr.hi td.pct{color:#b57a15}
+.verdict{display:flex;align-items:center;gap:16px;background:var(--panel);
+  color:var(--ink);padding:18px 22px;margin:0 -30px -34px;border-top:2px solid var(--amber)}
+.verdict .big{font-family:var(--f-disp);font-size:30px;font-weight:700;
+  letter-spacing:.05em;text-transform:uppercase;line-height:1}
+.verdict.go .big{color:var(--go)} .verdict.pruefen .big{color:var(--amber)}
+.verdict.nogo .big{color:var(--alarm)}
+.verdict p{margin:0;font-size:12.5px;color:var(--ink-dim);flex:1}
+.ask{background:#fff;border:1px solid var(--paper-rule);padding:16px}
+.ask .qs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.ask .qs button{font-family:var(--f-data);font-size:10.5px;letter-spacing:.05em;
+  border:1px solid var(--paper-rule);padding:6px 10px;color:#41525b;background:var(--paper)}
+.ask .qs button:hover{border-color:#8c9aa2;color:#1d2529}
+.ask .answer{font-size:13px;line-height:1.6;min-height:38px}
+.ask .answer .cite{display:block;font-family:var(--f-data);font-size:10.5px;
+  color:#6a7a83;margin-top:8px;padding-top:7px;border-top:1px solid var(--paper-2);
+  letter-spacing:.04em}
+.ask .idle{color:#7a8891;font-size:12.5px}
+.notes textarea{width:100%;min-height:90px;background:#fff;
+  border:1px solid var(--paper-rule);padding:11px 13px;font-family:var(--f-body);
+  font-size:13px;color:var(--paper-ink);resize:vertical}
+.notes .saved{font-family:var(--f-data);font-size:10px;color:#2c8757;
+  letter-spacing:.08em;margin-top:5px;min-height:14px}
+.watch-item{background:var(--panel);border:1px solid var(--rule);
+  border-left:3px solid var(--alarm);padding:15px 18px;margin-bottom:11px}
+.watch-item.mid{border-left-color:var(--amber)}
+.watch-item.info{border-left-color:var(--muted-lo)}
+.watch-item.seen{opacity:.5}
+.watch-item .top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:9px}
+.watch-item .top h4{margin:0;font-size:13.5px;font-weight:600;cursor:pointer}
+.watch-item .top h4:hover{color:var(--amber)}
+.watch-item .top time{font-family:var(--f-data);font-size:10.5px;
+  color:var(--muted-lo);margin-left:auto;letter-spacing:.06em}
+.watch-item .what{font-size:12.5px;color:var(--ink-dim);margin-bottom:10px}
+.diff{font-family:var(--f-data);font-size:11.5px;line-height:1.65;
+  background:var(--panel-lo);border:1px solid var(--rule-lo);
+  padding:11px 13px;overflow-x:auto}
+.diff .del{color:#e08b88;display:block}
+.diff .add{color:#7fd6a6;display:block}
+.diff .ctx{color:var(--muted-lo);display:block}
+.impact{margin-top:10px;padding:10px 13px;background:var(--alarm-lo);
+  border:1px solid #4a2725;font-size:12.5px;color:#f0b9b7}
+.impact b{color:#fff}
+
+.board{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+  background:var(--rule-lo);border:1px solid var(--rule)}
+@media(max-width:1000px){.board{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.board{grid-template-columns:1fr}}
+.col{background:var(--panel-lo);padding:13px;min-height:240px;transition:background .15s}
+.col.over{background:var(--panel-hi)}
+.col>h4{font-family:var(--f-data);font-size:9.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted-lo);margin:0 0 12px;font-weight:600;
+  display:flex;justify-content:space-between}
+.card{background:var(--panel);border:1px solid var(--rule);padding:11px 12px;
+  margin-bottom:8px;cursor:grab;transition:border-color .12s,opacity .12s}
+.card:hover{border-color:var(--muted-lo)}
+.card.dragging{opacity:.4;cursor:grabbing}
+.card .ct{font-size:12.5px;font-weight:600;line-height:1.35;margin-bottom:5px}
+.card .cb{font-size:11px;color:var(--muted);margin-bottom:7px}
+.card .cf{font-family:var(--f-data);font-size:10px;color:var(--muted-lo);letter-spacing:.05em}
+.card .open{float:right;font-family:var(--f-data);font-size:9px;color:var(--muted-lo);
+  border:1px solid var(--rule);padding:1px 6px;letter-spacing:.08em}
+.card .open:hover{color:var(--amber);border-color:var(--amber)}
+
+.form{max-width:860px}
+.form .fld{margin-bottom:20px}
+.form label{display:block;font-family:var(--f-data);font-size:10px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--muted-lo);margin-bottom:7px}
+.form textarea,.form input[type=text],.form input[type=number]{width:100%;
+  background:var(--panel-lo);border:1px solid var(--rule);color:var(--ink);
+  padding:10px 13px;font-size:13px}
+.form textarea{min-height:110px;resize:vertical;font-family:var(--f-body)}
+.form input[type=text].mono,.form textarea.mono{font-family:var(--f-data);font-size:12px}
+.form .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.form .row2{grid-template-columns:1fr}}
+.form .hint2{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5}
+.form .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:8px}
+.savenote{font-family:var(--f-data);font-size:10.5px;color:var(--go);
+  letter-spacing:.08em;min-height:16px;margin-top:9px}
+
+.why{font-family:var(--f-data);font-size:10.5px;color:var(--muted);line-height:1.75;
+  background:var(--panel-lo);border:1px solid var(--rule-lo);padding:11px 13px}
+.why b{color:var(--amber);font-weight:500}
+.sheet .why{background:var(--panel);border-color:var(--rule)}
+.hint{font-family:var(--f-data);font-size:10.5px;color:var(--muted-lo);
+  letter-spacing:.05em;margin-top:9px;line-height:1.7}
+.view{display:none}.view.on{display:block}
+.sectitle{font-family:var(--f-disp);font-size:19px;font-weight:600;
+  letter-spacing:.05em;text-transform:uppercase;margin:0 0 4px}
+.secsub{font-size:12.5px;color:var(--muted);margin:0 0 18px;max-width:860px}
+.empty{color:var(--muted-lo);font-family:var(--f-data);font-size:12px;
+  padding:26px 0;text-align:center}
+.footerbar{margin-top:44px;padding-top:16px;border-top:1px solid var(--rule);
+  display:flex;gap:18px;flex-wrap:wrap;font-family:var(--f-data);font-size:10px;
+  letter-spacing:.08em;color:var(--muted-lo)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(80px);
+  background:var(--panel-hi);border:1px solid var(--rule);color:var(--ink);
+  font-family:var(--f-data);font-size:11px;letter-spacing:.06em;
+  padding:10px 16px;z-index:90;transition:transform .25s;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+dialog.modal{background:var(--panel);color:var(--ink);border:1px solid var(--rule);
+  padding:22px;max-width:420px;width:92vw}
+dialog.modal::backdrop{background:rgba(8,11,13,.7)}
+dialog.modal h3{font-family:var(--f-disp);font-size:18px;letter-spacing:.05em;
+  text-transform:uppercase;margin:0 0 13px}
+dialog.modal input{width:100%;background:var(--panel-lo);border:1px solid var(--rule);
+  color:var(--ink);padding:9px 12px;margin-bottom:13px}
+dialog.modal .actions{display:flex;gap:8px;justify-content:flex-end}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<header class="masthead">
+  <div class="brand">
+    <span class="mark">KSP <b>Vergaberadar</b></span>
+    <span class="sub">QP International GmbH · Würzburg</span>
+  </div>
+  <div class="statusstrip" id="sourcelamps"></div>
+  <div class="headlinks">
+    <a href="feed.xml" title="RSS-Feed abonnieren">RSS</a>
+    <a href="fristen.ics" title="Alle Fristen als Kalender">ICS</a>
+  </div>
+</header>
+
+<nav class="channels" id="nav">
+  <button data-view="leitstand" aria-current="true">Leitstand</button>
+  <button data-view="radar">Radar<span class="badge" id="navnew"></span></button>
+  <button data-view="waechter">Wächter<span class="badge" id="navwatch"></span></button>
+  <button data-view="pipeline">Pipeline</button>
+  <button data-view="profil">Profil</button>
+</nav>
+
+<section class="view on" id="v-leitstand">
+  <div class="readouts" id="readouts"></div>
+  <h3 class="sectitle">Änderungen an laufenden Verfahren</h3>
+  <p class="secsub">Vergabestellen bessern Unterlagen nach, ohne die Bieter zu informieren, die ohne Registrierung heruntergeladen haben. Der Wächter zieht die Unterlagen bei jedem Lauf neu und vergleicht.</p>
+  <div id="alarms"></div>
+  <h3 class="sectitle" style="margin-top:34px">Neu und relevant</h3>
+  <p class="secsub">Bewertet gegen das KSP-Portfolio. Die Begründung steht bei jedem Treffer im Dossier.</p>
+  <div id="topline"></div>
+</section>
+
+<section class="view" id="v-radar">
+  <h3 class="sectitle">Radar</h3>
+  <p class="secsub" id="radarsub"></p>
+  <div class="profilebar" id="profilebar"></div>
+  <div class="toolbar">
+    <label class="search">
+      <span class="k">SUCHE</span>
+      <input id="q" type="search" placeholder="Anhängeraggregat für die Feuerwehr, 50 kVA, Stage V …" autocomplete="off">
+    </label>
+    <div class="chips" id="filters">
+      <button class="chip" data-f="go" aria-pressed="false">Go</button>
+      <button class="chip" data-f="pruefen" aria-pressed="false">Prüfen</button>
+      <button class="chip" data-f="ablage" aria-pressed="false">Ablage</button>
+      <button class="chip" data-f="offen" aria-pressed="true">Nur offene</button>
+    </div>
+    <button class="btn" id="saveprofile">Suche als Profil speichern</button>
+    <button class="btn" id="csv">CSV</button>
+  </div>
+  <table class="rows">
+    <thead><tr>
+      <th style="width:150px">Passung</th>
+      <th>Ausschreibung</th>
+      <th style="width:120px">Frist</th>
+      <th style="width:112px">Quelle</th>
+    </tr></thead>
+    <tbody id="list"></tbody>
+  </table>
+  <div class="empty" id="noresult" style="display:none">Kein Treffer. Filter zurücksetzen oder anders formulieren.</div>
+</section>
+
+<section class="view" id="v-waechter">
+  <h3 class="sectitle">Wächter</h3>
+  <p class="secsub">Abzug der Vergabeunterlagen bei jedem Lauf, Hash-Vergleich, Diff. Kritisch markiert wird, was Fristen, Mindestanforderungen, Eignung oder Wertung berührt. Gelesene Meldungen lassen sich abhaken.</p>
+  <div id="watchlist"></div>
+</section>
+
+<section class="view" id="v-pipeline">
+  <h3 class="sectitle">Pipeline</h3>
+  <p class="secsub">Karten per Drag&nbsp;&amp;&nbsp;Drop verschieben — der Status wird lokal gespeichert und überlebt den Neustart des Browsers. „Öffnen" zeigt das Dossier.</p>
+  <div class="board" id="board"></div>
+</section>
+
+<section class="view" id="v-profil">
+  <h3 class="sectitle">Profil</h3>
+  <p class="secsub">Das Suchprofil, gegen das jede Bekanntmachung bewertet wird. Änderungen wirken hier sofort auf die Anzeige; für die Bewertung im nächsten Sync die Datei exportieren und als <code>data/profile_override.json</code> ins Repository legen — die Pipeline liest sie automatisch.</p>
+  <div class="form" id="profilform">
+    <div class="fld">
+      <label for="pf-text">Unternehmensprofil (Grundlage der semantischen Bewertung)</label>
+      <textarea id="pf-text"></textarea>
+    </div>
+    <div class="row2">
+      <div class="fld">
+        <label for="pf-strong">Kernbegriffe (einer je Zeile)</label>
+        <textarea id="pf-strong" class="mono"></textarea>
+      </div>
+      <div class="fld">
+        <label for="pf-neg">Ausschlussbegriffe (einer je Zeile)</label>
+        <textarea id="pf-neg" class="mono"></textarea>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="fld">
+        <label for="pf-cpv">CPV-Kerncodes (Code Leerzeichen Beschreibung)</label>
+        <textarea id="pf-cpv" class="mono"></textarea>
+      </div>
+      <div>
+        <div class="fld">
+          <label>Leistungsband (kVA)</label>
+          <div class="row2">
+            <input type="number" id="pf-kvamin" min="1" max="5000">
+            <input type="number" id="pf-kvamax" min="1" max="5000">
+          </div>
+        </div>
+        <div class="fld">
+          <label>Schwellen: Go ab / Prüfen ab</label>
+          <div class="row2">
+            <input type="number" id="pf-go" min="1" max="100">
+            <input type="number" id="pf-watch" min="1" max="100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="pf-save">Speichern</button>
+      <button class="btn" id="pf-export">Als profile_override.json exportieren</button>
+      <button class="btn" id="pf-reset">Auf Auslieferung zurücksetzen</button>
+    </div>
+    <div class="savenote" id="pf-note"></div>
+  </div>
+</section>
+
+<div class="footerbar">
+  <span id="stand"></span>
+  <span>§ 41 VgV / § 29 UVgO: Unterlagenabruf ohne Registrierung</span>
+  <span>Läuft identisch auf GitHub Pages und als lokale Datei</span>
+</div>
+</div>
+
+<div class="sheetwrap" id="sheetwrap" role="dialog" aria-modal="true" aria-labelledby="sheettitle">
+  <article class="sheet" id="sheet"></article>
+</div>
+<dialog class="modal" id="profiledlg">
+  <h3>Suchprofil speichern</h3>
+  <input id="profilename" placeholder="Name, z. B. „FwA-NEA bundesweit“" maxlength="48">
+  <div class="actions">
+    <button class="btn" id="dlg-cancel">Abbrechen</button>
+    <button class="btn primary" id="dlg-save">Speichern</button>
+  </div>
+</dialog>
+<div class="toast" id="toast"></div>
+<script>
+const DATA = __DATA__;
+const NOTICES = DATA.notices || [];
+const CHANGES = (DATA.changes || []).map(c => ({...c}));
+const GENERATED = DATA.generated_at || "";
+const SOURCES = DATA.sources || [];
+
+/* Redaktionelle Dossiers (aus der Dokumentenanalyse). Werden mit
+   Pipeline-Dossiers (DATA.analyses) zusammengefuehrt; Pipeline gewinnt. */
+const BUILTIN_ANALYSES = {
+"11.81.01.0020": {
+  lede:"Beschränkte Ausschreibung nach UVgO über eine Netzersatzanlage für die Notfallinformationspunkte der Gemeinde Steinburg. Das ausgeschriebene Leistungsverzeichnis ist das LV, das KSP dem Lead im Juni geschrieben hat — technisch passt der KSP-50Y punktgenau. Die Risiken liegen nicht in der Technik, sondern in der Form. Das Amt hat zwei Zusätze eingefügt, die im KSP-Original nicht standen.",
+  passung:{produkt:"KSP-50Y Stage V (Anhänger)",
+    ok:[["Schalldruckpegel","65 dB(A) in 7 m — LV-Grenzwert exakt getroffen"],
+        ["Laufzeit","ca. 25 h bei 75 % Last (200 L / 7,8 L/h) — LV fordert 16 h"],
+        ["Abgasstufe","Stage V, EU-Typgenehmigung vorhanden"],
+        ["Stauraum","abschließbar (Bieterinfo 04.08.)"],
+        ["CEE-Abgänge","5 Dosen 125 A / 63 A, je eigener Schutzschalter + Hauptschalter"]],
+    warn:[["Schalldruckpegel","liegt exakt auf dem Grenzwert, kein Puffer — Messprotokoll vor Abgabe verifizieren"],
+          ["Nr. 1.7 Herstellung in der EG","YTO-Motor, Fertigungsort im Datenblatt nicht genannt — intern klären"]],
+    no:[]},
+  risiken:[
+    {t:"Nr. 1.7 „Herstellung in der Europäischen Gemeinschaft“",src:"LV-Fassung 02.07.2026, Abschnitt 1.7 — im KSP-Original vom 17.06. nicht enthalten",p:"Potenzielles K.-o.-Kriterium. Der KSP-50Y hat einen YTO-Motor; der Fertigungsort ist im Datenblatt nicht ausgewiesen. <b>Vor Abgabe intern klären.</b> Wird die Anforderung auf die Gesamtanlage bezogen, ist die Endmontage maßgeblich — das wäre zu belegen.",sev:"hoch"},
+    {t:"Eigene AGB und Angebotsvorbehalte aus dem Altangebot",src:"Angebot AG2026/06KS0617 vom 17.06.2026",p:"Zahlungsziel 7 Tage, Eigentumsvorbehalt und „Zwischenverkauf vorbehalten“ <b>müssen entfallen</b>. Jede Abweichung gilt als Änderung an den Vergabeunterlagen und führt zum Ausschluss.",sev:"hoch"},
+    {t:"Lieferzeit als feste Wochenzahl",src:"BVB 634 Nr. 3 — Lieferfristen des Angebots werden Vertragsfristen",p:"Keine Spanne wie „3–5 Monate“. Eine feste Zahl in Wochen eintragen. Vertragsstrafe 1 % je Woche, maximal 10 % netto.",sev:"hoch"},
+    {t:"Schalldruckpegel statt Schallleistung",src:"Bieterinformation vom 30.07.2026",p:"Der Auftraggeber hat die Angabe als LWA <b>ausdrücklich abgelehnt</b>. Gefordert ist der Schalldruckpegel in 7 m. KSP liegt mit 65 dB(A) exakt auf dem Grenzwert.",sev:"hoch"},
+    {t:"Gültigkeitsbefristung des Angebots",src:"Bindefrist 15.10.2026",p:"Keine kürzere Befristung im Angebotstext. Preise netto, maximal 3 Nachkommastellen, keine Mischkalkulation, keine leeren Positionen.",sev:"mittel"},
+    {t:"Gewährleistungsbegrenzung „1000 Betriebsstunden“",src:"Standardtext KSP-Angebot",p:"Streichen. Empfohlen wird stattdessen die Zusage von 24 statt 12 Monaten — das zahlt direkt auf Wertungskriterium 3 ein.",sev:"mittel"}],
+  wertung:{rows:[["Preis","45 %","Punkteskala definiert: 10 Punkte für das günstigste Angebot, 0 ab dem Doppelten, lineare Interpolation",false],
+    ["Technischer Wert","20 %","Nur Stufen „wie LV / besser als LV / Mindestanforderung“, keine Punktespanne — Übererfüllung explizit ausweisen",true],
+    ["Vertragsbedingungen","35 %","Gleiche Stufenlogik. Gewährleistung, Lieferzeit und Ersatzteilverfügbarkeit sind hier die Hebel",true],
+    ["Folgekosten","0 %","nicht gewertet",false],
+    ["Energieeffizienz","0 %","nicht gewertet",false]],
+    hinweis:"55 % der Wertung hängen an nachweisbarer Übererfüllung, für die keine Punktespanne definiert ist. Wer nur das LV anbietet, landet auf der mittleren Stufe. Die Hebel: Gewährleistung 24 statt 12 Monate, feste kurze Lieferzeit, Erstwartung und DGUV-V3-Erstprüfung inklusive, lange zugesicherte Ersatzteilverfügbarkeit, Zahlungs- und Vertragsstrafenregelung vorbehaltlos annehmen."},
+  widersprueche:[
+    {b:"Wartungskosten in der Wertung",f:"LV: „nicht Bestandteil der Wertung“ ⟷ Formblatt 227: Wertungssumme „einschl. evtl. Wartungskosten“",e:"Vor Abgabe per Bieterfrage klären lassen."},
+    {b:"„Vertragsformular Instandhaltung“",f:"In Formblatt 216 angekreuzt, den Unterlagen aber nicht beigefügt",e:"Ersatzweise eigenes Wartungsangebot beilegen."},
+    {b:"Preisblatt gegen LV",f:"Preisblatt LV_413500 kennt nur eine Pauschalposition ⟷ LV arbeitet mit Einheitspreisen",e:"Beides ausfüllen, Endsummen zwingend identisch."},
+    {b:"Verfahrensart im Formblatt 124_LD",f:"Sowohl „Beschränkte Ausschreibung“ als auch „Nichtoffenes Verfahren“ angekreuzt",e:"Vorbelegung des Auftraggebers, unverändert lassen."},
+    {b:"Mindestlohn nach VGSH",f:"Vorspann nennt 13,90 €/Std., Punkt 1 dagegen 13,60 €",e:"Redaktionelle Inkonsistenz des Formulars, ohne Auswirkung."}],
+  einzureichen:["633 Angebotsschreiben","LV mit Preisen inkl. Abschnitt 3 Bieterangaben","Preisblatt LV_413500","124_LD Eigenerklärung zur Eignung","Verpflichtungserklärung Mindestlohn § 4 VGSH","Nachweise Mindestanforderungen: Datenblatt, EU-Typgenehmigung Motor, CE","233 Nachunternehmer (Anschluss/Inbetriebnahme, DGUV-V3-Erstprüfung)","Wartungsangebot ersatzweise für das fehlende Vertragsformular Instandhaltung"],
+  offen:["EU-Typgenehmigungsnummer und -urkunde des YTO-Motors beschaffen","Fertigungsort Motor gegen Nr. 1.7 prüfen","Schallmessprotokoll 65 dB(A) in 7 m verifizieren","Eigene Jahresumsätze vergleichbarer Leistungen für 124_LD","Lieferzeit in Wochen, Gewährleistung in Monaten, Verfügbarkeit min./max. Jahre festlegen","Verpflichtungserklärung jedes Nachunternehmers nach VGSH Punkt 2 einholen"],
+  urteil:{d:"go",t:"Angebot abgeben",p:"Technisch punktgenaue Passung, das LV stammt im Kern von uns. Entscheidend ist die Form: AGB entfernen, Lieferzeit als feste Wochenzahl, Nr. 1.7 klären. 55 % der Wertung hängen an Übererfüllung — die Hebel sind vorhanden und kosten wenig.",v:"hoch"},
+  fragen:[
+    {q:"Bis wann muss das Angebot eingehen?",a:"18.08.2026 um 11:00 Uhr, elektronisch in Textform über die Vergabeplattform. Eine Signatur ist nicht gefordert, der Bieter muss aber erkennbar sein. Die Bindefrist läuft bis 15.10.2026.",c:"Angebotsaufforderung, Abschnitt 2 · Formblatt 633 Nr. 1"},
+    {q:"Welcher Schallwert wird gefordert?",a:"Maximal 65 dB(A) als Schalldruckpegel in 7 m Entfernung. Die Angabe als Schallleistungspegel LWA hat der Auftraggeber mit Bieterinformation vom 30.07.2026 ausdrücklich abgelehnt. Der KSP-50Y liegt mit 65 dB(A) exakt auf dem Grenzwert — kein Puffer.",c:"LV Nr. 1.6 · Bieterinformation 3 vom 30.07.2026"},
+    {q:"Sind Nebenangebote zugelassen?",a:"Nein. Nebenangebote sind nicht zugelassen, eine Losteilung findet nicht statt. Das Preisblatt LV_413500 kennt nur eine Position: Gesamtsumme netto, pauschal.",c:"Angebotsaufforderung, Abschnitt 4 · Preisblatt LV_413500"},
+    {q:"Welche Sicherheitsleistung ist gefordert?",a:"Keine. Eine Sicherheitsleistung wird erst ab 50.000 € netto verlangt; bei rund 39.600 € netto nicht einschlägig. Ab 30.000 € fordert der Auftraggeber allerdings einen Gewerbezentralregisterauszug an.",c:"ZVB 635 Nr. 7 · Angebotsaufforderung Abschnitt 9"},
+    {q:"Wie wird gezahlt?",a:"70 % nach Lieferung, der Rest nach förmlicher Abnahme in Steinburg. Vertragsgrundlage sind VOL/B 2003, BVB 634 und ZVB 635. Die Vertragsstrafe beträgt 1 % je Woche, maximal 10 % der Nettosumme.",c:"BVB 634 Nr. 5 · ZVB 635 Nr. 4"}]
+},
+"MG-FWA-NEA-2026": {
+  lede:"Drei Feuerwehranhänger mit Netzersatzanlage für den Katastrophenschutz der Stadt Mönchengladbach. Anhängeraggregate nach DIN 14685 in der Leistungsklasse 50 kVA — das ist exakt der KSP-50Y. Offenes Verfahren nach VgV, Frist 11.09.2026. Höchste Passung im aktuellen Bestand.",
+  passung:{produkt:"KSP-50Y Stage V (Anhänger)",
+    ok:[["Leistungsklasse","50 kVA — Kernprodukt"],["Bauform","Anhängeraggregat nach DIN 14685"],
+        ["Abnehmer","Feuerwehr / Katastrophenschutz — Referenzsegment"],["Stückzahl","3 Einheiten, Serieneffekt in der Kalkulation"]],
+    warn:[["Vergabeunterlagen","noch nicht heruntergeladen — Mindestanforderungen ungeprüft"],
+          ["Verfahren","VgV, also oberschwellig: Eignungsnachweise vollständig beizubringen"]],
+    no:[]},
+  risiken:[{t:"Vergabeunterlagen noch nicht geprüft",src:"Dokument-URL vorhanden, Abzug steht aus",p:"Der Wächter zieht die Unterlagen beim nächsten Lauf. Erst danach lassen sich Mindestanforderungen und Ausschlusskriterien beurteilen.",sev:"mittel"},
+    {t:"Oberschwelliges Verfahren",src:"VgV Ausschreibung",p:"Eignungsnachweise, Referenzen und Umsätze werden formal geprüft. Unterlagen frühzeitig zusammenstellen.",sev:"mittel"}],
+  wertung:{rows:[["noch nicht ausgewertet","—","Wertungsmatrix liegt erst mit den Vergabeunterlagen vor",false]],
+    hinweis:"Sobald die Unterlagen abgezogen sind, füllt sich dieser Abschnitt automatisch."},
+  widersprueche:[],
+  einzureichen:["wird nach Abzug der Vergabeunterlagen ergänzt"],
+  offen:["Vergabeunterlagen abziehen und Dossier erzeugen","Liefertermin gegen aktuelle Auslastung prüfen","Referenzen Feuerwehranhänger zusammenstellen"],
+  urteil:{d:"go",t:"Unterlagen ziehen",p:"Passgenauestes Verfahren im Bestand: richtige Leistungsklasse, richtige Bauform, richtiger Abnehmer, drei Einheiten. Frist am 11.09. lässt Zeit für eine saubere Kalkulation.",v:"mittel"},
+  fragen:[{q:"Warum ist die Passung so hoch?",a:"Vier Faktoren treffen zusammen: CPV-Kerncode 31127000, Kernbegriffe „Netzersatzanlagen“ und „FwA-NEA“ im Titel, Leistungsklasse 50 kVA mitten im Portfolio, kommunaler Auftraggeber im Feuerwehrsegment. Der Score ist die Summe dieser Einzelbegründungen.",c:"Bewertungsprotokoll, Regelwerk score.py"}]
+}};
+const ANALYSES = Object.assign({}, BUILTIN_ANALYSES, DATA.analyses || {});
+
+/* ---------- Speicher: localStorage mit In-Memory-Fallback ---------- */
+const STORE = (() => {
+  let ok = false;
+  try { const t="__t"; localStorage.setItem(t,"1"); localStorage.removeItem(t); ok = true; }
+  catch(e){ ok = false; }
+  const mem = {};
+  return {
+    persistent: ok,
+    get(k, d=null){ try{ const v = ok ? localStorage.getItem(k) : mem[k];
+      return v == null ? d : JSON.parse(v); }catch(e){ return d; } },
+    set(k, v){ try{ ok ? localStorage.setItem(k, JSON.stringify(v)) : mem[k]=JSON.stringify(v); }catch(e){} },
+    del(k){ try{ ok ? localStorage.removeItem(k) : delete mem[k]; }catch(e){} },
+  };
+})();
+
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NOW = GENERATED ? new Date(GENERATED) : new Date();
+
+const daysLeft = n => n.deadline ? Math.ceil((new Date(n.deadline)-NOW)/864e5) : null;
+const isOpen   = n => { const d = daysLeft(n); return d !== null && d >= 0; };
+const fmtDate  = s => s ? new Date(s).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit",year:"numeric"}) : "—";
+const fmtDT    = s => s ? new Date(s).toLocaleString("de-DE",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}) : "—";
+const restLabel = d => d===0 ? "heute" : d===1 ? "noch 1 Tag" : `noch ${d} Tage`;
+
+const SRC_LABEL = {ted:"TED",doe:"Bund",nrw:"NRW"};
+const srcLabel = s => SRC_LABEL[s] || (s.startsWith("cosinex:") ? "cosinex/"+s.split(":")[1] : s);
+
+const STATUS_KEYS = ["neu","pruefen","angebot","abgegeben","erledigt"];
+const STATUS_LABEL = {neu:"Neu",pruefen:"In Prüfung",angebot:"Angebot in Arbeit",abgegeben:"Abgegeben",erledigt:"Erledigt"};
+const statusOf = n => STORE.get("ksp.status."+n.uid) ||
+  (isOpen(n) && n.bucket !== "ablage" ? "neu" : "erledigt");
+const setStatus = (n, st) => { STORE.set("ksp.status."+n.uid, st); };
+
+function toast(msg){
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("show"), 2400);
+}
+
+function meter(score, bucket, i=0){
+  const SEGS=20, on=Math.round(score/100*SEGS), notch=70/100*SEGS;
+  const cls = bucket==="go"?"go":bucket==="pruefen"?"mid":"low";
+  let segs="";
+  for(let s=0;s<SEGS;s++) segs += `<i class="${s<on?"on":""}" style="animation-delay:${i*14+s*11}ms"></i>`;
+  return `<span class="meter lit ${cls}"><span class="segs">${segs}<span class="notch" style="left:${notch*6.5-1}px"></span></span><span class="num">${score}</span></span>`;
+}
+
+/* ---------- Kopf: Quellen-Lampen + Datenstand ---------- */
+function renderSources(){
+  $("#sourcelamps").innerHTML = SOURCES.map(s=>{
+    const cls = s.ok===true ? "" : s.ok===false ? "err" : "off";
+    const tip = s.ok===false ? (s.error||"Fehler") : s.ok===null ? "noch kein Sync" : `${s.count} Datensätze`;
+    return `<span class="lamp ${cls}" title="${esc(tip)}"><i></i> ${esc(s.name)}</span>`;
+  }).join("") + `<span id="synced">Stand ${fmtDT(GENERATED)}</span>`;
+  $("#stand").textContent = `Datenstand ${fmtDT(GENERATED)}` +
+    (STORE.persistent ? "" : " · Hinweis: Speicher nicht verfügbar, Status/Notizen gelten nur für diese Sitzung");
+}
+
+/* ---------- Leitstand ---------- */
+function renderReadouts(){
+  const open = NOTICES.filter(isOpen);
+  const go   = open.filter(n=>n.bucket==="go");
+  const soon = open.filter(n=>daysLeft(n)<=14);
+  const crit = CHANGES.filter(c=>c.sev==="kritisch").length;
+  const inWork = NOTICES.filter(n=>["pruefen","angebot"].includes(statusOf(n))).length;
+  const cards = [
+    {l:"Offene Verfahren",v:open.length,n:`${NOTICES.length} erfasst`,c:""},
+    {l:"Passung ≥ 70",v:go.length,n:"Angebot empfohlen",c:"go"},
+    {l:"Frist ≤ 14 Tage",v:soon.length,n:soon.length?`nächste: ${fmtDate(soon.sort((a,b)=>daysLeft(a)-daysLeft(b))[0].deadline)}`:"keine",c:soon.length?"warn":""},
+    {l:"Kritische Änderungen",v:crit,n:"seit letztem Abgleich",c:crit?"alarm":""},
+    {l:"In Bearbeitung",v:inWork,n:"Prüfung oder Angebot",c:""},
+    {l:"Quellen",v:`${SOURCES.filter(s=>s.ok).length}/${SOURCES.length}`,n:"erreichbar im letzten Lauf",c:SOURCES.some(s=>s.ok===false)?"warn":""},
+  ];
+  $("#readouts").innerHTML = cards.map(c=>`
+    <div class="readout ${c.c}"><div class="lbl">${c.l}</div>
+    <div class="val">${c.v}</div><div class="note">${c.n}</div></div>`).join("");
+}
+
+function changeItem(c, compact){
+  const n = NOTICES.find(x=>x.source_id===c.id) || {};
+  const key = "ksp.seen."+c.id+"."+(c.when||"")+"."+(c.file||"");
+  const seen = STORE.get(key, false);
+  const cls = c.sev==="kritisch"?"":c.sev==="wichtig"?"mid":"info";
+  return `<div class="watch-item ${cls} ${seen?"seen":""}" data-ck="${esc(key)}">
+    <div class="top">
+      <span class="tag ${c.sev==="kritisch"?"alarm":"warn"}">${esc(c.sev)}</span>
+      <h4 data-id="${esc(c.id)}">${esc(n.title||c.id)}</h4>
+      <time>${fmtDT(c.when)}</time>
+    </div>
+    <div class="what"><b>${esc(c.file)}</b> — ${esc(c.what)}</div>
+    <div class="diff">${(c.diff||[]).map(([k,t])=>`<span class="${k}">${esc(t)}</span>`).join("")}</div>
+    ${c.impact?`<div class="impact">${c.impact}</div>`:""}
+    ${compact?"":`<div class="hint">Erkannt durch Hash-Vergleich des Abzugs. Die Vergabestelle hat nicht benachrichtigt — ohne Registrierung ist der Bieter ihr nicht bekannt.
+      <button class="btn small" data-seen="${esc(key)}" style="margin-left:9px">${seen?"Als ungelesen markieren":"Gelesen"}</button></div>`}
+  </div>`;
+}
+
+function renderAlarms(){
+  const shown = CHANGES.slice().sort((a,b)=>(b.when||"").localeCompare(a.when||"")).slice(0,2);
+  $("#alarms").innerHTML = shown.map(c=>changeItem(c,true)).join("") +
+    (CHANGES.length>2 ? `<div class="hint">${CHANGES.length-2} weitere Änderung(en) im Wächter.</div>` : "") +
+    (CHANGES.length===0 ? `<div class="empty">Keine Änderungen im Beobachtungszeitraum.</div>` : "");
+}
+
+function renderTopline(){
+  const rows = NOTICES.filter(isOpen).filter(n=>n.bucket!=="ablage")
+    .sort((a,b)=>b.score-a.score).slice(0,5);
+  $("#topline").innerHTML = `<table class="rows"><tbody>${rows.map((n,i)=>row(n,i)).join("")}</tbody></table>`;
+}
+
+/* ---------- Trefferzeile ---------- */
+function row(n,i){
+  const d = daysLeft(n);
+  const when = d===null ? `<span class="t-when">—<small>${n.kind==="award"?"vergeben":"ohne Frist"}</small></span>`
+    : d<0 ? `<span class="t-when">abgelaufen<small>${fmtDate(n.deadline)}</small></span>`
+    : `<span class="t-when ${d<=7?"urgent":d<=14?"soon":""}">${fmtDate(n.deadline)}<small>${restLabel(d)}</small></span>`;
+  const prod = n.matched_product ? `<span class="tag mains">${esc(n.matched_product)}</span>` : "";
+  const kva  = n.kva ? `<span class="tag">${Math.round(n.kva)} kVA</span>` : "";
+  const st = statusOf(n);
+  const stTag = (st!=="neu" && st!=="erledigt") ? `<span class="tag st warn">${STATUS_LABEL[st]}</span>` : "";
+  return `<tr class="row ${d!==null&&d<0?"dim":""}" data-id="${esc(n.source_id)}" tabindex="0">
+    <td>${meter(n.score,n.bucket,i)}</td>
+    <td><div class="t-title">${esc(n.title)}</div>
+      <div class="t-buyer">${esc(n.buyer)}${n.buyer_city?", "+esc(n.buyer_city):""}</div>
+      <div class="t-meta">${esc(n.procedure)} · CPV ${esc((n.cpv||[])[0]||"—")} ${kva} ${prod} ${stTag}</div></td>
+    <td>${when}</td>
+    <td><span class="tag">${esc(srcLabel(n.source))}</span></td></tr>`;
+}
+
+/* ---------- Suche: Synonymfelder + Relevanz ---------- */
+const STOP = new Set(["der","die","das","und","für","fuer","mit","von","eine","einen","ein","im","in","zur","zum","auf","als","aus","bei","den","dem","des","über","ueber"]);
+const terms = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"")
+  .split(/[^a-z0-9]+/).filter(t=>t.length>2 && !STOP.has(t));
+const SYN = {
+  aggregat:["netzersatzanlage","notstromaggregat","stromerzeuger","nea","aggregat","stromaggregat","generator"],
+  mobil:["mobil","anhaenger","anhanger","fahrbar","transportabel","fwa"],
+  feuerwehr:["feuerwehr","katastrophenschutz","bevoelkerungsschutz","thw","rettung","bos"],
+  stationaer:["stationaer","ortsfest","container","gebaeude","fest"],
+  liefern:["lieferung","beschaffung","anschaffung","liefern","kauf"],
+  wartung:["wartung","instandhaltung","service","pruefung"],
+};
+function expand(ts){
+  const out = new Set(ts);
+  ts.forEach(t=>Object.values(SYN).forEach(f=>{
+    if(f.some(w=>w.startsWith(t)||t.startsWith(w))) f.forEach(w=>out.add(w));
+  }));
+  return [...out];
+}
+function relevance(n,q){
+  if(!q.trim()) return 1;
+  const hay = terms(`${n.title} ${n.description} ${n.buyer} ${n.procedure}`);
+  const want = expand(terms(q));
+  if(!want.length) return 1;
+  let hit=0;
+  want.forEach(w=>{ if(hay.some(h=>h.startsWith(w)||w.startsWith(h))) hit++; });
+  const kvaW = (q.match(/(\d{2,4})\s*kva/i)||[])[1];
+  let bonus=0;
+  if(kvaW && n.kva) bonus = Math.abs(n.kva-+kvaW)<25 ? .35 : -.2;
+  return hit/want.length + bonus;
+}
+function matchesQuery(n,q){ return relevance(n,q) > 0.18; }
+
+/* ---------- Suchprofile ---------- */
+function profiles(){ return STORE.get("ksp.profiles", []); }
+function saveProfiles(p){ STORE.set("ksp.profiles", p); }
+const state = { q:"", f:new Set(["offen"]), activeProfile:null };
+
+function profileCount(p){
+  return NOTICES.filter(isOpen).filter(n=>matchesQuery(n,p.q)).length;
+}
+function renderProfilebar(){
+  const ps = profiles();
+  $("#profilebar").innerHTML = `<span class="lbl">Suchprofile</span>` +
+    (ps.length ? ps.map((p,i)=>`
+      <button class="sprofile" aria-pressed="${state.activeProfile===i}" data-pi="${i}">
+        ${esc(p.name)} <span class="cnt">${profileCount(p)}</span>
+        <span class="x" data-px="${i}" title="Profil löschen">✕</span>
+      </button>`).join("")
+    : `<span class="hint" style="margin:0">Noch keine — Suche eingeben und „Suche als Profil speichern“.</span>`);
+}
+function activateProfile(i){
+  const ps = profiles();
+  if(state.activeProfile===i){ state.activeProfile=null; }
+  else { state.activeProfile=i; state.q = ps[i].q; $("#q").value = ps[i].q; }
+  if(state.activeProfile===null){ state.q=""; $("#q").value=""; }
+  renderProfilebar(); renderList();
+}
+
+/* ---------- Radar ---------- */
+function currentRows(){
+  let rows = NOTICES.slice();
+  if(state.f.has("offen")) rows = rows.filter(isOpen);
+  const buckets = ["go","pruefen","ablage"].filter(b=>state.f.has(b));
+  if(buckets.length) rows = rows.filter(n=>buckets.includes(n.bucket));
+  if(state.q.trim()){
+    rows = rows.map(n=>({n,r:relevance(n,state.q)})).filter(x=>x.r>0.18)
+               .sort((a,b)=>b.r-a.r||b.n.score-a.n.score).map(x=>x.n);
+  } else rows.sort((a,b)=>b.score-a.score);
+  return rows;
+}
+function renderList(){
+  const rows = currentRows();
+  $("#list").innerHTML = rows.map((n,i)=>row(n,i)).join("");
+  $("#noresult").style.display = rows.length ? "none":"block";
+  $("#radarsub").textContent =
+    `${NOTICES.length} Bekanntmachungen aus ${SOURCES.length} Quellen · ${rows.length} angezeigt`;
+}
+function exportCSV(){
+  const rows = currentRows();
+  const head = ["Score","Titel","Auftraggeber","Ort","Verfahren","CPV","kVA","Frist","Quelle","URL"];
+  const lines = [head.join(";")].concat(rows.map(n=>[
+    n.score, q(n.title), q(n.buyer), q(n.buyer_city), q(n.procedure),
+    (n.cpv||[])[0]||"", n.kva?Math.round(n.kva):"", n.deadline?fmtDate(n.deadline):"",
+    srcLabel(n.source), n.notice_url||""
+  ].join(";")));
+  function q(s){ return '"'+String(s||"").replace(/"/g,'""')+'"'; }
+  download("vergaberadar.csv", "﻿"+lines.join("\r\n"), "text/csv");
+  toast(`${rows.length} Zeilen exportiert`);
+}
+function download(name, content, mime){
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([content], {type:mime}));
+  a.download = name; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+}
+
+/* ---------- Wächter ---------- */
+function renderWatch(){
+  const items = CHANGES.slice().sort((a,b)=>(b.when||"").localeCompare(a.when||""));
+  $("#watchlist").innerHTML = (items.map(c=>changeItem(c,false)).join("") ||
+    `<div class="empty">Keine Änderungen erfasst.</div>`) +
+    `<div class="hint" style="margin-top:18px">Geprüft werden alle Verfahren mit Passung ≥ 45 und laufender Frist — bei jedem Sync (3× täglich).</div>`;
+  const unseen = items.filter(c=>!STORE.get("ksp.seen."+c.id+"."+(c.when||"")+"."+(c.file||""), false));
+  $("#navwatch").textContent = unseen.filter(c=>c.sev==="kritisch").length || "";
+}
+
+/* ---------- Pipeline: Drag & Drop ---------- */
+function renderBoard(){
+  $("#board").innerHTML = STATUS_KEYS.map(key=>{
+    const items = NOTICES.filter(n=>statusOf(n)===key).sort((a,b)=>b.score-a.score);
+    return `<div class="col" data-col="${key}"><h4><span>${STATUS_LABEL[key]}</span><span>${items.length}</span></h4>
+      ${items.map(n=>{
+        const d = daysLeft(n);
+        return `<div class="card" draggable="true" data-cid="${esc(n.source_id)}">
+          <div class="ct">${esc(n.title.slice(0,58))}${n.title.length>58?"…":""}
+            <button class="open" data-id="${esc(n.source_id)}">ÖFFNEN</button></div>
+          <div class="cb">${esc(n.buyer)}</div>
+          <div class="cf">Passung ${n.score}${d!==null&&d>=0?` · ${d===0?"heute fällig":restLabel(d)}`:""}</div>
+        </div>`;}).join("") || `<div class="hint">—</div>`}
+    </div>`;}).join("");
+
+  $$("#board .card").forEach(card=>{
+    card.addEventListener("dragstart", e=>{
+      card.classList.add("dragging");
+      e.dataTransfer.setData("text/plain", card.dataset.cid);
+      e.dataTransfer.effectAllowed = "move";
+    });
+    card.addEventListener("dragend", ()=>card.classList.remove("dragging"));
+  });
+  $$("#board .col").forEach(col=>{
+    col.addEventListener("dragover", e=>{ e.preventDefault(); col.classList.add("over"); });
+    col.addEventListener("dragleave", ()=>col.classList.remove("over"));
+    col.addEventListener("drop", e=>{
+      e.preventDefault(); col.classList.remove("over");
+      const id = e.dataTransfer.getData("text/plain");
+      const n = NOTICES.find(x=>x.source_id===id);
+      if(!n) return;
+      setStatus(n, col.dataset.col);
+      renderBoard(); renderReadouts(); renderList();
+      toast(`„${n.title.slice(0,40)}…“ → ${STATUS_LABEL[col.dataset.col]}`);
+    });
+  });
+}
+
+/* ---------- Detailblatt ---------- */
+function noticeICS(n){
+  if(!n.deadline) return "";
+  const dt = new Date(n.deadline);
+  const p = x => String(x).padStart(2,"0");
+  const stamp = `${dt.getFullYear()}${p(dt.getMonth()+1)}${p(dt.getDate())}T${p(dt.getHours())}${p(dt.getMinutes())}00`;
+  const escI = s => String(s||"").replace(/\\/g,"\\\\").replace(/;/g,"\;").replace(/,/g,"\\,");
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//KSP Vergaberadar//DE","BEGIN:VEVENT",
+    `UID:${n.uid}@ksp-vergaberadar`,`DTSTART:${stamp}`,`DTEND:${stamp}`,
+    `SUMMARY:${escI("Angebotsfrist: "+n.title.slice(0,80))}`,
+    `DESCRIPTION:${escI((n.buyer||"")+" · Passung "+n.score+"/100")}`,
+    "BEGIN:VALARM","TRIGGER:-P3D","ACTION:DISPLAY",
+    `DESCRIPTION:${escI("Frist in 3 Tagen")}`,"END:VALARM",
+    "END:VEVENT","END:VCALENDAR",""].join("\r\n");
+}
+
+function openSheet(id){
+  const n = NOTICES.find(x=>x.source_id===id); if(!n) return;
+  const d = ANALYSES[id];
+  const dl = daysLeft(n);
+  const st = statusOf(n);
+
+  const head = `<div class="sheet-head"><div>
+      <h2 id="sheettitle">${esc(n.title)}</h2>
+      <div class="who">${esc(n.buyer)}${n.buyer_city?", "+esc(n.buyer_city):""} · ${esc(n.procedure)}</div>
+      <div class="nr">${n.vergabenummer?esc(n.vergabenummer)+" · ":""}CPV ${esc((n.cpv||[])[0]||"—")} · Quelle ${esc(srcLabel(n.source))}${dl!==null&&dl>=0?` · Frist ${fmtDate(n.deadline)}, ${restLabel(dl)}`:""}</div>
+    </div><button class="sheet-close" id="closesheet">SCHLIESSEN ✕</button></div>`;
+
+  const actions = `<div class="sheet-actions">
+      <select id="sh-status" title="Status">${STATUS_KEYS.map(k=>
+        `<option value="${k}" ${k===st?"selected":""}>${STATUS_LABEL[k]}</option>`).join("")}</select>
+      ${n.deadline?`<button class="btn" id="sh-ics">Frist in Kalender</button>`:""}
+      ${n.notice_url?`<a class="btn" href="${esc(n.notice_url)}" target="_blank" rel="noopener">Bekanntmachung öffnen ↗</a>`:""}
+      ${n.documents_url?`<a class="btn" href="${esc(n.documents_url)}" target="_blank" rel="noopener">Vergabeunterlagen ↗</a>`:""}
+    </div>`;
+
+  const summarySec = `<div class="sec"><h3>Kurzfassung</h3>
+      <p class="lede">${esc(d?d.lede:(n.summary||"Für dieses Verfahren liegt noch keine Zusammenfassung vor."))}</p></div>`;
+
+  const why = `<div class="sec"><h3>Warum dieser Treffer</h3>
+    <div class="why">${(n.score_reasons||[]).map(r=>{
+      const m = r.split(/:\s*(?=[+-]?\d)/);
+      return `${esc(m[0])}${m[1]?` <b>${esc(m[1])}</b>`:""}`;}).join("<br>")}
+      <br><br>Summe <b>${n.score}</b> von 100 · Schwelle für Go: 70</div>
+    <div class="hint">Jede Zeile ist eine Regel aus dem Bewertungswerk, keine Black Box.</div></div>`;
+
+  const faqData = (d?d.fragen:null) || n.faq || [];
+  const askSec = faqData.length ? `<div class="sec"><h3>Assistent · Fragen an die Unterlagen</h3>
+      <div class="ask"><div class="qs">${faqData.map((f,i)=>`<button data-q="${i}">${esc(f.q)}</button>`).join("")}</div>
+      <div class="answer" id="answer"><span class="idle">Frage wählen. Geantwortet wird ausschließlich aus den vorliegenden Daten, mit Fundstelle.</span></div></div></div>` : "";
+
+  const notesSec = `<div class="sec notes"><h3>Interne Notizen</h3>
+      <textarea id="sh-notes" placeholder="Kalkulation, Zuständigkeit, Rückfragen …">${esc(STORE.get("ksp.notes."+n.uid,""))}</textarea>
+      <div class="saved" id="sh-notesaved"></div></div>`;
+
+  let body;
+  if(!d){
+    body = `<div class="sheet-body">${actions}${summarySec}
+      <div class="sec"><h3>Dossier</h3>
+      <p class="lede">Die Vergabeunterlagen wurden noch nicht abgezogen. Der Wächter holt sie beim nächsten Lauf über die Adresse aus der Bekanntmachung (eForms BT-15) und erzeugt daraus das vollständige Dossier.</p>
+      <p class="hint">${n.documents_url?"Dokument-URL vorhanden.":"Keine Dokument-URL in der Bekanntmachung — manueller Blick nötig."}</p></div>
+      ${askSec}${notesSec}${why}</div>`;
+  } else {
+    const p = d.passung;
+    const li = (arr,cls)=>arr.map(([a,b])=>`<li class="${cls}"><b>${esc(a)}</b> — ${esc(b)}</li>`).join("");
+    body = `<div class="sheet-body">${actions}${summarySec}
+      <div class="sec"><h3>Passung zum Portfolio · ${esc(p.produkt)}</h3>
+        <div class="grid2"><ul class="check">${li(p.ok,"ok")}</ul>
+        <ul class="check">${li(p.warn,"warn")}${li(p.no,"no")}</ul></div></div>
+      <div class="sec"><h3>Ausschlussrisiken</h3>
+        ${d.risiken.map(r=>`<div class="risk ${r.sev==="hoch"?"":"mid"}">
+          <h4>${esc(r.t)}</h4><div class="src">${esc(r.src)}</div><p>${r.p}</p></div>`).join("")}</div>
+      <div class="sec"><h3>Wertung</h3>
+        <table class="weight"><thead><tr><th>Anteil</th><th>Kriterium</th><th>Hebel</th></tr></thead>
+        <tbody>${d.wertung.rows.map(([k,g,h,hi])=>`<tr class="${hi?"hi":""}">
+          <td class="pct">${esc(g)}</td><td><b>${esc(k)}</b></td><td>${esc(h)}</td></tr>`).join("")}</tbody></table>
+        <p style="margin-top:13px;font-size:13px">${esc(d.wertung.hinweis)}</p></div>
+      ${d.widersprueche.length?`<div class="sec"><h3>Widersprüche in den Unterlagen</h3>
+        ${d.widersprueche.map(w=>`<div class="risk mid"><h4>${esc(w.b)}</h4>
+          <div class="src">${esc(w.f)}</div><p>${esc(w.e)}</p></div>`).join("")}</div>`:""}
+      <div class="sec"><h3>Einzureichen</h3>
+        <ul class="check">${d.einzureichen.map(x=>`<li class="ok">${esc(x)}</li>`).join("")}</ul></div>
+      <div class="sec"><h3>Intern zu klären</h3>
+        <ul class="check">${d.offen.map(x=>`<li class="warn">${esc(x)}</li>`).join("")}</ul></div>
+      ${askSec}${notesSec}${why}
+      <div class="verdict ${d.urteil.d==="go"?"go":d.urteil.d==="no-go"?"nogo":"pruefen"}">
+        <span class="big">${esc(d.urteil.t)}</span><p>${esc(d.urteil.p)}</p>
+        <span class="tag ${d.urteil.v==="hoch"?"go":"warn"}">Vertrauen ${esc(d.urteil.v)}</span></div></div>`;
+  }
+
+  $("#sheet").innerHTML = head + body;
+
+  $$("#sheet .ask .qs button").forEach(b=>b.onclick=()=>{
+    const f = faqData[+b.dataset.q];
+    $("#answer").innerHTML = `${esc(f.a)}<span class="cite">Fundstelle: ${esc(f.c)}</span>`;
+  });
+  $("#sh-status").onchange = e=>{
+    setStatus(n, e.target.value);
+    renderBoard(); renderReadouts(); renderList(); renderTopline();
+    toast(`Status: ${STATUS_LABEL[e.target.value]}`);
+  };
+  const icsBtn = $("#sh-ics");
+  if(icsBtn) icsBtn.onclick = ()=>{ download(`frist-${n.source_id}.ics`, noticeICS(n), "text/calendar"); };
+  const ta = $("#sh-notes");
+  ta.oninput = ()=>{
+    clearTimeout(ta._h);
+    ta._h = setTimeout(()=>{
+      STORE.set("ksp.notes."+n.uid, ta.value);
+      $("#sh-notesaved").textContent = STORE.persistent ? "Gespeichert" : "Nur für diese Sitzung gespeichert";
+      setTimeout(()=>$("#sh-notesaved").textContent="",1800);
+    }, 450);
+  };
+
+  $("#sheetwrap").classList.add("open");
+  document.body.style.overflow="hidden";
+  $("#closesheet").onclick = closeSheet;
+  $("#sheetwrap").scrollTop = 0;
+  $("#closesheet").focus();
+}
+function closeSheet(){
+  $("#sheetwrap").classList.remove("open");
+  document.body.style.overflow="";
+}
+
+/* ---------- Profil-Editor ---------- */
+const PF_DEFAULT = {
+  profile_text: "KSP Generatoren (QP International GmbH, Würzburg) liefert mobile und stationäre Netzersatzanlagen von 20 bis 200 kVA an Kommunen, Feuerwehren, THW, Bundeswehr, Polizei, Stadtwerke, Wasserversorger und KRITIS-Betreiber. Schwerpunkt sind Anhängeraggregate nach DIN 14685 für den Bevölkerungsschutz sowie mobile Netzersatzanlagen zur Absicherung von Notfallinformationspunkten und Leuchttürmen. Geliefert werden Diesel-Aggregate der Abgasstufe Stage V inklusive Zulassung, Inbetriebnahme, DGUV-V3-Erstprüfung, Einweisung und Wartungsvertrag. Nicht im Portfolio: Blockheizkraftwerke, Photovoltaik, Batteriespeicher, reine Bauleistungen und reine Wartungsverträge ohne Lieferanteil.",
+  keywords_strong: ["netzersatzanlage","netzersatzanlagen","nea","fwa-nea","notstromaggregat","notstromaggregate","notstromanlage","stromerzeuger","stromerzeugungsaggregat","stromaggregat","din 14685","anhängeraggregat","aggregatanhänger"],
+  keywords_negative: ["blockheizkraftwerk","bhkw","photovoltaik","pv-anlage","windkraft","windenergie","batteriespeicher","usv-anlage","kernkraft","wasserkraft","biogas"],
+  cpv_core: {"31127000":"Notstromaggregat","31121000":"Generatoraggregate","31121100":"Generatoraggregate mit Selbstzündungsmotor","31122000":"Generatorenanlagen","31120000":"Generatoren","31682500":"Notstromausrüstung"},
+  kva_sweet_spot: [20,200], score_go: 70, score_watch: 45,
+};
+function pfCurrent(){ return Object.assign({}, PF_DEFAULT, STORE.get("ksp.profile.override", {})); }
+function pfFill(){
+  const p = pfCurrent();
+  $("#pf-text").value = p.profile_text;
+  $("#pf-strong").value = p.keywords_strong.join("\n");
+  $("#pf-neg").value = p.keywords_negative.join("\n");
+  $("#pf-cpv").value = Object.entries(p.cpv_core).map(([k,v])=>`${k} ${v}`).join("\n");
+  $("#pf-kvamin").value = p.kva_sweet_spot[0];
+  $("#pf-kvamax").value = p.kva_sweet_spot[1];
+  $("#pf-go").value = p.score_go;
+  $("#pf-watch").value = p.score_watch;
+}
+function pfRead(){
+  const cpv = {};
+  $("#pf-cpv").value.split("\n").map(l=>l.trim()).filter(Boolean).forEach(l=>{
+    const m = l.match(/^(\d{8})\s*(.*)$/); if(m) cpv[m[1]] = m[2]||"";
+  });
+  return {
+    profile_text: $("#pf-text").value.trim(),
+    keywords_strong: $("#pf-strong").value.split("\n").map(s=>s.trim().toLowerCase()).filter(Boolean),
+    keywords_negative: $("#pf-neg").value.split("\n").map(s=>s.trim().toLowerCase()).filter(Boolean),
+    cpv_core: cpv,
+    kva_sweet_spot: [+$("#pf-kvamin").value||20, +$("#pf-kvamax").value||200],
+    score_go: +$("#pf-go").value||70, score_watch: +$("#pf-watch").value||45,
+  };
+}
+function pfWire(){
+  $("#pf-save").onclick = ()=>{
+    STORE.set("ksp.profile.override", pfRead());
+    $("#pf-note").textContent = STORE.persistent
+      ? "Gespeichert. Für die Bewertung im nächsten Sync: exportieren und als data/profile_override.json ins Repository legen."
+      : "Nur für diese Sitzung gespeichert (Browser-Speicher nicht verfügbar).";
+  };
+  $("#pf-export").onclick = ()=>{
+    download("profile_override.json", JSON.stringify(pfRead(), null, 1), "application/json");
+    toast("profile_override.json exportiert");
+  };
+  $("#pf-reset").onclick = ()=>{
+    STORE.del("ksp.profile.override"); pfFill();
+    $("#pf-note").textContent = "Zurückgesetzt auf Auslieferungszustand.";
+  };
+}
+
+/* ---------- Verdrahtung ---------- */
+$("#nav").addEventListener("click",e=>{
+  const b = e.target.closest("button[data-view]"); if(!b) return;
+  $$("#nav button").forEach(x=>x.setAttribute("aria-current", x===b));
+  $$(".view").forEach(v=>v.classList.toggle("on", v.id==="v-"+b.dataset.view));
+  window.scrollTo({top:0,behavior:"instant"});
+});
+document.addEventListener("click",e=>{
+  const seenBtn = e.target.closest("[data-seen]");
+  if(seenBtn){
+    const k = seenBtn.dataset.seen;
+    STORE.set(k, !STORE.get(k,false));
+    renderWatch(); renderAlarms(); return;
+  }
+  const pi = e.target.closest("[data-px]");
+  if(pi){
+    e.stopPropagation();
+    const ps = profiles(); ps.splice(+pi.dataset.px,1); saveProfiles(ps);
+    if(state.activeProfile===+pi.dataset.px) state.activeProfile=null;
+    renderProfilebar(); return;
+  }
+  const sp = e.target.closest("[data-pi]");
+  if(sp){ activateProfile(+sp.dataset.pi); return; }
+  const r = e.target.closest("[data-id]");
+  if(r) openSheet(r.dataset.id);
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape") closeSheet();
+  if(e.key==="Enter" && document.activeElement?.classList?.contains("row"))
+    openSheet(document.activeElement.dataset.id);
+  if(e.key==="/" && document.activeElement.tagName!=="INPUT" && document.activeElement.tagName!=="TEXTAREA"){
+    e.preventDefault(); $('#nav button[data-view=radar]').click(); $("#q").focus();
+  }
+});
+$("#sheetwrap").addEventListener("click",e=>{ if(e.target.id==="sheetwrap") closeSheet(); });
+$("#q").addEventListener("input",e=>{
+  state.q = e.target.value;
+  if(state.activeProfile!==null){ state.activeProfile=null; renderProfilebar(); }
+  renderList();
+});
+$("#filters").addEventListener("click",e=>{
+  const c = e.target.closest(".chip"); if(!c) return;
+  const f = c.dataset.f;
+  state.f.has(f) ? state.f.delete(f) : state.f.add(f);
+  c.setAttribute("aria-pressed", state.f.has(f));
+  renderList();
+});
+$("#csv").addEventListener("click", exportCSV);
+$("#saveprofile").addEventListener("click", ()=>{
+  if(!state.q.trim()){ toast("Erst eine Suche eingeben"); return; }
+  $("#profilename").value = state.q.slice(0,40);
+  $("#profiledlg").showModal();
+});
+$("#dlg-cancel").onclick = ()=>$("#profiledlg").close();
+$("#dlg-save").onclick = ()=>{
+  const name = $("#profilename").value.trim() || state.q.slice(0,40);
+  const ps = profiles(); ps.push({name, q: state.q}); saveProfiles(ps);
+  $("#profiledlg").close(); renderProfilebar();
+  toast(`Profil „${name}“ gespeichert`);
+};
+
+/* Badge: neue Verfahren seit letztem Besuch */
+(function(){
+  const last = STORE.get("ksp.lastvisit", null);
+  if(last){
+    const fresh = NOTICES.filter(n=>n.published && n.published > last && isOpen(n) && n.bucket!=="ablage").length;
+    $("#navnew").textContent = fresh || "";
+  }
+  STORE.set("ksp.lastvisit", new Date(NOW).toISOString().slice(0,10));
+})();
+
+renderSources(); renderReadouts(); renderAlarms(); renderTopline();
+renderProfilebar(); renderList(); renderWatch(); renderBoard();
+pfFill(); pfWire();
+</script>
+</body>
+</html>

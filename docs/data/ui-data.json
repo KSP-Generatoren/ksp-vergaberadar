@@ -1,0 +1,1395 @@
+{
+ "generated_at": "2026-08-19T09:51:16+00:00",
+ "sources": [
+  {
+   "name": "TED",
+   "ok": null,
+   "count": 0,
+   "error": "noch kein Sync",
+   "last": ""
+  },
+  {
+   "name": "Datenservice Bund",
+   "ok": null,
+   "count": 0,
+   "error": "noch kein Sync",
+   "last": ""
+  },
+  {
+   "name": "Vergabe.NRW",
+   "ok": null,
+   "count": 0,
+   "error": "noch kein Sync",
+   "last": ""
+  },
+  {
+   "name": "cosinex",
+   "ok": null,
+   "count": 0,
+   "error": "noch kein Sync",
+   "last": ""
+  }
+ ],
+ "notices": [
+  {
+   "source": "cosinex:nrw",
+   "source_id": "MG-FWA-NEA-2026",
+   "title": "Beschaffung von drei Feuerwehranhängern Netzersatzanlagen (FwA-NEA)",
+   "description": "Lieferung von drei Feuerwehranhängern mit Netzersatzanlage für den Katastrophenschutz. Anhängeraggregate nach DIN 14685, Leistungsklasse 50 kVA, mit CEE-Abgängen, Beleuchtung und Zulassung.",
+   "buyer": "Stadt Mönchengladbach",
+   "buyer_city": "Mönchengladbach",
+   "nuts": "DEA15",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VgV Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-06",
+   "deadline": "2026-09-11T00:00:00",
+   "notice_url": "https://www.evergabe.nrw.de/VMPCenter/notice/MG-FWA-NEA-2026",
+   "documents_url": "https://www.evergabe.nrw.de/VMPCenter/notice/MG-FWA-NEA-2026/documents",
+   "score": 99,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage, netzersatzanlagen, nea): +30",
+    "50 kVA liegt im Portfolio: +20",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "KSP-50Y Stage V (Anhaenger)",
+   "kva": 50.0,
+   "status": "neu",
+   "uid": "2cf4cabafff5fa15",
+   "bucket": "go",
+   "summary": "Stadt Mönchengladbach schreibt aus: Beschaffung von drei Feuerwehranhängern Netzersatzanlagen (FwA-NEA). Es handelt sich um ein oberschwelliges Verfahren nach VgV. Die geforderte Leistungsklasse liegt bei etwa 50 kVA und damit im Kernbereich des KSP-Portfolios (20–200 kVA). Angebotsfrist: 11.09.2026 um 00:00 Uhr. Passendes Produkt: KSP-50Y Stage V (Anhaenger). Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 11.09.2026 um 00:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Mönchengladbach, Mönchengladbach.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Erkannte Leistungsklasse etwa 50 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage, netzersatzanlagen, nea): +30 · 50 kVA liegt im Portfolio: +20 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 99 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:niedersachsen",
+   "source_id": "HI-NEA-2026-01",
+   "title": "Lieferung von Netzersatzanlagen verschiedener Leistungsklassen",
+   "description": "Rahmenvereinbarung über die Lieferung mobiler Netzersatzanlagen in den Leistungsklassen 20 kVA bis 100 kVA für die Stadt Hildesheim, Feuerwehr und Bauhof.",
+   "buyer": "Stadt Hildesheim",
+   "buyer_city": "Hildesheim",
+   "nuts": "DE925",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VgV Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-07-30",
+   "deadline": "2026-09-02T10:00:00",
+   "notice_url": "https://vergabe.niedersachsen.de/Satellite/notice/HI-NEA-2026-01",
+   "documents_url": "https://vergabe.niedersachsen.de/Satellite/notice/HI-NEA-2026-01/documents",
+   "score": 99,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30",
+    "100 kVA liegt im Portfolio: +20",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "KSP mobil 60-200 kVA",
+   "kva": 100.0,
+   "status": "neu",
+   "uid": "77e607c47fbfbb35",
+   "bucket": "go",
+   "summary": "Stadt Hildesheim schreibt aus: Lieferung von Netzersatzanlagen verschiedener Leistungsklassen. Es handelt sich um ein oberschwelliges Verfahren nach VgV. Die geforderte Leistungsklasse liegt bei etwa 100 kVA und damit im Kernbereich des KSP-Portfolios (20–200 kVA). Angebotsfrist: 02.09.2026 um 10:00 Uhr. Passendes Produkt: KSP mobil 60-200 kVA. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 02.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Hildesheim, Hildesheim.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Erkannte Leistungsklasse etwa 100 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30 · 100 kVA liegt im Portfolio: +20 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 99 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "NOERDLINGEN-MOBIL",
+   "title": "Lieferung mobiler Stromerzeuger",
+   "description": "Beschaffung mobiler Stromerzeuger für den Bauhof und die Feuerwehr der Stadt Nördlingen, Leistungsklasse 30 kVA.",
+   "buyer": "Stadt Nördlingen",
+   "buyer_city": "Nördlingen",
+   "nuts": "DE27E",
+   "cpv": [
+    "31121000"
+   ],
+   "procedure": "UVgO Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-06-30",
+   "deadline": "2026-08-21T11:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=NOERDLINGEN-MOBIL",
+   "documents_url": "https://oeffentlichevergabe.de/docs/NOERDLINGEN-MOBIL",
+   "score": 99,
+   "score_reasons": [
+    "CPV Kerncode 31121000 (Generatoraggregate): +35",
+    "Kernbegriff im Text (stromerzeuger): +30",
+    "30 kVA liegt im Portfolio: +20",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "KSP mobil 20-40 kVA",
+   "kva": 30.0,
+   "status": "neu",
+   "uid": "ed6d0f829601a924",
+   "bucket": "go",
+   "summary": "Stadt Nördlingen schreibt aus: Lieferung mobiler Stromerzeuger. Es handelt sich um ein unterschwelliges Verfahren nach UVgO. Die geforderte Leistungsklasse liegt bei etwa 30 kVA und damit im Kernbereich des KSP-Portfolios (20–200 kVA). Angebotsfrist: 21.08.2026 um 11:00 Uhr. Passendes Produkt: KSP mobil 20-40 kVA. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 21.08.2026 um 11:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Nördlingen, Nördlingen.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31121000. Erkannte Leistungsklasse etwa 30 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31121000 (Generatoraggregate): +35 · Kernbegriff im Text (stromerzeuger): +30 · 30 kVA liegt im Portfolio: +20 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 99 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "HH-FF-NEA-2026",
+   "title": "Beschaffung mobiler Notstromaggregate für die Freiwillige Feuerwehr Hamburg",
+   "description": "Lieferung mobiler Notstromaggregate für die Freiwillige Feuerwehr Hamburg, Anhängerausführung, Leistungsklasse 50 kVA, inklusive Einweisung und Wartung.",
+   "buyer": "Behörde für Inneres und Sport",
+   "buyer_city": "Hamburg",
+   "nuts": "DE600",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VgV Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-07-20",
+   "deadline": "2026-08-28T12:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=HH-FF-NEA-2026",
+   "documents_url": "https://oeffentlichevergabe.de/docs/HH-FF-NEA-2026",
+   "score": 93,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (notstromaggregat, notstromaggregate, stromaggregat): +30",
+    "50 kVA liegt im Portfolio: +20",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "KSP-50Y Stage V (Anhaenger)",
+   "kva": 50.0,
+   "status": "neu",
+   "uid": "5d5564aa6d9b9988",
+   "bucket": "go",
+   "summary": "Behörde für Inneres und Sport schreibt aus: Beschaffung mobiler Notstromaggregate für die Freiwillige Feuerwehr Hamburg. Es handelt sich um ein oberschwelliges Verfahren nach VgV. Die geforderte Leistungsklasse liegt bei etwa 50 kVA und damit im Kernbereich des KSP-Portfolios (20–200 kVA). Angebotsfrist: 28.08.2026 um 12:00 Uhr. Passendes Produkt: KSP-50Y Stage V (Anhaenger). Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 28.08.2026 um 12:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Behörde für Inneres und Sport, Hamburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Erkannte Leistungsklasse etwa 50 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (notstromaggregat, notstromaggregate, stromaggregat): +30 · 50 kVA liegt im Portfolio: +20 · Lieferleistung: +8 — Summe 93 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:niedersachsen",
+   "source_id": "HI-STE-2026-02",
+   "title": "Lieferung von drei Stromerzeugern nach DIN 14685 für die Feuerwehr",
+   "description": "Beschaffung von drei tragbaren bzw. fahrbaren Stromerzeugern nach DIN 14685 für die Freiwillige Feuerwehr Hildesheim.",
+   "buyer": "Stadt Hildesheim",
+   "buyer_city": "Hildesheim",
+   "nuts": "DE925",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "UVgO Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-07-17",
+   "deadline": "2026-08-26T10:00:00",
+   "notice_url": "https://vergabe.niedersachsen.de/Satellite/notice/HI-STE-2026-02",
+   "documents_url": "https://vergabe.niedersachsen.de/Satellite/notice/HI-STE-2026-02/documents",
+   "score": 79,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (stromerzeuger, din 14685): +30",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "c6974ffbc20d3f56",
+   "bucket": "go",
+   "summary": "Stadt Hildesheim schreibt aus: Lieferung von drei Stromerzeugern nach DIN 14685 für die Feuerwehr. Es handelt sich um ein unterschwelliges Verfahren nach UVgO. Angebotsfrist: 26.08.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 26.08.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Hildesheim, Hildesheim.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (stromerzeuger, din 14685): +30 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 79 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "11.81.01.0020",
+   "title": "Lieferung NEA - Notfallinformationspunkte Steinburg",
+   "description": "Beschränkte Ausschreibung ohne Teilnahmewettbewerb nach UVgO über die Lieferung einer Netzersatzanlage für die Notfallinformationspunkte der Gemeinde Steinburg. Anhängeraggregat, Schalldruckpegel maximal 65 dB(A) in 7 m, Laufzeit mindestens 16 h, abschließbarer Stauraum, fünf CEE-Dosen, Herstellung in der Europäischen Gemeinschaft.",
+   "buyer": "Amt Bad Oldesloe-Land",
+   "buyer_city": "Bad Oldesloe",
+   "nuts": "DEF0C",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "UVgO Beschränkte Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-07-02",
+   "deadline": "2026-08-18T11:00:00",
+   "notice_url": "",
+   "documents_url": "",
+   "score": 79,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage, nea): +30",
+    "Auftraggeber 'amt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "cc9aeb6553320058",
+   "bucket": "go",
+   "summary": "Amt Bad Oldesloe-Land schreibt aus: Lieferung NEA - Notfallinformationspunkte Steinburg. Es handelt sich um ein unterschwelliges Verfahren nach UVgO, als beschränkte Ausschreibung. Angebotsfrist: 18.08.2026 um 11:00 Uhr.",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 18.08.2026 um 11:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Amt Bad Oldesloe-Land, Bad Oldesloe.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage, nea): +30 · Auftraggeber 'amt': +6 · Lieferleistung: +8 — Summe 79 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": "11.81.01.0020"
+  },
+  {
+   "source": "cosinex:rheinland",
+   "source_id": "WTV-HAPP-2026",
+   "title": "Lieferung, Montage und Inbetriebsetzung von einer stationären Netzersatzanlage sowie einem Vorratstank am Hochbehälter/Pumpwerk Happerschoß",
+   "description": "Stationäre Netzersatzanlage zur Absicherung des Hochbehälters und Pumpwerks Happerschoß, inklusive Vorratstank und Einbindung in die Leittechnik.",
+   "buyer": "Wahnbachtalsperrenverband",
+   "buyer_city": "Siegburg",
+   "nuts": "DEA2C",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "Sonstige Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-11",
+   "deadline": "2026-09-18T00:00:00",
+   "notice_url": "https://www.vmp-rheinland.de/VMPSatellite/notice/WTV-HAPP-2026",
+   "documents_url": "https://www.vmp-rheinland.de/VMPSatellite/notice/WTV-HAPP-2026/documents",
+   "score": 73,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage): +30",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "c8e6a153ce11ae42",
+   "bucket": "go",
+   "summary": "Wahnbachtalsperrenverband schreibt aus: Lieferung, Montage und Inbetriebsetzung von einer stationären Netzersatzanlage sowie einem Vorratstank am Hochbehälter/Pumpwerk Happerschoß. Angebotsfrist: 18.09.2026 um 00:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 18.09.2026 um 00:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Wahnbachtalsperrenverband, Siegburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage): +30 · Lieferleistung: +8 — Summe 73 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "NEUSAESS-LV055",
+   "title": "LV 055 Notstromaggregat",
+   "description": "Lieferung und Montage eines Notstromaggregats im Rahmen der Baumaßnahme Welden.",
+   "buyer": "Stadt Neusäß",
+   "buyer_city": "Welden",
+   "nuts": "DE27A",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VOB/A Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-11",
+   "deadline": "2026-09-08T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=NEUSAESS-LV055",
+   "documents_url": "https://oeffentlichevergabe.de/docs/NEUSAESS-LV055",
+   "score": 69,
+   "score_reasons": [
+    "vob: -10",
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (notstromaggregat, stromaggregat): +30",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "dca851bdc1b8e740",
+   "bucket": "pruefen",
+   "summary": "Stadt Neusäß schreibt aus: LV 055 Notstromaggregat. Es handelt sich um ein Bauvergabeverfahren nach VOB/A. Angebotsfrist: 08.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 08.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Neusäß, Welden.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vob: -10 · CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (notstromaggregat, stromaggregat): +30 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 69 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "SWA-MOBIL-250-330",
+   "title": "Mobile Netzersatzanlagen 250 kVA und 330 kVA",
+   "description": "Lieferung mobiler Netzersatzanlagen in den Leistungsklassen 250 kVA und 330 kVA für die Stadtwerke Augsburg.",
+   "buyer": "Stadtwerke Augsburg",
+   "buyer_city": "Augsburg",
+   "nuts": "DE271",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "SektVO Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-06-04",
+   "deadline": "2026-07-15T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=SWA-MOBIL-250-330",
+   "documents_url": "https://oeffentlichevergabe.de/docs/SWA-MOBIL-250-330",
+   "score": 69,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30",
+    "330 kVA am Rand des Portfolios: +3",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8",
+    "Deckel: 330 kVA ausserhalb 20-200 kVA, kein Auto-Go"
+   ],
+   "matched_product": "",
+   "kva": 330.0,
+   "status": "neu",
+   "uid": "0d440ece3367f481",
+   "bucket": "pruefen",
+   "summary": "Stadtwerke Augsburg schreibt aus: Mobile Netzersatzanlagen 250 kVA und 330 kVA. Es handelt sich um ein Sektorenverfahren nach SektVO. Die geforderte Leistungsklasse liegt bei etwa 330 kVA und damit außerhalb des KSP-Kernbereichs von 20–200 kVA. Angebotsfrist: 15.07.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 15.07.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadtwerke Augsburg, Augsburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Erkannte Leistungsklasse etwa 330 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30 · 330 kVA am Rand des Portfolios: +3 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 69 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:niedersachsen",
+   "source_id": "AMMERLAND-TZ-ELM",
+   "title": "TZ Elmendorf: Lieferung eines Notstromaggregates",
+   "description": "Lieferung eines Notstromaggregates für das Technologiezentrum Elmendorf.",
+   "buyer": "Landkreis Ammerland",
+   "buyer_city": "Westerstede",
+   "nuts": "DE945",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VOB/A Beabsichtigte Ausschreibung",
+   "kind": "prior_information",
+   "value_eur": null,
+   "published": "2026-06-17",
+   "deadline": null,
+   "notice_url": "https://vergabe.niedersachsen.de/Satellite/notice/AMMERLAND-TZ-ELM",
+   "documents_url": "",
+   "score": 61,
+   "score_reasons": [
+    "vob: -10",
+    "beabsichtigte: -8",
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (notstromaggregat, notstromaggregate, stromaggregat): +30",
+    "Auftraggeber 'landkreis': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "fe8fd669f559328f",
+   "bucket": "pruefen",
+   "summary": "Landkreis Ammerland schreibt aus: TZ Elmendorf: Lieferung eines Notstromaggregates. Es handelt sich um ein Bauvergabeverfahren nach VOB/A.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Landkreis Ammerland, Westerstede.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vob: -10 · beabsichtigte: -8 · CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (notstromaggregat, notstromaggregate, stromaggregat): +30 · Auftraggeber 'landkreis': +6 — Summe 61 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "CLP-NEA-630",
+   "title": "Anschaffung einer mobilen Netzersatzanlage 630 kVA",
+   "description": "Beschaffung einer mobilen Netzersatzanlage mit 630 kVA Leistung zur Absicherung kritischer Infrastruktur im Stadtgebiet Cloppenburg.",
+   "buyer": "Stadt Cloppenburg",
+   "buyer_city": "Cloppenburg",
+   "nuts": "DE949",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "UVgO Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-18",
+   "deadline": "2026-09-22T11:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=CLP-NEA-630",
+   "documents_url": "https://oeffentlichevergabe.de/docs/CLP-NEA-630",
+   "score": 59,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage): +30",
+    "630 kVA ausserhalb des Portfolios: -20",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": 630.0,
+   "status": "neu",
+   "uid": "f1f8f8b3ee54fe4c",
+   "bucket": "pruefen",
+   "summary": "Stadt Cloppenburg schreibt aus: Anschaffung einer mobilen Netzersatzanlage 630 kVA. Es handelt sich um ein unterschwelliges Verfahren nach UVgO. Die geforderte Leistungsklasse liegt bei etwa 630 kVA und damit außerhalb des KSP-Kernbereichs von 20–200 kVA. Angebotsfrist: 22.09.2026 um 11:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 22.09.2026 um 11:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Cloppenburg, Cloppenburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Erkannte Leistungsklasse etwa 630 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage): +30 · 630 kVA ausserhalb des Portfolios: -20 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 59 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "SIB-JVA-TORGAU",
+   "title": "Justizvollzugsanstalt Torgau Sozialtherapie - Elektrotechnische Anlagen",
+   "description": "Errichtung der elektrotechnischen Anlagen einschließlich Netzersatzanlage im Rahmen des Neubaus der Sozialtherapie der JVA Torgau.",
+   "buyer": "Staatsbetrieb Sächsisches Immobilien- und Baumanagement",
+   "buyer_city": "Dresden",
+   "nuts": "DED21",
+   "cpv": [
+    "45315300",
+    "31127000"
+   ],
+   "procedure": "VOB/A Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-07",
+   "deadline": "2026-09-15T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=SIB-JVA-TORGAU",
+   "documents_url": "https://oeffentlichevergabe.de/docs/SIB-JVA-TORGAU",
+   "score": 55,
+   "score_reasons": [
+    "vob: -10",
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage): +30"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "118e1a295f90ced3",
+   "bucket": "pruefen",
+   "summary": "Staatsbetrieb Sächsisches Immobilien- und Baumanagement schreibt aus: Justizvollzugsanstalt Torgau Sozialtherapie - Elektrotechnische Anlagen. Es handelt sich um ein Bauvergabeverfahren nach VOB/A. Angebotsfrist: 15.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 15.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Staatsbetrieb Sächsisches Immobilien- und Baumanagement, Dresden.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45315300, 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vob: -10 · CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage): +30 — Summe 55 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:rheinland",
+   "source_id": "CXPTY6DD367",
+   "title": "Lieferung, Montage und Inbetriebsetzung von zwei Container-Netzersatzanlagen sowie zusätzlich einem Container für die Zentralsteuerung inklusive einem Vorratstank",
+   "description": "Bereitstellung von zwei 400V/1000 kVA Notstromaggregaten mit automatischer Inbetriebnahme bei Stromausfällen und unterbrechungsfreier Rückschaltung ins Netz. Ein zusätzlicher Container mit Vorratstank und zentralem Steuerfeld wird benötigt. Ausschließliche Verwendung von schwefelarmem Heizöl nach DIN 51603-1 erforderlich.",
+   "buyer": "Wahnbachtalsperrenverband",
+   "buyer_city": "Siegburg",
+   "nuts": "DEA2C",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "Nichtoffenes Verfahren mit Teilnahmewettbewerb",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-01-26",
+   "deadline": "2026-02-27T09:00:00",
+   "notice_url": "https://www.vmp-rheinland.de/VMPSatellite/notice/CXPTY6DD367",
+   "documents_url": "https://www.vmp-rheinland.de/VMPSatellite/notice/CXPTY6DD367/documents",
+   "score": 53,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage, netzersatzanlagen, notstromaggregat): +30",
+    "1000 kVA ausserhalb des Portfolios: -20",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": 1000.0,
+   "status": "neu",
+   "uid": "091dcb81a4600289",
+   "bucket": "pruefen",
+   "summary": "Wahnbachtalsperrenverband schreibt aus: Lieferung, Montage und Inbetriebsetzung von zwei Container-Netzersatzanlagen sowie zusätzlich einem Container für die Zentralsteuerung inklusive einem Vorratstank. Die geforderte Leistungsklasse liegt bei etwa 1000 kVA und damit außerhalb des KSP-Kernbereichs von 20–200 kVA. Angebotsfrist: 27.02.2026 um 09:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 27.02.2026 um 09:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Wahnbachtalsperrenverband, Siegburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Erkannte Leistungsklasse etwa 1000 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage, netzersatzanlagen, notstromaggregat): +30 · 1000 kVA ausserhalb des Portfolios: -20 · Lieferleistung: +8 — Summe 53 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": "54127-2026 / WTV 26 L 0002"
+  },
+  {
+   "source": "doe",
+   "source_id": "DLR-BS-1000",
+   "title": "Neubau Netzersatzanlage 1000 kVA",
+   "description": "Errichtung einer Netzersatzanlage mit 1000 kVA am Standort Braunschweig einschließlich Gebäudeeinbindung.",
+   "buyer": "Deutsches Zentrum für Luft- und Raumfahrt e.V.",
+   "buyer_city": "Braunschweig",
+   "nuts": "DE911",
+   "cpv": [
+    "31127000",
+    "45315300"
+   ],
+   "procedure": "VgV Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-07-10",
+   "deadline": "2026-08-25T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=DLR-BS-1000",
+   "documents_url": "https://oeffentlichevergabe.de/docs/DLR-BS-1000",
+   "score": 45,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage): +30",
+    "1000 kVA ausserhalb des Portfolios: -20"
+   ],
+   "matched_product": "",
+   "kva": 1000.0,
+   "status": "neu",
+   "uid": "db9c5fd75c35f482",
+   "bucket": "pruefen",
+   "summary": "Deutsches Zentrum für Luft- und Raumfahrt e.V. schreibt aus: Neubau Netzersatzanlage 1000 kVA. Es handelt sich um ein oberschwelliges Verfahren nach VgV. Die geforderte Leistungsklasse liegt bei etwa 1000 kVA und damit außerhalb des KSP-Kernbereichs von 20–200 kVA. Angebotsfrist: 25.08.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 25.08.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Deutsches Zentrum für Luft- und Raumfahrt e.V., Braunschweig.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000, 45315300. Erkannte Leistungsklasse etwa 1000 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage): +30 · 1000 kVA ausserhalb des Portfolios: -20 — Summe 45 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "TENNET-RV-MOBIL",
+   "title": "Rahmenvertrag mobile Stromversorgung",
+   "description": "Rahmenvertrag über mobile Stromversorgungsanlagen für Netzbaustellen der TenneT TSO GmbH.",
+   "buyer": "TenneT TSO GmbH",
+   "buyer_city": "Bayreuth",
+   "nuts": "DE242",
+   "cpv": [
+    "31122000"
+   ],
+   "procedure": "SektVO Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-05-20",
+   "deadline": "2026-07-02T12:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=TENNET-RV-MOBIL",
+   "documents_url": "https://oeffentlichevergabe.de/docs/TENNET-RV-MOBIL",
+   "score": 35,
+   "score_reasons": [
+    "CPV Kerncode 31122000 (Generatorenanlagen): +35"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "dc629279964bede7",
+   "bucket": "ablage",
+   "summary": "TenneT TSO GmbH schreibt aus: Rahmenvertrag mobile Stromversorgung. Es handelt sich um ein Sektorenverfahren nach SektVO, mit Rahmenvereinbarungscharakter. Angebotsfrist: 02.07.2026 um 12:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 02.07.2026 um 12:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "TenneT TSO GmbH, Bayreuth.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31122000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31122000 (Generatorenanlagen): +35 — Summe 35 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "FR-RETTUNGSZENTRUM",
+   "title": "Rettungszentrum Freiburg - Elektroinstallationsarbeiten",
+   "description": "Elektroinstallationsarbeiten im Neubau des Rettungszentrums, einschließlich Anbindung der Ersatzstromversorgung.",
+   "buyer": "Stadt Freiburg i. Br.",
+   "buyer_city": "Freiburg",
+   "nuts": "DE131",
+   "cpv": [
+    "45315300"
+   ],
+   "procedure": "VOB/A Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-07-31",
+   "deadline": "2026-09-04T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=FR-RETTUNGSZENTRUM",
+   "documents_url": "https://oeffentlichevergabe.de/docs/FR-RETTUNGSZENTRUM",
+   "score": 20,
+   "score_reasons": [
+    "vob: -10",
+    "CPV Randcode 45315300: +12",
+    "Randbegriff (ersatzstromversorgung): +12",
+    "Auftraggeber 'stadt': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "889040ca6c989ec9",
+   "bucket": "ablage",
+   "summary": "Stadt Freiburg i. Br. schreibt aus: Rettungszentrum Freiburg - Elektroinstallationsarbeiten. Es handelt sich um ein Bauvergabeverfahren nach VOB/A. Angebotsfrist: 04.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 04.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Freiburg i. Br., Freiburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45315300. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vob: -10 · CPV Randcode 45315300: +12 · Randbegriff (ersatzstromversorgung): +12 · Auftraggeber 'stadt': +6 — Summe 20 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:nrw",
+   "source_id": "LZPD-RV-NEA",
+   "title": "Abschluss von Rahmenvereinbarungen über die Lieferung von ortsfesten Netzersatzanlagen für die Polizei NRW",
+   "description": "Rahmenvereinbarung über ortsfeste Netzersatzanlagen für Liegenschaften der Polizei Nordrhein-Westfalen.",
+   "buyer": "Landesamt für Zentrale Polizeiliche Dienste Nordrhein-Westfalen",
+   "buyer_city": "Duisburg",
+   "nuts": "DEA12",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VgV Vergebener Auftrag",
+   "kind": "award",
+   "value_eur": null,
+   "published": "2026-08-02",
+   "deadline": null,
+   "notice_url": "https://www.evergabe.nrw.de/VMPCenter/notice/LZPD-RV-NEA",
+   "documents_url": "",
+   "score": 0,
+   "score_reasons": [
+    "vergebener auftrag: -100",
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30",
+    "Auftraggeber 'amt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "3e5af66a3e64027f",
+   "bucket": "ablage",
+   "summary": "Landesamt für Zentrale Polizeiliche Dienste Nordrhein-Westfalen schreibt aus: Abschluss von Rahmenvereinbarungen über die Lieferung von ortsfesten Netzersatzanlagen für die Polizei NRW. Es handelt sich um ein oberschwelliges Verfahren nach VgV, mit Rahmenvereinbarungscharakter. Das Verfahren ist bereits vergeben und dient nur noch der Marktbeobachtung.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Landesamt für Zentrale Polizeiliche Dienste Nordrhein-Westfalen, Duisburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vergebener auftrag: -100 · CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30 · Auftraggeber 'amt': +6 · Lieferleistung: +8 — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "MARARS-LASTBANK",
+   "title": "Lieferung Lastbank",
+   "description": "Lieferung einer Lastbank zur Prüfung von Stromerzeugungsanlagen am Standort Wilhelmshaven.",
+   "buyer": "Marinearsenal",
+   "buyer_city": "Wilhelmshaven",
+   "nuts": "DE943",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VgV Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-07-08",
+   "deadline": "2026-08-20T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=MARARS-LASTBANK",
+   "documents_url": "https://oeffentlichevergabe.de/docs/MARARS-LASTBANK",
+   "score": 0,
+   "score_reasons": [
+    "Ausschluss: lastbank - liefern wir nicht"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "f8dc2aa12626e313",
+   "bucket": "ablage",
+   "summary": "Marinearsenal schreibt aus: Lieferung Lastbank. Es handelt sich um ein oberschwelliges Verfahren nach VgV. Angebotsfrist: 20.08.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 20.08.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Marinearsenal, Wilhelmshaven.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Ausschluss: lastbank - liefern wir nicht — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:nrw",
+   "source_id": "UKA-WARTUNG-10KV",
+   "title": "Wartung der stationären Netzersatzanlagen 10 KV",
+   "description": "Wartungsvertrag über die stationären Netzersatzanlagen 10 kV am Universitätsklinikum Aachen.",
+   "buyer": "Universitätsklinikum Aachen AöR",
+   "buyer_city": "Aachen",
+   "nuts": "DEA2D",
+   "cpv": [
+    "50532000"
+   ],
+   "procedure": "VgV Vergebener Auftrag",
+   "kind": "award",
+   "value_eur": null,
+   "published": "2026-06-24",
+   "deadline": null,
+   "notice_url": "https://www.evergabe.nrw.de/VMPCenter/notice/UKA-WARTUNG-10KV",
+   "documents_url": "",
+   "score": 0,
+   "score_reasons": [
+    "vergebener auftrag: -100",
+    "CPV Randcode 50532000: +12",
+    "Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30",
+    "Auftraggeber 'klinik': +6",
+    "reiner Wartungsauftrag ohne Lieferanteil: -25"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "8a01b83a43044faa",
+   "bucket": "ablage",
+   "summary": "Universitätsklinikum Aachen AöR schreibt aus: Wartung der stationären Netzersatzanlagen 10 KV. Es handelt sich um ein oberschwelliges Verfahren nach VgV. Das Verfahren ist bereits vergeben und dient nur noch der Marktbeobachtung.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Universitätsklinikum Aachen AöR, Aachen.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 50532000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vergebener auftrag: -100 · CPV Randcode 50532000: +12 · Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30 · Auftraggeber 'klinik': +6 · reiner Wartungsauftrag ohne Lieferanteil: -25 — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:nrw",
+   "source_id": "KAARST-FW-60",
+   "title": "Feuerwehr Kaarst - Erneuerung Netzersatzanlage 60kVA",
+   "description": "Erneuerung der Netzersatzanlage 60 kVA am Feuerwehrgerätehaus Kaarst.",
+   "buyer": "Stadt Kaarst - Der Bürgermeister",
+   "buyer_city": "Kaarst",
+   "nuts": "DEA1B",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VOB/A Vergebener Auftrag",
+   "kind": "award",
+   "value_eur": null,
+   "published": "2026-06-02",
+   "deadline": null,
+   "notice_url": "https://www.evergabe.nrw.de/VMPCenter/notice/KAARST-FW-60",
+   "documents_url": "",
+   "score": 0,
+   "score_reasons": [
+    "vob: -10",
+    "vergebener auftrag: -100",
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage): +30",
+    "60 kVA liegt im Portfolio: +20",
+    "Auftraggeber 'stadt': +6"
+   ],
+   "matched_product": "KSP-50Y Stage V (Anhaenger)",
+   "kva": 60.0,
+   "status": "neu",
+   "uid": "262801af80cd44b8",
+   "bucket": "ablage",
+   "summary": "Stadt Kaarst - Der Bürgermeister schreibt aus: Feuerwehr Kaarst - Erneuerung Netzersatzanlage 60kVA. Es handelt sich um ein Bauvergabeverfahren nach VOB/A. Die geforderte Leistungsklasse liegt bei etwa 60 kVA und damit im Kernbereich des KSP-Portfolios (20–200 kVA). Das Verfahren ist bereits vergeben und dient nur noch der Marktbeobachtung. Passendes Produkt: KSP-50Y Stage V (Anhaenger).",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Kaarst - Der Bürgermeister, Kaarst.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Erkannte Leistungsklasse etwa 60 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vob: -10 · vergebener auftrag: -100 · CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage): +30 · 60 kVA liegt im Portfolio: +20 — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "MVA-WEISWEILER-KWK",
+   "title": "MVA Weisweiler - Erneuerung KWK-Anlage",
+   "description": "Erneuerung der Kraft-Wärme-Kopplungsanlage einschließlich Blockheizkraftwerk am Standort Weisweiler.",
+   "buyer": "MVA Weisweiler GmbH",
+   "buyer_city": "Eschweiler",
+   "nuts": "DEA2D",
+   "cpv": [
+    "31121000"
+   ],
+   "procedure": "SektVO Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-07-02",
+   "deadline": "2026-08-14T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=MVA-WEISWEILER-KWK",
+   "documents_url": "https://oeffentlichevergabe.de/docs/MVA-WEISWEILER-KWK",
+   "score": 0,
+   "score_reasons": [
+    "Ausschluss: blockheizkraftwerk ohne Kernbegriff"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "8f86f6d4a1bb671a",
+   "bucket": "ablage",
+   "summary": "MVA Weisweiler GmbH schreibt aus: MVA Weisweiler - Erneuerung KWK-Anlage. Es handelt sich um ein Sektorenverfahren nach SektVO. Angebotsfrist: 14.08.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 14.08.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "MVA Weisweiler GmbH, Eschweiler.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31121000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Ausschluss: blockheizkraftwerk ohne Kernbegriff — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "SYKE-KLAERANLAGE",
+   "title": "Notstromaggregat für die Kläranlage Syke",
+   "description": "Lieferung und Montage eines Notstromaggregats für die Kläranlage Syke.",
+   "buyer": "Stadt Syke",
+   "buyer_city": "Syke",
+   "nuts": "DE923",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "UVgO Vergebener Auftrag",
+   "kind": "award",
+   "value_eur": null,
+   "published": "2026-06-30",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=SYKE-KLAERANLAGE",
+   "documents_url": "",
+   "score": 0,
+   "score_reasons": [
+    "vergebener auftrag: -100",
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (notstromaggregat, stromaggregat): +30",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "054959b00b3a4761",
+   "bucket": "ablage",
+   "summary": "Stadt Syke schreibt aus: Notstromaggregat für die Kläranlage Syke. Es handelt sich um ein unterschwelliges Verfahren nach UVgO. Das Verfahren ist bereits vergeben und dient nur noch der Marktbeobachtung.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Syke, Syke.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vergebener auftrag: -100 · CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (notstromaggregat, stromaggregat): +30 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  }
+ ],
+ "changes": [
+  {
+   "id": "11.81.01.0020",
+   "sev": "kritisch",
+   "when": "2026-08-05T06:04:00",
+   "file": "Bieterinformation_3.pdf",
+   "what": "Neue Datei in den Vergabeunterlagen",
+   "diff": [
+    [
+     "ctx",
+     " LV Nr. 3.2 Zulassung"
+    ],
+    [
+     "del",
+     "-Zulassung wird vom Auftragnehmer beantragt."
+    ],
+    [
+     "add",
+     "+Zulassung wird vom Auftraggeber in Stormarn beantragt, der Auftragnehmer liefert die Unterlagen."
+    ]
+   ],
+   "impact": "Verantwortung für die Zulassung wechselt. <b>Der Auftragnehmer schuldet weiterhin die vollständigen Unterlagen</b> — im Angebot entsprechend formulieren, sonst entsteht eine Lücke zwischen Angebot und Vertrag."
+  },
+  {
+   "id": "11.81.01.0020",
+   "sev": "kritisch",
+   "when": "2026-07-30T06:02:00",
+   "file": "LV.pdf",
+   "what": "Abschnitt 1.6 geändert",
+   "diff": [
+    [
+     "del",
+     "-LV Nr. 1.6 Schallleistungspegel LWA maximal 90 dB(A)."
+    ],
+    [
+     "add",
+     "+LV Nr. 1.6 Schalldruckpegel in 7 m maximal 65 dB(A). Angabe als LWA wird nicht akzeptiert."
+    ]
+   ],
+   "impact": "Die Messgröße wurde ausgetauscht. <b>Ein Angebot mit LWA-Angabe wäre jetzt formal angreifbar.</b> KSP liegt mit 65 dB(A) in 7 m exakt auf dem neuen Grenzwert — Messprotokoll vor Abgabe verifizieren, es gibt keinen Puffer."
+  },
+  {
+   "id": "11.81.01.0020",
+   "sev": "wichtig",
+   "when": "2026-08-04T06:03:00",
+   "file": "LV.pdf",
+   "what": "Abschnitt 1.9 präzisiert",
+   "diff": [
+    [
+     "del",
+     "-LV Nr. 1.9 Stauraum für Zubehör vorhanden."
+    ],
+    [
+     "add",
+     "+LV Nr. 1.9 Stauraum für Zubehör vorhanden, abschließbar."
+    ]
+   ],
+   "impact": "Der Stauraum muss im Angebot ausdrücklich als <b>abschließbar</b> bezeichnet werden. Der KSP-50Y erfüllt das, die Formulierung im Angebotstext ist anzupassen."
+  }
+ ],
+ "analyses": {}
+}

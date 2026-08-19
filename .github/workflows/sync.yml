@@ -1,0 +1,116 @@
+# KSP Vergaberadar - automatischer Betrieb
+#
+# Laeuft 3x taeglich (wie Vergabepilot: frueh/mittags/nachmittags), holt alle
+# Quellen, bewertet, prueft Vergabeunterlagen auf Aenderungen, baut die Site
+# und deployt sie auf GitHub Pages.
+#
+# Einmalige Einrichtung nach dem Push:
+#   Settings -> Pages -> Source: "GitHub Actions"
+#   optional: Settings -> Secrets -> ANTHROPIC_API_KEY  (fuer KI-Dossiers)
+name: sync
+
+on:
+  schedule:
+    # UTC. Entspricht ca. 06:20 / 12:20 / 17:20 Berlin (Sommerzeit).
+    - cron: "20 4 * * *"
+    - cron: "20 10 * * *"
+    - cron: "20 15 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Abhaengigkeiten
+        run: pip install -r requirements.txt
+
+      - name: Quellen abrufen und bewerten
+        # Auf GitHub-Runnern ist api.ted.europa.eu erreichbar.
+        # Faellt eine Quelle aus, laeuft der Rest weiter; die Site zeigt den
+        # Status je Quelle an.
+        run: python -m ksp_radar.cli sync --days 14 || true
+
+      - name: Vergabeunterlagen auf Aenderungen pruefen
+        run: python -m ksp_radar.cli watch || true
+
+      - name: KI-Dossiers fuer Top-Treffer
+        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, sqlite3, subprocess
+          conn = sqlite3.connect("data/radar.sqlite3")
+          conn.row_factory = sqlite3.Row
+          try:
+              rows = conn.execute(
+                  "SELECT uid FROM notice WHERE score >= 70 "
+                  "AND uid NOT IN (SELECT notice_uid FROM dossier) "
+                  "AND (deadline IS NULL OR deadline >= date('now')) LIMIT 5").fetchall()
+          except sqlite3.OperationalError:
+              rows = []
+          for r in rows:
+              subprocess.run(["python", "-m", "ksp_radar.cli", "dossier", r["uid"]],
+                             check=False)
+          PY
+
+      - name: Site bauen
+        run: python -m ksp_radar.cli build
+
+      - name: Datenstand committen
+        run: |
+          git config user.name  "vergaberadar-bot"
+          git config user.email "github@ksp-generatoren.de"
+          git add -A data/ docs/
+          git diff --cached --quiet || git commit -m "sync: $(date -u +%F' '%H:%M) UTC"
+          git push || true
+
+      - name: Zusammenfassung
+        run: |
+          echo "## Sync-Ergebnis" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f data/status.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          st = json.load(open("data/status.json"))
+          print(f"- Stand: {st.get('last_sync','?')}")
+          print(f"- Datensaetze: {st.get('total',0)}, neu: {st.get('new',0)}, Go: {st.get('go',0)}")
+          for s in st.get("sources", []):
+              mark = "OK " if s.get("ok") else "FEHLER"
+              print(f"- {mark} {s['name']}: {s['count']}  {s.get('error','')}")
+          PY
+          else
+            echo "- noch kein Sync-Status (Seed-Betrieb)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Pages-Artefakt
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: sync-and-build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
