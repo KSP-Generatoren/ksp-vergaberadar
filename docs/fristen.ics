@@ -2,4 +2,232 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//KSP Vergaberadar//DE
 X-WR-CALNAME:KSP Angebotsfristen
+BEGIN:VEVENT
+UID:c427ce169bf58914@ksp-vergaberadar
+DTSTART:20260911T090000
+DTEND:20260911T090000
+SUMMARY:Angebotsfrist: Deutschland – Notstromaggregat – Beschaffung von drei Feuerwehranhängern Netzers
+DESCRIPTION:Stadt Mönchengladbach · Passung 79/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Deutschland – Notstromaggregat – Beschaffung von drei Feuerw
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:32c6556bc3a86e9d@ksp-vergaberadar
+DTSTART:20260911T090000
+DTEND:20260911T090000
+SUMMARY:Angebotsfrist: Beschaffung von drei Feuerwehranhängern Netzersatzanlagen (FwA-NEA)
+DESCRIPTION:Stadt Mönchengladbach · Passung 79/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Beschaffung von drei Feuerwehranhängern Netzersatzanlagen (F
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:0245869d0dff2dd8@ksp-vergaberadar
+DTSTART:20260911T000000
+DTEND:20260911T000000
+SUMMARY:Angebotsfrist: Beschaffung von drei Feuerwehranhängern Netzersatzanlagen (FwA-NEA)
+DESCRIPTION:Stadt Mönchengladbach · Passung 79/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Beschaffung von drei Feuerwehranhängern Netzersatzanlagen (F
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cb823e97bcbdfdb6@ksp-vergaberadar
+DTSTART:20260911T000000
+DTEND:20260911T000000
+SUMMARY:Angebotsfrist: Beschaffung von drei Feuerwehranhängern Netzersatzanlagen (FwA-NEA)
+DESCRIPTION:Stadt Mönchengladbach · Passung 79/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Beschaffung von drei Feuerwehranhängern Netzersatzanlagen (F
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:00e757fdca748111@ksp-vergaberadar
+DTSTART:20260902T000000
+DTEND:20260902T000000
+SUMMARY:Angebotsfrist: Lieferung von Netzersatzanlagen verschiedener Leistungsklassen
+DESCRIPTION:Stadt Hildesheim · Passung 79/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Lieferung von Netzersatzanlagen verschiedener Leistungsklass
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:1a5d9f02d0221007@ksp-vergaberadar
+DTSTART:20260826T000000
+DTEND:20260826T000000
+SUMMARY:Angebotsfrist: Lieferung von drei Stromerzeugern nach DIN 14685 für die Feuerwehr
+DESCRIPTION:Stadt Hildesheim · Passung 79/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Lieferung von drei Stromerzeugern nach DIN 14685 für die Feu
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:a9b65d1298df3e14@ksp-vergaberadar
+DTSTART:20260901T100000
+DTEND:20260901T100000
+SUMMARY:Angebotsfrist: Lieferung\, Montage und Inbetriebsetzung von einer stationären  Netzersatzanlage 
+DESCRIPTION:Wahnbachtalsperrenverband · Passung 73/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Lieferung\, Montage und Inbetriebsetzung von einer stationäre
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:4e8a4da860d9535f@ksp-vergaberadar
+DTSTART:20260918T000000
+DTEND:20260918T000000
+SUMMARY:Angebotsfrist: Lieferung\, Montage und Inbetriebsetzung von einer stationären Netzersatzanlage s
+DESCRIPTION:Wahnbachtalsperrenverband · Passung 73/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Lieferung\, Montage und Inbetriebsetzung von einer stationäre
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:83c04a2a4c16ea79@ksp-vergaberadar
+DTSTART:20260918T000000
+DTEND:20260918T000000
+SUMMARY:Angebotsfrist: Lieferung\, Montage und Inbetriebsetzung von einer stationären Netzersatzanlage s
+DESCRIPTION:Wahnbachtalsperrenverband · Passung 73/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Lieferung\, Montage und Inbetriebsetzung von einer stationäre
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:6518e5d06ab9e4f6@ksp-vergaberadar
+DTSTART:20260914T100000
+DTEND:20260914T100000
+SUMMARY:Angebotsfrist: Errichtung Zweiteinspeisung Campus Süd - Los 320 NEA (Netzersatzanlage Geb. 4287
+DESCRIPTION:Universitätsklinikum Leipzig AöR · Passung 71/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Errichtung Zweiteinspeisung Campus Süd - Los 320 NEA (Netzer
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:b947ac2751746ae4@ksp-vergaberadar
+DTSTART:20260907T090000
+DTEND:20260907T090000
+SUMMARY:Angebotsfrist: Justizvollzugsanstalt Torgau Sozialtherapie
+DESCRIPTION:Staatsbetrieb Sächsisches Immobilien- und Baumanagement\, Zentrale\,  Zentralstelle Vergabe- und Vertragsmanagement · Passung 65/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Justizvollzugsanstalt Torgau Sozialtherapie
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:b976741b86f841ea@ksp-vergaberadar
+DTSTART:20260814T110000
+DTEND:20260814T110000
+SUMMARY:Angebotsfrist: Max-Planck-Forschungsstelle für die Wissenschaft der Pathogene\, Neubau und Umbau
+DESCRIPTION:Max-Planck-Gesellschaft Abt.III · Passung 62/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Max-Planck-Forschungsstelle für die Wissenschaft der Pathoge
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:3fd063d00ed7704e@ksp-vergaberadar
+DTSTART:20260914T100000
+DTEND:20260914T100000
+SUMMARY:Angebotsfrist: Deutschland – Bauarbeiten für Gebäude im Gesundheitswesen – Errichtung Zweiteins
+DESCRIPTION:Universitätsklinikum Leipzig AöR · Passung 59/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Deutschland – Bauarbeiten für Gebäude im Gesundheitswesen – 
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:e0208e78d84b2eed@ksp-vergaberadar
+DTSTART:20260917T100000
+DTEND:20260917T100000
+SUMMARY:Angebotsfrist: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – Anschaffung e
+DESCRIPTION:Stadt Cloppenburg · Passung 59/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmot
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2d89dda4189f1570@ksp-vergaberadar
+DTSTART:20260911T073000
+DTEND:20260911T073000
+SUMMARY:Angebotsfrist: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – Herstellung u
+DESCRIPTION:Kreis Pinneberg · Passung 58/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmot
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:b3bd342a5023ae44@ksp-vergaberadar
+DTSTART:20260825T120000
+DTEND:20260825T120000
+SUMMARY:Angebotsfrist: Lieferung von neun 17 kVA tragbaren Stromerzeugern
+DESCRIPTION:Feuerwehr Bremen · Passung 53/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Lieferung von neun 17 kVA tragbaren Stromerzeugern
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:b5172ebce3365d14@ksp-vergaberadar
+DTSTART:20260911T073000
+DTEND:20260911T073000
+SUMMARY:Angebotsfrist: Herstellung und Lieferung einer mobilen Netzersatzanlage mit 600 kVA-Leistung
+DESCRIPTION:Gebäudemanagement Schleswig-Holstein AöR\, Fachbereich 412 · Passung 53/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Herstellung und Lieferung einer mobilen Netzersatzanlage mit
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:32180de67b71a383@ksp-vergaberadar
+DTSTART:20260922T094500
+DTEND:20260922T094500
+SUMMARY:Angebotsfrist: Deutschland – Stromversorgungsanlagen – Netzersatzanlage Zentraltower
+DESCRIPTION:Staatliches Bauamt Ingolstadt · Passung 51/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Deutschland – Stromversorgungsanlagen – Netzersatzanlage Zen
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:32e6a80216cd1e83@ksp-vergaberadar
+DTSTART:20260922T094500
+DTEND:20260922T094500
+SUMMARY:Angebotsfrist: Netzersatzanlage Zentraltower
+DESCRIPTION:Staatliches Bauamt Ingolstadt · Passung 51/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Netzersatzanlage Zentraltower
+END:VALARM
+END:VEVENT
 END:VCALENDAR
