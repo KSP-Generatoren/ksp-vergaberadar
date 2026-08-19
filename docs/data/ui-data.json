@@ -1,33 +1,33 @@
 {
- "generated_at": "2026-08-19T11:03:28+00:00",
+ "generated_at": "2026-08-19T11:07:59+00:00",
  "sources": [
   {
    "name": "TED",
    "ok": false,
    "count": 0,
    "error": "Client error '400 Bad Request' for url 'https://api.ted.europa.eu/v3/notices/search'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400",
-   "last": "2026-08-19T11:03:28"
+   "last": "2026-08-19T11:07:58"
   },
   {
    "name": "Datenservice Bund",
    "ok": false,
    "count": 0,
    "error": "Client error '406 ' for url 'https://oeffentlichevergabe.de/api/notice-exports?from=2026-08-05&format=xml'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406",
-   "last": "2026-08-19T11:03:28"
+   "last": "2026-08-19T11:07:58"
   },
   {
    "name": "Vergabe.NRW",
    "ok": false,
    "count": 0,
    "error": "[Errno -2] Name or service not known",
-   "last": "2026-08-19T11:03:28"
+   "last": "2026-08-19T11:07:58"
   },
   {
    "name": "cosinex",
    "ok": true,
    "count": 18,
    "error": "",
-   "last": "2026-08-19T11:03:28"
+   "last": "2026-08-19T11:07:58"
   }
  ],
  "notices": [
