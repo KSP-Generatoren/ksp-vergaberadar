@@ -171,6 +171,18 @@ DESCRIPTION:Frist in 3 Tagen: Deutschland – Stromerzeugungsaggregate mit Selbs
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:7ede34898c6cb49a@ksp-vergaberadar
+DTSTART:20260917T100000
+DTEND:20260917T100000
+SUMMARY:Angebotsfrist: Anschaffung einer mobilen Netzersatzanlage 630 kVA
+DESCRIPTION:Stadt Cloppenburg · Passung 59/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Anschaffung einer mobilen Netzersatzanlage 630 kVA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:2d89dda4189f1570@ksp-vergaberadar
 DTSTART:20260911T073000
 DTEND:20260911T073000
