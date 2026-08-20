@@ -1,33 +1,33 @@
 {
- "generated_at": "2026-08-20T10:49:33+00:00",
+ "generated_at": "2026-08-20T15:53:55+00:00",
  "sources": [
   {
    "name": "TED",
    "ok": true,
    "count": 55,
    "error": "",
-   "last": "2026-08-20T10:49:14"
+   "last": "2026-08-20T15:53:41"
   },
   {
    "name": "Datenservice Bund",
    "ok": true,
    "count": 130,
    "error": "",
-   "last": "2026-08-20T10:49:14"
+   "last": "2026-08-20T15:53:41"
   },
   {
    "name": "Vergabe.NRW",
    "ok": true,
    "count": 8,
    "error": "",
-   "last": "2026-08-20T10:49:14"
+   "last": "2026-08-20T15:53:41"
   },
   {
    "name": "cosinex",
    "ok": true,
    "count": 10,
    "error": "",
-   "last": "2026-08-20T10:49:14"
+   "last": "2026-08-20T15:53:41"
   }
  ],
  "notices": [
@@ -13995,6 +13995,132 @@
   {
    "id": "32e6a80216cd1e83",
    "sev": "info",
+   "when": "2026-08-20 15:53:54",
+   "file": "298502",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b5172ebce3365d14",
+   "sev": "info",
+   "when": "2026-08-20 15:53:51",
+   "file": "121016296",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b3bd342a5023ae44",
+   "sev": "info",
+   "when": "2026-08-20 15:53:48",
+   "file": "TenderingProcedureDetails",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "8b2e345002ef0043",
+   "sev": "info",
+   "when": "2026-08-20 15:53:46",
+   "file": "CXW1YYDDYYNNYZE5",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b947ac2751746ae4",
+   "sev": "info",
+   "when": "2026-08-20 15:53:45",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "6518e5d06ab9e4f6",
+   "sev": "info",
+   "when": "2026-08-20 15:53:44",
+   "file": "zustellweg-auswaehlen",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "cc1de1898c70f18d",
+   "sev": "info",
+   "when": "2026-08-20 15:53:44",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "a9b65d1298df3e14",
+   "sev": "info",
+   "when": "2026-08-20 15:53:43",
+   "file": "CXPTY6DDGYN",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32c6556bc3a86e9d",
+   "sev": "info",
+   "when": "2026-08-20 15:53:42",
+   "file": "documents",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32e6a80216cd1e83",
+   "sev": "info",
    "when": "2026-08-20 10:49:31",
    "file": "298502",
    "what": "geaendert",
@@ -14416,104 +14542,6 @@
    "id": "1a8707ae6315b702",
    "sev": "info",
    "when": "2026-08-19 11:39:00",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b3bd342a5023ae44",
-   "sev": "info",
-   "when": "2026-08-19 11:39:00",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "8b2e345002ef0043",
-   "sev": "info",
-   "when": "2026-08-19 11:38:58",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b947ac2751746ae4",
-   "sev": "info",
-   "when": "2026-08-19 11:38:57",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "cc1de1898c70f18d",
-   "sev": "info",
-   "when": "2026-08-19 11:38:56",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "6518e5d06ab9e4f6",
-   "sev": "info",
-   "when": "2026-08-19 11:38:55",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "a9b65d1298df3e14",
-   "sev": "info",
-   "when": "2026-08-19 11:38:54",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32c6556bc3a86e9d",
-   "sev": "info",
-   "when": "2026-08-19 11:38:53",
    "file": "(Erstabzug)",
    "what": "neu",
    "diff": [
