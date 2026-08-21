@@ -1,5 +1,5 @@
 {
- "last_sync": "2026-08-21T04:57:49",
+ "last_sync": "2026-08-21T10:49:30",
  "sources": [
   {
    "name": "TED",
@@ -16,7 +16,7 @@
   {
    "name": "Vergabe.NRW",
    "ok": true,
-   "count": 8,
+   "count": 10,
    "error": ""
   },
   {
@@ -26,7 +26,7 @@
    "error": ""
   }
  ],
- "total": 195,
- "new": 14,
+ "total": 197,
+ "new": 2,
  "go": 16
 }

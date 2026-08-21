@@ -1,33 +1,33 @@
 {
- "generated_at": "2026-08-21T04:58:12+00:00",
+ "generated_at": "2026-08-21T10:49:46+00:00",
  "sources": [
   {
    "name": "TED",
    "ok": true,
    "count": 51,
    "error": "",
-   "last": "2026-08-21T04:57:49"
+   "last": "2026-08-21T10:49:30"
   },
   {
    "name": "Datenservice Bund",
    "ok": true,
    "count": 126,
    "error": "",
-   "last": "2026-08-21T04:57:49"
+   "last": "2026-08-21T10:49:30"
   },
   {
    "name": "Vergabe.NRW",
    "ok": true,
-   "count": 8,
+   "count": 10,
    "error": "",
-   "last": "2026-08-21T04:57:49"
+   "last": "2026-08-21T10:49:30"
   },
   {
    "name": "cosinex",
    "ok": true,
    "count": 10,
    "error": "",
-   "last": "2026-08-21T04:57:49"
+   "last": "2026-08-21T10:49:30"
   }
  ],
  "notices": [
@@ -14879,9 +14879,233 @@
     }
    ],
    "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:nrw",
+   "source_id": "1127833",
+   "title": "Rathaus Notstromversorgung",
+   "description": "",
+   "buyer": "Stadt Düren",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VOB/AVergebener Auftrag",
+   "kind": "award",
+   "value_eur": null,
+   "published": "2026-08-21",
+   "deadline": null,
+   "notice_url": "https://www.evergabe.nrw.de/VMPCenter/public/company/projectForwarding.do?pid=1127833",
+   "documents_url": "",
+   "score": 0,
+   "score_reasons": [
+    "vob: -10",
+    "vergebener auftrag: -100",
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Randbegriff (notstrom, notstromversorgung): +12",
+    "Auftraggeber 'stadt': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "aad3c16d0377f921",
+   "bucket": "ablage",
+   "summary": "Stadt Düren schreibt aus: Rathaus Notstromversorgung. Es handelt sich um ein Bauvergabeverfahren nach VOB/A. Das Verfahren ist bereits vergeben und dient nur noch der Marktbeobachtung.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Düren.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vob: -10 · vergebener auftrag: -100 · CPV Kerncode 31127000 (Notstromaggregat): +35 · Randbegriff (notstrom, notstromversorgung): +12 · Auftraggeber 'stadt': +6 — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:aachen",
+   "source_id": "53278",
+   "title": "Rathaus Notstromversorgung",
+   "description": "",
+   "buyer": "Stadt Düren",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "VOB/AVergebener Auftrag",
+   "kind": "award",
+   "value_eur": null,
+   "published": "2026-08-21",
+   "deadline": null,
+   "notice_url": "https://www.vergaben-wirtschaftsregion-aachen.de/VMPSatellite/public/company/projectForwarding.do?pid=53278",
+   "documents_url": "",
+   "score": 0,
+   "score_reasons": [
+    "vob: -10",
+    "vergebener auftrag: -100",
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Randbegriff (notstrom, notstromversorgung): +12",
+    "Auftraggeber 'stadt': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "40aefa1edbb7907e",
+   "bucket": "ablage",
+   "summary": "Stadt Düren schreibt aus: Rathaus Notstromversorgung. Es handelt sich um ein Bauvergabeverfahren nach VOB/A. Das Verfahren ist bereits vergeben und dient nur noch der Marktbeobachtung.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Düren.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "vob: -10 · vergebener auftrag: -100 · CPV Kerncode 31127000 (Notstromaggregat): +35 · Randbegriff (notstrom, notstromversorgung): +12 · Auftraggeber 'stadt': +6 — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
   }
  ],
  "changes": [
+  {
+   "id": "32e6a80216cd1e83",
+   "sev": "info",
+   "when": "2026-08-21 10:49:44",
+   "file": "298502",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b5172ebce3365d14",
+   "sev": "info",
+   "when": "2026-08-21 10:49:40",
+   "file": "121016296",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b3bd342a5023ae44",
+   "sev": "info",
+   "when": "2026-08-21 10:49:38",
+   "file": "TenderingProcedureDetails",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b947ac2751746ae4",
+   "sev": "info",
+   "when": "2026-08-21 10:49:35",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "cc1de1898c70f18d",
+   "sev": "info",
+   "when": "2026-08-21 10:49:34",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "6518e5d06ab9e4f6",
+   "sev": "info",
+   "when": "2026-08-21 10:49:33",
+   "file": "zustellweg-auswaehlen",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "a9b65d1298df3e14",
+   "sev": "info",
+   "when": "2026-08-21 10:49:32",
+   "file": "CXPTY6DDGYN",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32c6556bc3a86e9d",
+   "sev": "info",
+   "when": "2026-08-21 10:49:31",
+   "file": "documents",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
   {
    "id": "09c73d774b132a79",
    "sev": "info",
@@ -15321,118 +15545,6 @@
    "sev": "info",
    "when": "2026-08-20 04:57:26",
    "file": "PublicationControllerServlet",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "8b2e345002ef0043",
-   "sev": "info",
-   "when": "2026-08-20 04:57:26",
-   "file": "CXW1YYDDYYNNYZE5",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "cc1de1898c70f18d",
-   "sev": "info",
-   "when": "2026-08-20 04:57:25",
-   "file": "PublicationControllerServlet",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "6518e5d06ab9e4f6",
-   "sev": "info",
-   "when": "2026-08-20 04:57:24",
-   "file": "zustellweg-auswaehlen",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "a9b65d1298df3e14",
-   "sev": "info",
-   "when": "2026-08-20 04:57:23",
-   "file": "CXPTY6DDGYN",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32c6556bc3a86e9d",
-   "sev": "info",
-   "when": "2026-08-20 04:57:22",
-   "file": "documents",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32e6a80216cd1e83",
-   "sev": "info",
-   "when": "2026-08-19 15:52:16",
-   "file": "298502",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b5172ebce3365d14",
-   "sev": "info",
-   "when": "2026-08-19 15:52:13",
-   "file": "121016296",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b3bd342a5023ae44",
-   "sev": "info",
-   "when": "2026-08-19 15:52:11",
-   "file": "TenderingProcedureDetails",
    "what": "geaendert",
    "diff": [
     [
