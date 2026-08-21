@@ -1,33 +1,33 @@
 {
- "generated_at": "2026-08-21T10:49:46+00:00",
+ "generated_at": "2026-08-21T15:54:20+00:00",
  "sources": [
   {
    "name": "TED",
    "ok": true,
    "count": 51,
    "error": "",
-   "last": "2026-08-21T10:49:30"
+   "last": "2026-08-21T15:53:57"
   },
   {
    "name": "Datenservice Bund",
    "ok": true,
    "count": 126,
    "error": "",
-   "last": "2026-08-21T10:49:30"
+   "last": "2026-08-21T15:53:57"
   },
   {
    "name": "Vergabe.NRW",
    "ok": true,
    "count": 10,
    "error": "",
-   "last": "2026-08-21T10:49:30"
+   "last": "2026-08-21T15:53:57"
   },
   {
    "name": "cosinex",
    "ok": true,
-   "count": 10,
+   "count": 11,
    "error": "",
-   "last": "2026-08-21T10:49:30"
+   "last": "2026-08-21T15:53:57"
   }
  ],
  "notices": [
@@ -700,6 +700,65 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35 · Kernbegriff im Text (stromerzeugungsaggregat): +30 · Auftraggeber 'bundeswehr': +7 — Summe 72 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "cosinex:dtvp",
+   "source_id": "340030",
+   "title": "Netzersatzanlagen - Betriebsstelle Elsfleth",
+   "description": "",
+   "buyer": "Oldenburgisch-Ostfriesischer Wasserverband",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "31127000"
+   ],
+   "procedure": "UVgOAusschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-21",
+   "deadline": "2026-09-11T00:00:00",
+   "notice_url": "https://www.dtvp.de/Satellite/public/company/projectForwarding.do?pid=340030",
+   "documents_url": "",
+   "score": 72,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30",
+    "Auftraggeber 'wasserverband': +7"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "ce6cdb3bf63cb620",
+   "bucket": "go",
+   "summary": "Oldenburgisch-Ostfriesischer Wasserverband schreibt aus: Netzersatzanlagen - Betriebsstelle Elsfleth. Es handelt sich um ein unterschwelliges Verfahren nach UVgO. Angebotsfrist: 11.09.2026 um 00:00 Uhr.",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 11.09.2026 um 00:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Oldenburgisch-Ostfriesischer Wasserverband.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage, netzersatzanlagen): +30 · Auftraggeber 'wasserverband': +7 — Summe 72 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -14997,6 +15056,118 @@
   {
    "id": "32e6a80216cd1e83",
    "sev": "info",
+   "when": "2026-08-21 15:54:16",
+   "file": "298502",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b5172ebce3365d14",
+   "sev": "info",
+   "when": "2026-08-21 15:54:12",
+   "file": "121016296",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b3bd342a5023ae44",
+   "sev": "info",
+   "when": "2026-08-21 15:54:09",
+   "file": "TenderingProcedureDetails",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b947ac2751746ae4",
+   "sev": "info",
+   "when": "2026-08-21 15:54:04",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "cc1de1898c70f18d",
+   "sev": "info",
+   "when": "2026-08-21 15:54:03",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "6518e5d06ab9e4f6",
+   "sev": "info",
+   "when": "2026-08-21 15:54:02",
+   "file": "zustellweg-auswaehlen",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "a9b65d1298df3e14",
+   "sev": "info",
+   "when": "2026-08-21 15:54:00",
+   "file": "CXPTY6DDGYN",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32c6556bc3a86e9d",
+   "sev": "info",
+   "when": "2026-08-21 15:53:59",
+   "file": "documents",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32e6a80216cd1e83",
+   "sev": "info",
    "when": "2026-08-21 10:49:44",
    "file": "298502",
    "what": "geaendert",
@@ -15432,118 +15603,6 @@
    "id": "cc1de1898c70f18d",
    "sev": "info",
    "when": "2026-08-20 10:49:20",
-   "file": "PublicationControllerServlet",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "6518e5d06ab9e4f6",
-   "sev": "info",
-   "when": "2026-08-20 10:49:18",
-   "file": "zustellweg-auswaehlen",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "a9b65d1298df3e14",
-   "sev": "info",
-   "when": "2026-08-20 10:49:17",
-   "file": "CXPTY6DDGYN",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32c6556bc3a86e9d",
-   "sev": "info",
-   "when": "2026-08-20 10:49:16",
-   "file": "documents",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "7ede34898c6cb49a",
-   "sev": "info",
-   "when": "2026-08-20 04:57:36",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32e6a80216cd1e83",
-   "sev": "info",
-   "when": "2026-08-20 04:57:34",
-   "file": "298502",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b5172ebce3365d14",
-   "sev": "info",
-   "when": "2026-08-20 04:57:31",
-   "file": "121016296",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b3bd342a5023ae44",
-   "sev": "info",
-   "when": "2026-08-20 04:57:29",
-   "file": "TenderingProcedureDetails",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b947ac2751746ae4",
-   "sev": "info",
-   "when": "2026-08-20 04:57:26",
    "file": "PublicationControllerServlet",
    "what": "geaendert",
    "diff": [

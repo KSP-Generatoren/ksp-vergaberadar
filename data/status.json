@@ -1,5 +1,5 @@
 {
- "last_sync": "2026-08-21T10:49:30",
+ "last_sync": "2026-08-21T15:53:57",
  "sources": [
   {
    "name": "TED",
@@ -22,11 +22,11 @@
   {
    "name": "cosinex",
    "ok": true,
-   "count": 10,
+   "count": 11,
    "error": ""
   }
  ],
- "total": 197,
- "new": 2,
- "go": 16
+ "total": 198,
+ "new": 1,
+ "go": 17
 }

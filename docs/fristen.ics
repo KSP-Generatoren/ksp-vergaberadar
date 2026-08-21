@@ -123,6 +123,18 @@ DESCRIPTION:Frist in 3 Tagen: Deutschland – Stromerzeugungsaggregate mit Selbs
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:ce6cdb3bf63cb620@ksp-vergaberadar
+DTSTART:20260911T000000
+DTEND:20260911T000000
+SUMMARY:Angebotsfrist: Netzersatzanlagen - Betriebsstelle Elsfleth
+DESCRIPTION:Oldenburgisch-Ostfriesischer Wasserverband · Passung 72/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Netzersatzanlagen - Betriebsstelle Elsfleth
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:6518e5d06ab9e4f6@ksp-vergaberadar
 DTSTART:20260914T100000
 DTEND:20260914T100000
