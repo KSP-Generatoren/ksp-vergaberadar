@@ -111,6 +111,18 @@ DESCRIPTION:Frist in 3 Tagen: Lieferung\, Montage und Inbetriebsetzung von einer
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:3fe3c85caf8bdae8@ksp-vergaberadar
+DTSTART:20260929T130000
+DTEND:20260929T130000
+SUMMARY:Angebotsfrist: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – 6003101373-Bw
+DESCRIPTION:Bundeswehr-Dienstleistungszentrum Rotenburg · Passung 72/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmot
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:6518e5d06ab9e4f6@ksp-vergaberadar
 DTSTART:20260914T100000
 DTEND:20260914T100000
@@ -120,6 +132,18 @@ BEGIN:VALARM
 TRIGGER:-P3D
 ACTION:DISPLAY
 DESCRIPTION:Frist in 3 Tagen: Errichtung Zweiteinspeisung Campus Süd - Los 320 NEA (Netzer
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:09c73d774b132a79@ksp-vergaberadar
+DTSTART:20260921T103000
+DTEND:20260921T103000
+SUMMARY:Angebotsfrist: SG Hesel - Mobiles Notstromaggregat auf einem Anhänger mit Tandemachse für die P
+DESCRIPTION:Samtgemeinde Hesel · Passung 71/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: SG Hesel - Mobiles Notstromaggregat auf einem Anhänger mit T
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -180,6 +204,18 @@ BEGIN:VALARM
 TRIGGER:-P3D
 ACTION:DISPLAY
 DESCRIPTION:Frist in 3 Tagen: Anschaffung einer mobilen Netzersatzanlage 630 kVA
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:027efa26a26e6b66@ksp-vergaberadar
+DTSTART:20260917T100000
+DTEND:20260917T100000
+SUMMARY:Angebotsfrist: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – Anschaffung e
+DESCRIPTION:Stadt Cloppenburg · Passung 59/100
+BEGIN:VALARM
+TRIGGER:-P3D
+ACTION:DISPLAY
+DESCRIPTION:Frist in 3 Tagen: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmot
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT

@@ -1,16 +1,16 @@
 {
- "last_sync": "2026-08-20T15:53:41",
+ "last_sync": "2026-08-21T04:57:49",
  "sources": [
   {
    "name": "TED",
    "ok": true,
-   "count": 55,
+   "count": 51,
    "error": ""
   },
   {
    "name": "Datenservice Bund",
    "ok": true,
-   "count": 130,
+   "count": 126,
    "error": ""
   },
   {
@@ -26,7 +26,7 @@
    "error": ""
   }
  ],
- "total": 203,
- "new": 0,
+ "total": 195,
+ "new": 14,
  "go": 16
 }

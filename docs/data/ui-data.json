@@ -1,33 +1,33 @@
 {
- "generated_at": "2026-08-20T15:53:55+00:00",
+ "generated_at": "2026-08-21T04:58:12+00:00",
  "sources": [
   {
    "name": "TED",
    "ok": true,
-   "count": 55,
+   "count": 51,
    "error": "",
-   "last": "2026-08-20T15:53:41"
+   "last": "2026-08-21T04:57:49"
   },
   {
    "name": "Datenservice Bund",
    "ok": true,
-   "count": 130,
+   "count": 126,
    "error": "",
-   "last": "2026-08-20T15:53:41"
+   "last": "2026-08-21T04:57:49"
   },
   {
    "name": "Vergabe.NRW",
    "ok": true,
    "count": 8,
    "error": "",
-   "last": "2026-08-20T15:53:41"
+   "last": "2026-08-21T04:57:49"
   },
   {
    "name": "cosinex",
    "ok": true,
    "count": 10,
    "error": "",
-   "last": "2026-08-20T15:53:41"
+   "last": "2026-08-21T04:57:49"
   }
  ],
  "notices": [
@@ -647,6 +647,66 @@
   },
   {
    "source": "ted",
+   "source_id": "580357-2026",
+   "title": "Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – 6003101373-BwDLZ Rotenburg Wümme",
+   "description": "Gesamtauftrag",
+   "buyer": "Bundeswehr-Dienstleistungszentrum Rotenburg",
+   "buyer_city": "Rotenburg/Wümme",
+   "nuts": "DE936",
+   "cpv": [
+    "31121100",
+    "31121100"
+   ],
+   "procedure": "open",
+   "kind": "cn-standard",
+   "value_eur": null,
+   "published": "2026-08-21",
+   "deadline": "2026-09-29T13:00:00",
+   "notice_url": "https://ted.europa.eu/de/notice/-/detail/580357-2026",
+   "documents_url": "",
+   "score": 72,
+   "score_reasons": [
+    "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35",
+    "Kernbegriff im Text (stromerzeugungsaggregat): +30",
+    "Auftraggeber 'bundeswehr': +7"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "3fe3c85caf8bdae8",
+   "bucket": "go",
+   "summary": "Bundeswehr-Dienstleistungszentrum Rotenburg schreibt aus: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – 6003101373-BwDLZ Rotenburg Wümme. Angebotsfrist: 29.09.2026 um 13:00 Uhr.",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 29.09.2026 um 13:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Bundeswehr-Dienstleistungszentrum Rotenburg, Rotenburg/Wümme.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31121100, 31121100. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35 · Kernbegriff im Text (stromerzeugungsaggregat): +30 · Auftraggeber 'bundeswehr': +7 — Summe 72 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "ted",
    "source_id": "555948-2026",
    "title": "Deutschland – Notstromaggregat – LV 055 Notstromaggregat",
    "description": "Netzersatzanlage für den Feuerwehr - Neubau",
@@ -1104,6 +1164,66 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (netzersatzanlage, notstromaggregat, stromaggregat): +30 · Auftraggeber 'stadt': +6 — Summe 71 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "25731696",
+   "title": "SG Hesel - Mobiles Notstromaggregat auf einem Anhänger mit Tandemachse für die Pumpstationen der Samtgemeinde Hesel",
+   "description": "Mobiles Notstromaggregat auf einem Anhänger mit Tandemachse für die Pumpstationen der Samtgemeinde Hesel\n\nSG Hesel - Mobiles Notstromaggregat auf einem Anhänger mit Tandemachse für die Pumpstationen der Samtgemeinde Hesel",
+   "buyer": "Samtgemeinde Hesel",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "31127000",
+    "31127000"
+   ],
+   "procedure": "de-open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": null,
+   "deadline": "2026-09-21T10:30:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25731696",
+   "documents_url": "https://www.deutsches-ausschreibungsblatt.de/VN/S-HESEL-2026-0022",
+   "score": 71,
+   "score_reasons": [
+    "CPV Kerncode 31127000 (Notstromaggregat): +35",
+    "Kernbegriff im Text (notstromaggregat, stromaggregat): +30",
+    "Auftraggeber 'gemeinde': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "09c73d774b132a79",
+   "bucket": "go",
+   "summary": "Samtgemeinde Hesel schreibt aus: SG Hesel - Mobiles Notstromaggregat auf einem Anhänger mit Tandemachse für die Pumpstationen der Samtgemeinde Hesel. Angebotsfrist: 21.09.2026 um 10:30 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 21.09.2026 um 10:30 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Samtgemeinde Hesel.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31127000, 31127000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31127000 (Notstromaggregat): +35 · Kernbegriff im Text (notstromaggregat, stromaggregat): +30 · Auftraggeber 'gemeinde': +6 — Summe 71 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -1943,6 +2063,68 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35 · Kernbegriff im Text (netzersatzanlage): +30 · 630 kVA ausserhalb des Portfolios: -20 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 59 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "ted",
+   "source_id": "580820-2026",
+   "title": "Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – Anschaffung einer mobilen Netzersatzanlage 630 kVA",
+   "description": "Das Vergabeverfahren wird als offenes Verfahren nach VgV durchgeführt. Jedes interessierte Unternehmen kann ein Angebot abgeben. Die Angebotsabgabe und die Kommunikation erfolgen ausschließlich elektronisch über die Vergabeplattform. Verhandlungen über Angebote oder Preise finden nicht statt. Nur Angebote, die sämtliche Mindestanforderungen erfüllen, werden in die Zuschlagswertung einbezogen. Die Wertung erfolgt anhand der veröffentlichten Zuschlagskriterien, der Bewertungsmatrix und der verbindlichen Angaben im Technischen Angebotsheft. Lieferung einer vollständig funktionsfähigen, betriebsbereiten, geprüften und straßenzugelassenen mobilen Netzersatzanlage mit mindestens 630 kVA elektrischer Dauerleistung im PRP-Betrieb, 400/230 V, 50 Hz und cos phi 0,8. Die Anlage umfasst insbesondere einen flüssigkeitsgekühlten Dieselmotor der EU-Abgasstufe Stage V mit mindestens 500 kW mechanischer Leistung, einen bürstenlosen Synchrongenerator, eine wetter- und schallgedämmte Haube, ein straßenzugelassenes Tandemfahrgestell, eine Steuerung für automatischen Netzersatz-, Insel- und Netzparallelbetrieb mit automatischer Rücksynchronisierung, eine Leitungstrommelanlage mit Kabelsystemen, Erdungs- und Potenzialausgleichseinrichtungen, automatische Kraftstoffnachfüllung, Beleuchtung und Zubehör. Der integrierte Dieseltank muss ein geometrisches Volumen von mindestens 990 l und eine Betriebsdauer von mindestens zehn Stunden bei 75 % der PRP-Nennleistung ermöglichen. Der Schalldruckpegel darf 68 dB(A) in 7 m Abstand bei 75 % PRP-Nennleistung nicht überschreiten. Zum Leistungsumfang gehören außerdem Kraft- und Betriebsstoffe zur Übergabe, Transport, Werksfunktions- und Lasttest, Inbetriebnahmeunterstützung, förmliche Abnahme, vollständige deutschsprachige Dokumentation und Einweisung des Betriebspersonals.",
+   "buyer": "Stadt Cloppenburg",
+   "buyer_city": "Cloppenburg",
+   "nuts": "DE948",
+   "cpv": [
+    "31121100",
+    "31121100"
+   ],
+   "procedure": "open",
+   "kind": "cn-standard",
+   "value_eur": null,
+   "published": "2026-08-21",
+   "deadline": "2026-09-17T10:00:00",
+   "notice_url": "https://ted.europa.eu/de/notice/-/detail/580820-2026",
+   "documents_url": "",
+   "score": 59,
+   "score_reasons": [
+    "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35",
+    "Kernbegriff im Text (netzersatzanlage, stromerzeugungsaggregat): +30",
+    "630 kVA ausserhalb des Portfolios: -20",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": 630.0,
+   "status": "neu",
+   "uid": "027efa26a26e6b66",
+   "bucket": "pruefen",
+   "summary": "Stadt Cloppenburg schreibt aus: Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – Anschaffung einer mobilen Netzersatzanlage 630 kVA. Die geforderte Leistungsklasse liegt bei etwa 630 kVA und damit außerhalb des KSP-Kernbereichs von 20–200 kVA. Angebotsfrist: 17.09.2026 um 10:00 Uhr.",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 17.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Cloppenburg, Cloppenburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31121100, 31121100. Erkannte Leistungsklasse etwa 630 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35 · Kernbegriff im Text (netzersatzanlage, stromerzeugungsaggregat): +30 · 630 kVA ausserhalb des Portfolios: -20 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 59 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -3196,6 +3378,60 @@
    "vergabenummer": ""
   },
   {
+   "source": "doe",
+   "source_id": "3c3a9f86-c734-49dc-9096-58ded5b9f2dc",
+   "title": "Rahmenvertrag Bekleidung / Los 7: Cargohosen Business & Airport Security",
+   "description": "Die Vergabe zur Sicherstellung der unterbrechungsfreien Beschaffung von Arbeitsschutz-, Feuerwehr- und Dienstbekleidung für ca. 1.700 Bekleidungsträger*innen der FBB GmbH teilt sich in die nachfolgend aufgeführten Lose:\n\nLos 1 | Arbeitsschutz-, Schnittschutz- und Funktionskleidung - ausgeschrieben als Verhandlungsverfahren mit Teilnahmewettbewerb\nInhalt: Basis- und Elektrikerkleidung, Schnittschutzkleidung, Funktionsunterwäsche, Knieeinschubpolster\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 917 Abrufartikel\n\nLos 2 | Warn- und Wetterschutzkleidung | ausgeschrieben als Verhandlungsverfahren mit Teilnahmewettbewerb\nInhalt: Warnschutzwesten, Warnschutzjacken- und Parka, Dienstkleidung/Arbeitsschutz/Airport Security, Wetterschutzparka Feuerwehr, Warnschutz-T-Shirt & Sweatjacke, Rettungsdienst-Jacke\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 1.746 Abrufartikel\n\nLos 3 | Handschuhe, PSA & Kleinteiliges | ausgeschrieben als Bagatelllos\nInhalt: Handschuhe aller Art, Kopf- und Gehörschutz, Schnittschutz-PSA, Augenschutz, Wintermützen, Base Caps, Feuerwehr-Helm & Zubehör\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 255 Abrufartikel\n\nLos 4 | Sicherheitsschuhe & Stiefel | ausgeschrieben als Verhandlungsverfahren mit Teilnahmewettbewerb\nInhalt: S3 Sicherheitshalbschuhe & Knöchelschuhe, Winterhalbstiefel- und Knöchelschuhe, S1-Sicherheitssandale, Feuerwehr-Stiefel, Einsatzschuhe- und Stiefel, Schnittschutzstiefel\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 144 Abrufartikel\n\nLos 5 | Oberbekleidung Workwear & Business | ausgeschrieben als Verhandlungsverfahren mit Teilnahmewettbewerb\nInhalt: T-Shirts & Polos-Shirts, Longsleeve, Sweatshirt, Fleecejacken, Business-T-Shirt & Longsleeves\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 707 Abrufartikel\n\nLos 6 | Sportkleidung Feuerwehr | ausgeschrieben als Bagatelllos\nInhalt: Trainingsanzug, Sportshirt, Sporthose, Sportschuhe\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 96 Abrufartikel\n\nLos 7 | Cargohosen Business & Airport Security | ausgeschrieben als Verhandlungsverfahren mit Teilnahmewettbewerb\nInhalt: Edel-Cargohosen & Multi-Cargo-Einsatzhosen Airport Security\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 559 Abrufartikel\n\nLos 8 | Koppel & Zubehör Airport Security | ausgeschrieben als Bagatelllos\nInhalt: Security-Koppel und Unterkoppel, Handschuhalter, Erste-Hilfe-Tasche, Gürteltasche, Trinkflaschenhalter, Trinkflasche, Nylongürtel\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 1.176 Abrufartikel\n\nLos 9 | Business- und Dienstbekleidung (Schwerkonfektion), Oberbekleidung, Strickwaren & Accessoires | ausgeschrieben als Verhandlungsverfahren mit Teilnahmewettbewerb\nInhalt: Sakko/Blazer, Hosen, Rock, Etuikleid, Hemden & Blusen, Strickpullover/Cardigan, Krawatte/Tuch\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 397 Abrufartikel\n\nLos 10 | Feuerwehrschutzkleidung für die Brandbekämpfung, TH-Kleidung & Dienstkleidung Feuerwehr |ausgeschrieben als Verhandlungsverfahren mit Teilnahmewettbewerb\nInhalt: Jacke & Hose Brandbekämpfung, Handschuhe, Rettungssystem, Jacke & Hose Technische Hilfeleistung, Leibriemen, Kennzeichnungsweste, \nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 1.303 Abrufartikel\n\nLos 11 | Einsatzweste Airport Security | ausgeschrieben als Bagatelllos\nInhalt: ballistische Einsatzweste & Wechselhülle, Tagetasche\nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 280 Abrufartikel\n\nLos 12 | Merchandise | ausgeschrieben als Verhandlungsverfahren mit Teilnahmewettbewerb\nInhalt: T-Shirts & Hoodies für BER-Team, Messe-T-Shirts, Kinderwarnwesten, BER-Schlüsselband & Jojo-Clip, BER-Sneaker usw. \nKalkulatorischer Ansatz zum Zeitpunkt der Bekanntmachung: 4.000 Abrufartikel\n\nZiel ist es, den für den Leistungsbestandteil bestmöglichen Partner zu binden, entscheidend für den Zuschlag ist mithin die Wirtschaftlichkeit der Einzellose. Es wird keine Angebots- und keine Zuschlagslimitierung geben.",
+   "buyer": "Flughafen Berlin Brandenburg GmbH",
+   "buyer_city": "Berlin",
+   "nuts": "",
+   "cpv": [
+    "18100000",
+    "18100000"
+   ],
+   "procedure": "neg-w-call",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-19",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=3c3a9f86-c734-49dc-9096-58ded5b9f2dc",
+   "documents_url": "",
+   "score": 38,
+   "score_reasons": [
+    "Kernbegriff im Text (nea): +30",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "ef3208e88ea55c06",
+   "bucket": "ablage",
+   "summary": "Flughafen Berlin Brandenburg GmbH schreibt aus: Rahmenvertrag Bekleidung / Los 7: Cargohosen Business & Airport Security. mit Rahmenvereinbarungscharakter.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Flughafen Berlin Brandenburg GmbH, Berlin.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 18100000, 18100000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Kernbegriff im Text (nea): +30 · Lieferleistung: +8 — Summe 38 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
    "source": "ted",
    "source_id": "561746-2026",
    "title": "Deutschland – Notstromversorgungsaggregate – Stromerzeugeraggregate u.a. - 6003100804 - VB338",
@@ -3851,6 +4087,71 @@
     {
      "q": "Wer ist die Vergabestelle?",
      "a": "Stadt Höxter.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45, 45, 43. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Kernbegriff im Text (nea): +30 · Auftraggeber 'stadt': +6 — Summe 36 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "25729344",
+   "title": "Erneuerung der RWA-Anlagen im Anhaltischen Berufsschulzentrum Hugo Junkers, Junkersstraße 30, 06847 Dessau-Roßlau - Los 1 Metallbauarbeiten / Rauch-Wärme-Abzüge",
+   "description": "a) Öffentlicher Auftraggeber (Vergabestelle)\n\nName und Anschrift:\nStadt Dessau-Roßlau, Zentr. Vergabestelle\nZerbster Str. 4\n06844 Dessau-Roßlau\nTelefon:\n+49 340/204-2260\nFax:\n+49 340-2042691360\nE-Mail:\nausschreibung@dessau-rosslau.de\nInternet:\nwww.dessau-rosslau.de\n\nb)\n\nVergabeverfahren:\nÖffentliche Ausschreibung, VOB/A\nVergabenummer:\n46/2026 De-Ro\n\nc) Angaben zum elektronischen Vergabeverfahren und zur Ver- und Entschlüsselung der Unterlagen\n\nZugelassene Angebotsabgabe\nelektronisch\nin Textform\nmit fortgeschrittener/m Signatur/Siegel\nmit qualifizierter/m Signatur/Siegel\n\nd) Art des Auftrags\n\nAusführung von Bauleistungen\n\ne) Ort der Ausführung\n\nStadt Dessau-Roßlau, Anhaltisches Berufsschulzentrum \"Hugo Junkers\", Junkersstraße 30, 06847 Dessau-Roßlau\n\nf) Art und Umfang der Leistung, ggf. aufgeteilt nach Losen\n\nArt der Leistung:\nLos 1 Metallbauarbeiten / Rauch-Wärme-Abzüge\nUmfang der Leistung:\n6 St Großes Fenster ca. 2600 mm x 770 mm\n12 St Kleines Fenster ca. 1600 mm x 770 mm\n108 St Trapezfenster ca. 2160 mm x 570 / 940 mm\n13 St Rechteckfenster ca. 1650x640mm\n26 St Kettenantrieb D4 als Zugbrücke für Kippfenster\n24 St Profilintegrierter mechatronischer Kipp-Beschlag\n147 St F 2a Verriegelungsantrieb\n168 St BF 2b Elementkontroller\n28 St Linearantrieb LDH15 für Dachfenster\n22 St Modulzentrale\n67 St RWA-Bedienstellen\n37 St Optischer Rauchmelder VdS\n\ng) Angaben über den Zweck der baulichen Anlage oder des Auftrags, wenn auch Planungsleistungen gefordert werden\n\nZweck der baulichen Anlage:\nZweck des Auftrags:\n\nh) Aufteilung in Lose (Art und Umfang der Lose siehe Buchstabe f)\n\nVergabe nach Losen:\nNein\n\ni) Ausführungsfristen\n\nBeginn der Ausführung:\nFertigstellung oder Dauer der Leistungen:\n28.01.2028\nweitere Fristen:\nAusführungsbeginn: spätestens 5 Werktage nach Zugang des Auftragsschreibens\nBetriebsfertige Installation am 10.12.2027\nFertigstellung der Gesamtleistung am 28.01.2028\n\nj) Nebenangebote\n\nnicht zugelassen\n\nk) mehrere Hauptangebote\n\nzugelassen\n\nl) Bereitstellung/Anforderung der Vergabeunterlagen\n\nVergabeunterlagen werden elektronisch zur Verfügung gestellt\nunter:\nhttps://www.evergabe.de/unterlagen/54321-Tender-19f8d3357e8-713de6729d753a52\nMaßnahmen zum Schutz vertraulicher Informationen:\nNein\nNachforderung:\nFehlende Unterlagen, deren Vorlage mit dem Angebot gefordert war, werden nachgefordert\n\no) Ablauf der Angebotsfrist\n\nam:\n27.08.2026\num:\n09:00 Uhr\nAblauf der Bindefrist am:\n29.10.2026\n\np)\n\nAdresse für elektronische Angebote (URL): https://www.evergabe.de\nAnschrift für schriftliche Angebote: -ENTFÄLLT- (es sind ausschließlich elektronische Angebote zugelassen)\n\nq) Sprache, in der die Angebote abgefasst sein müssen\n\nDeutsch\n\nr) Zuschlagskriterien\n\nnachfolgende Zuschlagskriterien, ggf. einschl. Gewichtung:\nNiedrigster Preis\n\ns) Eröffnungstermin\n\nam:\n27.08.2026\num:\n09:00\nOrt:\nStadt Dessau-Roßlau über www.eVergabe.de\nPersonen, die bei der Eröffnung anwesend sein dürfen:\nEntfällt, entsprechend § 14 VOB/A sind keine Bieter und Bevollmächtigen zum Öffnungstermin zugelassen.\n\nt) geforderte Sicherheiten\n\nSoweit die Auftragssumme mindestens 250.000 Euro ohne Umsatzsteuer beträgt, ist Sicherheit für die Vertragserfüllung in Höhe von fünf Prozent der Auftragssumme (inkl. Umsatzsteuer, ohne Nachträge) zu leisten.\nDie Sicherheit für Mängelansprüche beträgt drei Prozent der Summe der Abschlagszahlungen zum Zeitpunkt der Abnahme (vorläufige Abrechnungssumme).\n\nu) Wesentliche Finanzierungs- und Zahlungsbedingungen und/oder Hinweise auf die maßgeblichen Vorschriften, in denen sie enthalten sind\n\ngemäß VOB/B\n\nv) Rechtsform der/Anforderung an Bietergemeinschaften\n\nGesamtschuldnerisch haftend mit bevollmächtigtem Vertreter\n\nw) Beurteilung der Eignung\n\nPräqualifizierte Unternehmen führen den Nachweis der Eignung durch den Eintrag in die Liste des Vereins für die Präqualifikation von Bauunternehmen e.V. (Präqualifikationsverzeichnis). Bei Einsatz von Nachunternehmen ist auf gesondertes Verlangen nachzuweisen, dass diese präqualifiziert sind oder die Voraussetzung für die Präqualifikation erfüllen.\nNicht präqualifizierte Unternehmen haben als vorläufigen Nachweis der Eignung mit dem Angebot das ausgefüllte Formblatt ''Eigenerklärung zur Eignung'' vorzulegen. Bei Einsatz von Nachunternehmen sind auf gesondertes Verlangen die Eigenerklärungen auch für diese abzugeben. Sind die Nachunternehmen präqualifiziert, reicht die Angabe der Nummer, unter der diese in der Liste des Vereins für die Präqualifikation von Bauunternehmen e.V. (Präqualifikationsverzeichnis) geführt werden.\nGelangt das Angebot in die engere Wahl, sind die Eigenerklärungen (auch die der Nachunternehmen) auf gesondertes Verlangen durch Vorlage der in der ''Eigenerklärung zur Eignung'' genannten Bescheinigungen zuständiger Stellen zu bestätigen. Bescheinigungen, die nicht in deutscher Sprache abgefasst sind, ist eine Übersetzung in die deutsche Sprache beizufügen.\nDas Formblatt 'Eigenerklärung zur Eignung' ist erhältlich:\nSiehe Vergabeunterlagen\nDarüber hinaus hat der Bieter zum Nachweis seiner Fachkunde folgende Angaben gemäß § 6a Abs. 3 VOB/A zu machen:\nWeitere Nachweise nach § 6a VOB/A/Angaben/Unterlagen sind mit dem Angebot vorzulegen, auf gesondertes Verlangen der Vergabestelle auch für Nachunternehmer:\nEntfällt!\nWeitere Nachweise nach § 6a VOB/A/Angaben/Unterlagen (auch für Nachunternehmer) auf Verlangen der Vergabestelle vorzulegen:\nFreistellungsbescheinigung nach § 48 b Einkommenssteuergesetz, Artikel 4 des Gesetzes zur Eindämmung illegaler Betätigung im Baugewerbe vom 30. 08. 2001 (soweit vorhanden)\nUrkalkulation\nNachweis der aktuellen Haftpflichtversicherung zu Personen- und Sachschäden\nProduktdatenblätter benannter Fabrikate\nBestätigung vom Systemlieferanten zur Nachkaufgarantie für Aluminium Fenster- und Beschlagsysteme von mindestens 10 Jahren\nZertifikat Sachkunde DIN 18232-10: Nachweis der Benennung einer verantwortlichen Fachkraft; Nachweis der Fachkenntnis der verantwortlichen Fachkraft für die jeweilige Brandsicherheitsanlage im Anwendungsbereich der DIN 18232-10; Nachweis der Kenntnisse der verantwortlichen Fachkraft über die zu verwendenden Systeme im Anwendungsbereich der DIN 18232-10\nHinweise zum Bestbieterprinzip gemäß § 8 TVergG LSA\n1. Die nach diesem Gesetz und nach den in § 1 (2) Satz 1 genannten Vergabe- und Vertragsordnungen verpflichtend vorzulegenden Erklärungen und Nachweise werden nur von demjenigen Bieter, dem nach Abschluss der Wertung der Angebote der Zuschlag erteilt werden soll (Bestbieter), nachgefordert.\n2. Der Auftraggeber behält sich vor, parallel zum Bestbieter auch die nachrangigen Bieter zur Vorlage der Erklärungen und Nachweise nach Nr. 1 aufzufordern.\n3. Nachforderungen und Abforderungen der Erklärungen und Nachweise erfolgen elektronisch über die eVergabe-Plattform www.eVergabe.de.\n4. Der Bieter hat die verpflichtend vorzulegenden Erklärungen und Nachweise nach Aufforderung innerhalb einer Frist von mindestens 3 und höchstens 10 Kalendertagen vorzulegen.\n\nx) Nachprüfung behaupteter Verstöße\n\nNachprüfungsstelle (§ 21 VOB/A):\nLandesverwaltungsamt Vergabeprüfstelle oder 3. Vergabekammer beim Landesverwaltungsamt\nErnst-Kamieth-Str. 2\n06112 Halle (Saale)\n\n\nBrandschutz,Metallbau/ Stahlbau (Ausbau),Fenster/ Türen (Holz),Fenster/ Türen (Kunststoff),Metallbau/ Stahlbau (konstruktiv),Fenster/ Türen (Metall),Klimatechnik-/ Lüftungstechnik,Brandschutz (Haustechnik)",
+   "buyer": "Stadt Dessau-Roßlau, Zentr. Vergabestelle",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "45",
+    "45",
+    "43",
+    "44",
+    "71",
+    "43",
+    "44",
+    "71"
+   ],
+   "procedure": "de-open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": null,
+   "deadline": "2026-08-27T09:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25729344",
+   "documents_url": "https://www.evergabe.de/auftraege/suche-ueber-vergabestellen/Stadt%2520Dessau%252DRo%25C3%259Flau%252C%2520Zentr%252E%2520Vergabestelle/3429205",
+   "score": 36,
+   "score_reasons": [
+    "Kernbegriff im Text (nea): +30",
+    "Auftraggeber 'stadt': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "079a690a576dc7e2",
+   "bucket": "ablage",
+   "summary": "Stadt Dessau-Roßlau, Zentr. Vergabestelle schreibt aus: Erneuerung der RWA-Anlagen im Anhaltischen Berufsschulzentrum Hugo Junkers, Junkersstraße 30, 06847 Dessau-Roßlau - Los 1 Metallbauarbeiten / Rauch-Wärme-Abzüge. Angebotsfrist: 27.08.2026 um 09:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 27.08.2026 um 09:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Dessau-Roßlau, Zentr. Vergabestelle.",
      "c": "Bekanntmachung, Auftraggeber"
     },
     {
@@ -5070,6 +5371,70 @@
    "vergabenummer": ""
   },
   {
+   "source": "doe",
+   "source_id": "17a0cd06-bc3d-4787-8d6a-cedb9ffc3dd0",
+   "title": "10023959-Conseils techniques et organisationnels pour améliorer la coordination et la promotion de la décentralisation",
+   "description": "The \"Promotion of Responsible Governance in Mauritania II (ProGResp II)\" project is part of the German cooperation programme for peace and social cohesion in Mauritania. It is being implemented in a context where the promotion of peace, social cohesion, and good governance is a key driver of the country's sustainable development. Through this module, the initiative focuses on strengthening democracy, the rule of law, transparency, and accountability within public institutions. By promoting more inclusive, participatory, and effective governance, the programme aims to create the conditions for improved public service delivery and enhanced dialogue between institutions and citizens, thereby contributing to greater stability, trust, and social cohesion.\n\nThe Project addresses a major challenge that continues to hinder the decentralization process in Mauritania. Despite the national authorities, clear political commitment to promoting decentralization as a driver of local development, institutional shortcomings persist in the management, steering, and coordination of the process. Consultation and coordination mechanisms among ministries, local authorities, and non-state actors remain insufficiently structured, limiting the coherence of interventions and the complementarity of actions.\n\nFurthermore, the allocation of powers and responsibilities among the different levels of governance remains, at times, unclear, despite the existence of a core legal and regulatory framework. This situation reduces the effectiveness of public action and limits the ability of institutions to respond adequately to the needs and expectations of the population. Against this background, the Project aims to improve the coordinated implementation of the decentralization process by strengthening cooperation among the various institutional actors, particularly at the central level, and by developing governance mechanisms that promote better coordination, greater involvement of local authorities in decision-making, and more effective management of local public policies.\n\nThe programme also contributes to the implementation of Mauritania's national commitments to sustainable development by aligning with the national development strategy for accelerated growth and shared prosperity, which provides the framework for achieving the objectives of the United Nations 2030 Agenda. Its objective is to sustainably strengthen the capacities of public actors involved in local governance at the national level, enabling them to effectively implement the National Strategy for Decentralization and Local Development (SNDDL).\n\nWhile the ultimate beneficiaries are the Mauritanian population as a whole, estimated at nearly 4.7 million people, the direct target groups are executives, managers, and staff within central government institutions involved in local governance, as well as civil society actors engaged in decentralization, including associations of local authorities. By strengthening the capacities of these actors and improving territorial governance mechanisms, the module aims to foster a more effective, transparent, and inclusive institutional environment capable of promoting balanced development, strengthening citizen participation, and contributing sustainably to peace, social cohesion, and improved living conditions for the people of Mauritania.",
+   "buyer": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH",
+   "buyer_city": "Eschborn",
+   "nuts": "",
+   "cpv": [
+    "79416000",
+    "79416000",
+    "79341400",
+    "79416200",
+    "79419000",
+    "79341400",
+    "79416200",
+    "79419000"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-19",
+   "deadline": "2026-09-21T12:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=17a0cd06-bc3d-4787-8d6a-cedb9ffc3dd0",
+   "documents_url": "https://ausschreibungen.giz.de/Satellite/notice/CXTRYY6DYY8XXXBE/documents",
+   "score": 30,
+   "score_reasons": [
+    "Kernbegriff im Text (nea): +30"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "e031bff0d672332c",
+   "bucket": "ablage",
+   "summary": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH schreibt aus: 10023959-Conseils techniques et organisationnels pour améliorer la coordination et la promotion de la décentralisation. Angebotsfrist: 21.09.2026 um 12:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 21.09.2026 um 12:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, Eschborn.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 79416000, 79416000, 79341400. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Kernbegriff im Text (nea): +30 — Summe 30 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
    "source": "ted",
    "source_id": "546261-2026",
    "title": "Deutschland – Elektrische Ausrüstung – Lieferung, Montage, Inbetriebnahme und Instandhaltung von Ladeinfrastruktur 5. BA - TWB",
@@ -5827,6 +6192,58 @@
   },
   {
    "source": "doe",
+   "source_id": "b863a5f6-9eb9-40a0-ae09-a3c4db5d15f8",
+   "title": "Lieferung von 2 UTV für die Fachdienste",
+   "description": "Lieferung von zwei neuen / neuwertigen, geländegängigen Utility Task Vehicle (UTV) einschließlich feuerwehrtechnischem Ausbau, Zulassung, Einweisung sowie vollständiger Dokumentation.\nDas Fahrzeug dient insbesondere der\nVegetationsbrandbekämpfung\nWald- und Flächenbrandeinsätzen\nHochwasserlagen\nRettungseinsätzen im unwegsamen Gelände\nMaterial- und Personaltransport\nErkundung und Meldediensten z.B. bei Blackoutlagen\nDas angebotene Fahrzeug muss den einschlägigen gesetzlichen Vorschriften, der StVZO sowie den gültigen DIN-, EN- und ECE-Richtlinien entsprechen\nLieferung von zwei neuen / neuwertigen, geländegängigen Utility Task Vehicle (UTV) einschließlich feuerwehrtechnischem Ausbau, Zulassung, Einweisung sowie vollständiger Dokumentation.\nDas Fahrzeug dient insbesondere der\nVegetationsbrandbekämpfung\nWald- und Flächenbrandeinsätzen\nHochwasserlagen\nRettungseinsätzen im unwegsamen Gelände\nMaterial- und Personaltransport\nErkundung und Meldediensten z.B. bei Blackoutlagen\nDas angebotene Fahrzeug muss den einschlägigen gesetzlichen Vorschriften, der StVZO sowie den gültigen DIN-, EN- und ECE-Richtlinien entsprechen",
+   "buyer": "Landkreis Harz",
+   "buyer_city": "Halberstadt",
+   "nuts": "",
+   "cpv": [],
+   "procedure": "de-open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-20",
+   "deadline": "2026-08-31T09:30:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=b863a5f6-9eb9-40a0-ae09-a3c4db5d15f8",
+   "documents_url": "https://www.evergabe-online.de/tenderdetails.html?id=884465",
+   "score": 26,
+   "score_reasons": [
+    "Randbegriff (blackout): +12",
+    "Auftraggeber 'landkreis': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "dbe5ab3a71ea32a4",
+   "bucket": "ablage",
+   "summary": "Landkreis Harz schreibt aus: Lieferung von 2 UTV für die Fachdienste. Angebotsfrist: 31.08.2026 um 09:30 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 31.08.2026 um 09:30 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Landkreis Harz, Halberstadt.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Randbegriff (blackout): +12 · Auftraggeber 'landkreis': +6 · Lieferleistung: +8 — Summe 26 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
    "source_id": "3d75664b-456a-45f8-926f-5ad2f0393f53",
    "title": "Ex-ante-Transparenzbekanntmachung:\nBeschaffung eines integrierten Entgeltabrechnungssystems für das bestehende HR-System",
    "description": "Das Ortenau Klinikum gKAöR beabsichtigt, den Auftrag zur Bereitstellung, lizenzrechtlichen Freischaltung und zum Betrieb eines integrierten Entgeltabrechnungsmoduls (P&I LogaHR Payroll) an die P&I Personal & Informatik AG im Wege eines Verhandlungsverfahrens ohne Teilnahmewettbewerb nach § 14 Abs. 4 Nr. 2 lit. b) und c) VgV zu vergeben. Mit dieser Bekanntmachung informiert der Auftraggeber gemäß § 135 Abs. 3 Satz 1 GWB über seine Absicht, den Auftrag ohne vorherige Veröffentlichung einer Auftragsbekanntmachung zu vergeben. Der Vertrag wird frühestens zehn Kalendertage nach dem Tag nach der Veröffentlichung dieser Bekanntmachung geschlossen.\nDas Ortenau Klinikum betreibt als führendes HR-System P&I LogaHR des Herstellers P&I Personal & Informatik AG, das nach einem wettbewerblichen Vergabeverfahren beschafft wurde. Die Entgeltabrechnung wird derzeit durch ein separates System (Fidelis von SDWorx) erbracht, das über Schnittstellen an das noch in Funktion befindliche System Personal Office von Krammer & Partner angebunden ist. Beschaffungsgegenstand ist die Aktivierung der Entgeltabrechnung durch lizenzrechtliche Freischaltung zur Vervollständigung von P&I LogaHR einschließlich Betrieb, Wartung und laufender gesetzlicher Aktualisierung als SaaS-Lösung.\nDas Alleinstellungsmerkmal der P&I Personal & Informatik AG ergibt sich aus zwei kumulativ vorliegenden Gründen: Erstens ist das Modul P&I LogaHR Payroll urheberrechtlich geschützter integraler Bestandteil der Plattform und ausschließlich durch P&I mittels lizenzrechtlicher Freischaltung aktivierbar; Drittlizenzen wurden nicht vergeben (§ 14 Abs. 4 Nr. 2 lit. c) VgV). Zweitens ist aus technischen Gründen kein Wettbewerb vorhanden, da die Häufung folgender Anforderungen kumulativ nur durch P&I erfüllt werden kann: jährlich zu erneuernde ITSG-/GKV-Systemzertifizierung als gesetzliche Zulassungsvoraussetzung; kumulative KRITIS-/NIS-2-Sicherheitsanforderungen (Private Cloud, BSI ISO 27001, BSI C5 Typ 2, deutsches Rechenzentrum, eigener Rechenzentrumsbetrieb); systemarchitektonisch ausgeschlossene bidirektionale Stammdatenschnittstellen zu externen Systemen; Anforderung einer einheitlichen, redundanzfreien Datenbankarchitektur; latenzfreie IAM-Konsistenz (Imprivata Unimate); tarifkomplexe Zeitwirtschaft-/Payroll-Konsistenz (TVöD, AVR) sowie gesetzliche Meldepflichten im Single-Point-of-Change-Prinzip (§ 14 Abs. 4 Nr. 2 lit. b) VgV).\nDer Auftraggeber hat zur Vorbereitung eine europaweite Markterkundung nach § 28 VgV durchgeführt (Bekanntmachungs-ID CXP4YEMMXQ9, veröffentlicht 30.06.2026, Frist 30.07.2026). Auf die Markterkundung, die alle Anforderungen vollständig kommuniziert hat, hat ausschließlich P&I eine substanzielle Interessenbekundung eingereicht. Kein anderer Marktteilnehmer hat dargelegt, die kumulativen Anforderungen erfüllen zu können. Eine vernünftige Alternative oder Ersatzlösung ist nicht vorhanden (§ 14 Abs. 6 VgV). Der mangelnde Wettbewerb ist nicht das Ergebnis einer künstlichen Einschränkung der Auftragsvergabeparameter, sondern Folge der bestehenden, wettbewerblich beschafften Systemarchitektur sowie der gesetzlichen Anforderungen im Gesundheitswesen. Die vollständige Begründung ist in Abschnitt 6.1 dargestellt.",
@@ -6543,6 +6960,69 @@
     {
      "q": "Wo sind die Vergabeunterlagen?",
      "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Randcode 09134200: +12 · Lieferleistung: +8 — Summe 20 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "ted",
+   "source_id": "578542-2026",
+   "title": "Deutschland – Dieselkraftstoff (EN 590) – Kraftstoffe",
+   "description": "Lieferung von Diesel, AdBlue sowie Superkraftstoff E5 für das Jahr 2027. Optional für das Jahr 2028.",
+   "buyer": "Rhein-Neckar-Verkehr GmbH",
+   "buyer_city": "Mannheim",
+   "nuts": "DE126",
+   "cpv": [
+    "09134220",
+    "09132000",
+    "09134200",
+    "09134220",
+    "09132000",
+    "09134200"
+   ],
+   "procedure": "open",
+   "kind": "cn-standard",
+   "value_eur": 8382966.23,
+   "published": "2026-08-21",
+   "deadline": "2026-09-21T10:00:00",
+   "notice_url": "https://ted.europa.eu/de/notice/-/detail/578542-2026",
+   "documents_url": "",
+   "score": 20,
+   "score_reasons": [
+    "CPV Randcode 09134200: +12",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "b84f882994dcac65",
+   "bucket": "ablage",
+   "summary": "Rhein-Neckar-Verkehr GmbH schreibt aus: Deutschland – Dieselkraftstoff (EN 590) – Kraftstoffe. Angebotsfrist: 21.09.2026 um 10:00 Uhr.",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 21.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Rhein-Neckar-Verkehr GmbH, Mannheim.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 09134220, 09132000, 09134200. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
      "c": "eForms BT-15 Documents URL"
     },
     {
@@ -7903,6 +8383,240 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "Randbegriff (kritis): +12 · Auftraggeber 'klinik': +6 — Summe 18 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "ted",
+   "source_id": "581173-2026",
+   "title": "Deutschland – Bauarbeiten – Generalumbau der zentralen Notaufnahme zum integrierten Notfallzentrum",
+   "description": "Freimachen und Herrichten des Baufeldes einschließlich Rückbau befestigter Flächen und sonstiger Außenbauteile, Demontage vorhandener Überdachungen, Rodung von Bewuchs und Bäumen sowie Abtrag und Entsorgung von Oberboden. ─ca. 1.800 m² befestigte Flächen und Parkdeckbeläge, davon ca. 1.270 m² Straßen-betonplatten und 520 m² Asphaltflächen ─ca. 150 m² Überdachungen ─ca. 150 m² Gitterabdeckungen und Absturzsicherungen ─ca. 400 m² Rodungs- und Oberbodenflächen",
+   "buyer": "SRH Zentralklinikum Suhl GmbH",
+   "buyer_city": "Suhl",
+   "nuts": "DEG0S",
+   "cpv": [
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45262670",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45113000",
+    "45262100",
+    "45000000",
+    "45112700",
+    "45331000",
+    "45331200",
+    "45331200",
+    "45311000",
+    "45311000",
+    "45314000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45315300",
+    "45232460",
+    "45100000",
+    "45111000",
+    "45223220",
+    "45441000",
+    "45443000",
+    "45262320",
+    "45324000",
+    "45260000",
+    "45420000",
+    "44221200",
+    "44221300",
+    "45341000",
+    "45430000",
+    "45431000",
+    "45431000",
+    "45410000",
+    "45442100",
+    "45442100",
+    "45420000",
+    "44423400",
+    "44520000",
+    "44522000",
+    "90910000",
+    "45112710",
+    "45315300",
+    "42416100",
+    "24111500",
+    "48921000"
+   ],
+   "procedure": "open",
+   "kind": "pin-rtl",
+   "value_eur": null,
+   "published": "2026-08-21",
+   "deadline": null,
+   "notice_url": "https://ted.europa.eu/de/notice/-/detail/581173-2026",
+   "documents_url": "",
+   "score": 18,
+   "score_reasons": [
+    "CPV Randcode 45315300: +12",
+    "Auftraggeber 'klinik': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "becf6bd05fb85954",
+   "bucket": "ablage",
+   "summary": "SRH Zentralklinikum Suhl GmbH schreibt aus: Deutschland – Bauarbeiten – Generalumbau der zentralen Notaufnahme zum integrierten Notfallzentrum.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "SRH Zentralklinikum Suhl GmbH, Suhl.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45000000, 45000000, 45000000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Randcode 45315300: +12 · Auftraggeber 'klinik': +6 — Summe 18 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "4191a539-1af2-4bf5-a597-9065a6be5c06",
+   "title": "Neubau eines Gesundheitscampus (Medical School und Ausbildungszentrum)",
+   "description": "Die Westpfalz-Klinikum GmbH (\"WKK\") beabsichtigt, auf dem Pfaff-Areal in Kaiserslautern einen integrierten Medizin- und Ausbildungscampus (\"Gesundheitscampus\") zu realisieren. Der Gesundheitscampus ist als strategisches Leuchtturmprojekt für die Region Westpfalz angelegt und soll die medizinische und pflegerische Ausbildung an einem zentralen Standort bündeln. Ziel des Vorhabens ist es, den ärztlichen und nichtärztlichen Fachkräftenachwuchs in der Region langfristig zu sichern, Kaiserslautern als Wissenschafts- und Hochschulstandort zu stärken und die regionale Gesundheitsversorgung nachhaltig zu unterstützen.  Die Realisierung des Projekts ist als Kauf einer Eigentumseinheit nach dem Wohnungseigentumsgesetz vorgesehen. WKK wird das in ihrem Eigentum befindliche Grundstück zunächst nach den Vorgaben des WEG teilen. Spätere Teileigentumseinheiten sind dann zum einen die MSK-SE-Einheit und zum anderen die Einheit Ausbildungscampus. Die WKK wird nach Fertigstellung zudem die Ausbildungscampus-Einheit langfristig anmieten.   Gegenstand der Ausschreibung ist daher nicht nur die bauliche Errichtung des Gesundheitscampus, sondern auch der Erwerb der Eigentumseinheit Ausbildungscampus und die langfristige Vermietung. Im Ergebnis schuldet der Auftragnehmer daher den Erwerb der Eigentumseinheit, eine verbindliche Bauverpflichtung zur schlüsselfertigen Errichtung des Gesundheitscampus, sowie langfristige Vermietung (10 + 5 +5) der beim Auftragnehmer verbleibenden Einheit.   Der Gebäudekomplex wird zudem eine Gastronomieeinheit enthalten, die zur Fremdvermietung bzw. zum Betrieb durch vom Auftragnehmer auszuwählende Dritte vorgesehen ist.  Bei der Wahl der Realisierungsvarianten ist der Auftragnehmer frei, sofern die funktionalen, rechtlichen, wirtschaftlichen und terminlichen Mindestanforderungen des Projekts eingehalten werden.   - In Betracht kommt insbesondere eine Realisierung durch einen Investor als federführenden Auftragnehmer. In dieser Variante erwirbt der Investor die Eigentumseinheit, übernimmt die Bauverpflichtung, organisiert Planung und Bauausführung eigenverantwortlich und bindet hierfür einen Generalunternehmer, Generalübernehmer oder geeignete Einzelunternehmer ein.   - Daneben kommt eine Realisierung durch einen Generalunternehmer oder Generalübernehmer als Auftragnehmer und verantwortlichen Vertragspartner des AG in Betracht. In dieser Variante übernimmt der Auftragnehmer die technische und organisatorische Gesamtverantwortung für Planung und Errichtung des Gesundheitscampus und bindet einen Investor, Finanzierungspartner oder eine Projektgesellschaft ein, die den Erwerb der Eigentumseinheit, die spätere Eigentümerstellung und die langfristige Vermietung der beim Investor verbleibenden Einheit übernimmt.   Die vorstehenden Varianten sind nur beispielhaft und nicht abschließend. In allen Varianten muss die Bieterstruktur gewährleisten, dass sämtliche Verpflichtungen aus Erwerb der Eigentumseinheit, Bauverpflichtung, Mietvertrag, Gemeinschaftsordnung und Sicherungskonzept rechtlich verbindlich und wirtschaftlich belastbar erfüllt werden können. Für alle Realisierungsvarianten gilt weiterhin, dass der Gesundheitscampus als einheitliches Vorhaben errichtet werden soll.",
+   "buyer": "Westpfalz-Klinikum GmbH",
+   "buyer_city": "Kaiserslautern",
+   "nuts": "",
+   "cpv": [
+    "45210000",
+    "45210000"
+   ],
+   "procedure": "neg-w-call",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-19",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=4191a539-1af2-4bf5-a597-9065a6be5c06",
+   "documents_url": "https://www.dtvp.de/Satellite/notice/CXP4YNAMZ6A/documents",
+   "score": 18,
+   "score_reasons": [
+    "Randbegriff (leuchtturm): +12",
+    "Auftraggeber 'klinik': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "7efe0c3d59933cb5",
+   "bucket": "ablage",
+   "summary": "Westpfalz-Klinikum GmbH schreibt aus: Neubau eines Gesundheitscampus (Medical School und Ausbildungszentrum). Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Westpfalz-Klinikum GmbH, Kaiserslautern.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45210000, 45210000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Randbegriff (leuchtturm): +12 · Auftraggeber 'klinik': +6 — Summe 18 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "555a167d-466f-4b97-a359-a8c78348993a",
+   "title": "Erneuerung der Energieversorgung für Leuchtturm Kalkgrund",
+   "description": "Gegenstand der Baumaßnahme ist:\n- Baustelleneinrichtung inkl. ca. 1680m Baustraße\n- Verlegung 1340m 6KV Mittelspannungskabel im HDD - Spülbohrverfahren\n- Aufbau einer 20/6KV Mittelspannungsstation inkl. Schutz- und Erdungsmaßnahmen",
+   "buyer": "Wasserstraßen- und Schifffahrtsamt Ostsee",
+   "buyer_city": "Stralsund",
+   "nuts": "",
+   "cpv": [
+    "45000000",
+    "45000000",
+    "43000000",
+    "44000000",
+    "71000000",
+    "43000000",
+    "44000000",
+    "71000000"
+   ],
+   "procedure": "de-open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-20",
+   "deadline": "2026-09-10T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=555a167d-466f-4b97-a359-a8c78348993a",
+   "documents_url": "https://www.evergabe-online.de/tenderdetails.html?id=884558",
+   "score": 18,
+   "score_reasons": [
+    "Randbegriff (leuchtturm): +12",
+    "Auftraggeber 'amt': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "f0d77f3f638c5add",
+   "bucket": "ablage",
+   "summary": "Wasserstraßen- und Schifffahrtsamt Ostsee schreibt aus: Erneuerung der Energieversorgung für Leuchtturm Kalkgrund. Angebotsfrist: 10.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 10.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Wasserstraßen- und Schifffahrtsamt Ostsee, Stralsund.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45000000, 45000000, 43000000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Randbegriff (leuchtturm): +12 · Auftraggeber 'amt': +6 — Summe 18 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -9767,6 +10481,182 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "Randbegriff (kritis): +12 — Summe 12 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "48a30c33-6bcf-46b3-aee4-d817c56c9386",
+   "title": "Baulogistik",
+   "description": "ca. 425 lfm Bauzaun aufbauen, vorhalten, abbauen\nca. 263 lfm Kunststoffnetz als Behang aufbauen, vorhalten, abbauen\nzwei Bautore doppelflüglig, ein Tor einflüglig\nca. 40 lfm Holzbauzaun als Pflanzenschutz\nzwei Bürocontainer, ein WC-Container aufbauen, vorhalten, reinigen , abbauen (118 Wochen)\nzwei Mobile Toiletten aufbauen, vorhalten, reinigen, abbauen (17 Wochen)\nTrinkwasser/Abwasserleitung verlegen, anschließen (inkl. Frostschutzheizung)\nzwei Bauwasserentnahmestellen aufbauen, vorhalten, räumen\nBaustromanlage  (Verteilerschränke, Leitungen, Anschlüsse)\nBaustellenbeleuchtung (Lichtmasten, Leitungen, Strahler, Verteiler)",
+   "buyer": "Regierung von Oberbayern - Vergabekammer Südbayern",
+   "buyer_city": "München",
+   "nuts": "",
+   "cpv": [
+    "45113000",
+    "45113000",
+    "45315300",
+    "45315300"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-18",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=48a30c33-6bcf-46b3-aee4-d817c56c9386",
+   "documents_url": "",
+   "score": 12,
+   "score_reasons": [
+    "CPV Randcode 45315300: +12"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "402eff8336f4a3d4",
+   "bucket": "ablage",
+   "summary": "Regierung von Oberbayern - Vergabekammer Südbayern schreibt aus: Baulogistik.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Regierung von Oberbayern - Vergabekammer Südbayern, München.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45113000, 45113000, 45315300. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Randcode 45315300: +12 — Summe 12 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "4a953d82-1e5a-4bb1-aa58-b6accadf3efa",
+   "title": "Erneuerung Unterwerk Waiblingen; Bahnstrecke 4710, Kilometer 8,3",
+   "description": "Um die Versorgungssicherheit für den elektrischen Zugbetrieb auch weiterhin in vollem Umfang zu gewährleisten, wird das Unterwerk (Uw) Waiblingen komplett erneuert.\nDas Unterwerk stellt eine Umspannerleistung von 2x 15 MVA zur Verfügung.\nDie 110-kV-Schaltanlage wird mit 2 Abzweigen in Hybridmodulbauweise errichtet. Die 15-kV-Schaltanlage wird als luftisolierte, metallgeschottete Fabrikfertig-Typgeprüfte Schalt-anlage errichtet und mit 9 Abzweigen aufgebaut.",
+   "buyer": "DB Energie GmbH (Bukr 31)",
+   "buyer_city": "Frankfurt Main",
+   "nuts": "",
+   "cpv": [
+    "45315300",
+    "45315300"
+   ],
+   "procedure": "neg-wo-call",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-12",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=4a953d82-1e5a-4bb1-aa58-b6accadf3efa",
+   "documents_url": "",
+   "score": 12,
+   "score_reasons": [
+    "CPV Randcode 45315300: +12"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "104512469e24bab2",
+   "bucket": "ablage",
+   "summary": "DB Energie GmbH (Bukr 31) schreibt aus: Erneuerung Unterwerk Waiblingen; Bahnstrecke 4710, Kilometer 8,3.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "DB Energie GmbH (Bukr 31), Frankfurt Main.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45315300, 45315300. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Randcode 45315300: +12 — Summe 12 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "f45fe465-095c-4c60-be69-c41830f38c3c",
+   "title": "Neubau Übergabestation KA Leverkusen: EMSR - Technik",
+   "description": "Errichtung der EMSR - Technik, der neuen elektrische Übergabestation einschließlich der zugehörigen Mittelspannungs-, Niederspannungs-, Schutz-, Mess-, Automatisierungs-, Installations- und Dokumentationsleistungen.",
+   "buyer": "Wupperverband",
+   "buyer_city": "Wuppertal",
+   "nuts": "",
+   "cpv": [
+    "45232221",
+    "45232221",
+    "45315300",
+    "45315600",
+    "45315700",
+    "48921000",
+    "45311000",
+    "45315300",
+    "45315600",
+    "45315700",
+    "48921000",
+    "45311000"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": 1708107.5,
+   "published": "2026-08-19",
+   "deadline": "2026-09-21T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=f45fe465-095c-4c60-be69-c41830f38c3c",
+   "documents_url": "https://www.dtvp.de/Satellite/notice/CXP4YKRMQLT/documents",
+   "score": 12,
+   "score_reasons": [
+    "CPV Randcode 45315300: +12"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "8d66b5b4524d8193",
+   "bucket": "ablage",
+   "summary": "Wupperverband schreibt aus: Neubau Übergabestation KA Leverkusen: EMSR - Technik. Angebotsfrist: 21.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 21.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Wupperverband, Wuppertal.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45232221, 45232221, 45315300. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Randcode 45315300: +12 — Summe 12 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -13993,6 +14883,132 @@
  ],
  "changes": [
   {
+   "id": "09c73d774b132a79",
+   "sev": "info",
+   "when": "2026-08-21 04:58:12",
+   "file": "(Erstabzug)",
+   "what": "neu",
+   "diff": [
+    [
+     "ctx",
+     "1 Dateien erfasst"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32e6a80216cd1e83",
+   "sev": "info",
+   "when": "2026-08-21 04:58:08",
+   "file": "298502",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b5172ebce3365d14",
+   "sev": "info",
+   "when": "2026-08-21 04:58:04",
+   "file": "121016296",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b3bd342a5023ae44",
+   "sev": "info",
+   "when": "2026-08-21 04:58:01",
+   "file": "TenderingProcedureDetails",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b947ac2751746ae4",
+   "sev": "info",
+   "when": "2026-08-21 04:57:56",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "cc1de1898c70f18d",
+   "sev": "info",
+   "when": "2026-08-21 04:57:54",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "6518e5d06ab9e4f6",
+   "sev": "info",
+   "when": "2026-08-21 04:57:53",
+   "file": "zustellweg-auswaehlen",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "a9b65d1298df3e14",
+   "sev": "info",
+   "when": "2026-08-21 04:57:52",
+   "file": "CXPTY6DDGYN",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32c6556bc3a86e9d",
+   "sev": "info",
+   "when": "2026-08-21 04:57:51",
+   "file": "documents",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
    "id": "32e6a80216cd1e83",
    "sev": "info",
    "when": "2026-08-20 15:53:54",
@@ -14422,132 +15438,6 @@
     [
      "ctx",
      "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b947ac2751746ae4",
-   "sev": "info",
-   "when": "2026-08-19 15:52:08",
-   "file": "PublicationControllerServlet",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "8b2e345002ef0043",
-   "sev": "info",
-   "when": "2026-08-19 15:52:08",
-   "file": "CXW1YYDDYYNNYZE5",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "cc1de1898c70f18d",
-   "sev": "info",
-   "when": "2026-08-19 15:52:07",
-   "file": "PublicationControllerServlet",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "6518e5d06ab9e4f6",
-   "sev": "info",
-   "when": "2026-08-19 15:52:06",
-   "file": "zustellweg-auswaehlen",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "a9b65d1298df3e14",
-   "sev": "info",
-   "when": "2026-08-19 15:52:05",
-   "file": "CXPTY6DDGYN",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32c6556bc3a86e9d",
-   "sev": "info",
-   "when": "2026-08-19 15:52:04",
-   "file": "documents",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32e6a80216cd1e83",
-   "sev": "info",
-   "when": "2026-08-19 11:39:08",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b5172ebce3365d14",
-   "sev": "info",
-   "when": "2026-08-19 11:39:03",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "1a8707ae6315b702",
-   "sev": "info",
-   "when": "2026-08-19 11:39:00",
-   "file": "(Erstabzug)",
-   "what": "neu",
-   "diff": [
-    [
-     "ctx",
-     "1 Dateien erfasst"
     ]
    ],
    "impact": ""
