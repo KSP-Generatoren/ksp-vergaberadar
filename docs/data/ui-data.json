@@ -1,33 +1,33 @@
 {
- "generated_at": "2026-08-21T15:54:20+00:00",
+ "generated_at": "2026-08-22T04:54:05+00:00",
  "sources": [
   {
    "name": "TED",
    "ok": true,
    "count": 51,
    "error": "",
-   "last": "2026-08-21T15:53:57"
+   "last": "2026-08-22T04:53:47"
   },
   {
    "name": "Datenservice Bund",
    "ok": true,
-   "count": 126,
+   "count": 127,
    "error": "",
-   "last": "2026-08-21T15:53:57"
+   "last": "2026-08-22T04:53:47"
   },
   {
    "name": "Vergabe.NRW",
    "ok": true,
    "count": 10,
    "error": "",
-   "last": "2026-08-21T15:53:57"
+   "last": "2026-08-22T04:53:47"
   },
   {
    "name": "cosinex",
    "ok": true,
    "count": 11,
    "error": "",
-   "last": "2026-08-21T15:53:57"
+   "last": "2026-08-22T04:53:47"
   }
  ],
  "notices": [
@@ -2190,6 +2190,68 @@
    "vergabenummer": ""
   },
   {
+   "source": "doe",
+   "source_id": "007fe46b-5f20-4174-a8b8-03d750529d29",
+   "title": "Anschaffung einer mobilen Netzersatzanlage 630 kVA",
+   "description": "Die Stadt Cloppenburg, Regiebetrieb Kläranlage, beabsichtigt die Beschaffung einer mobilen Netzersatzanlage mit einer elektrischen Dauerleistung von mindestens 630 kVA im PRP-Betrieb nach ISO 8528. Die Gesamtanlage ist vollständig montiert auf einem straßenzugelassenen Tandemfahrgestell zu liefern und für den temporären netzunabhängigen Betrieb sowie für den Insel- und Netzparallelbetrieb einschließlich automatischer Rücksynchronisierung auszulegen. Zum Auftrag gehören die betriebsfertige Bereitstellung, Prüfungen, Zulassungsunterlagen, Dokumentation, Transport, Einweisung und sämtliche zur sicheren Funktion erforderlichen Nebenleistungen.",
+   "buyer": "Stadt Cloppenburg",
+   "buyer_city": "Cloppenburg",
+   "nuts": "",
+   "cpv": [
+    "31121100",
+    "31121100"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-20",
+   "deadline": "2026-09-17T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=007fe46b-5f20-4174-a8b8-03d750529d29",
+   "documents_url": "https://www.deutsches-ausschreibungsblatt.de/VN/S-CLP-2026-0063",
+   "score": 59,
+   "score_reasons": [
+    "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35",
+    "Kernbegriff im Text (netzersatzanlage): +30",
+    "630 kVA ausserhalb des Portfolios: -20",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": 630.0,
+   "status": "neu",
+   "uid": "8399ff2a32603163",
+   "bucket": "pruefen",
+   "summary": "Stadt Cloppenburg schreibt aus: Anschaffung einer mobilen Netzersatzanlage 630 kVA. Die geforderte Leistungsklasse liegt bei etwa 630 kVA und damit außerhalb des KSP-Kernbereichs von 20–200 kVA. Angebotsfrist: 17.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 17.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Cloppenburg, Cloppenburg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31121100, 31121100. Erkannte Leistungsklasse etwa 630 kVA.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35 · Kernbegriff im Text (netzersatzanlage): +30 · 630 kVA ausserhalb des Portfolios: -20 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 59 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
    "source": "ted",
    "source_id": "541577-2026",
    "title": "Deutschland – Stromerzeugungsaggregate mit Selbstzündungsmotoren – Herstellung und Lieferung einer mobilen Netzersatzanlage mit 600 kVA-Leistung",
@@ -2491,6 +2553,68 @@
   },
   {
    "source": "doe",
+   "source_id": "25738300",
+   "title": "Kreisklinik Wörth an der Donau - Beschaffung einer Netzersatzanlage (Notstromaggregats)",
+   "description": "Elektroinstallation, Nieder- und Mittelspannungsanlagen, Prallwände, Schallschutz",
+   "buyer": "Kreisklink Wörth an der Donau",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "45315300-1 45323000-7",
+    "45315300-1 45323000-7"
+   ],
+   "procedure": "beabsichtigte Beschränkte Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": null,
+   "deadline": "2026-09-17T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25738300",
+   "documents_url": "https://plattform.aumass.de/Veroeffentlichung/AV2868AF-A",
+   "score": 47,
+   "score_reasons": [
+    "beabsichtigte: -8",
+    "CPV Randcode 45315300: +12",
+    "Kernbegriff im Text (netzersatzanlage, notstromaggregat, stromaggregat): +30",
+    "Auftraggeber 'kreis': +5",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "c0064f5ee7d38ecf",
+   "bucket": "pruefen",
+   "summary": "Kreisklink Wörth an der Donau schreibt aus: Kreisklinik Wörth an der Donau - Beschaffung einer Netzersatzanlage (Notstromaggregats). als beschränkte Ausschreibung. Angebotsfrist: 17.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 17.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Kreisklink Wörth an der Donau.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45315300-1 45323000-7, 45315300-1 45323000-7. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "beabsichtigte: -8 · CPV Randcode 45315300: +12 · Kernbegriff im Text (netzersatzanlage, notstromaggregat, stromaggregat): +30 · Auftraggeber 'kreis': +5 · Lieferleistung: +8 — Summe 47 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
    "source_id": "5c16e1e9-4205-4019-ab2e-5db2f27d8aa5",
    "title": "Neubau Gymnasium am Neandertal; VE248 - Lose Möblierung",
    "description": "Die Stadt Erkrath beabsichtigt, ein neues Schulgebäude für das Gymnasium am Neandertal zu errichten. Das Schulgebäude wird als Bauwerk mit 5 Geschossen realisiert und weist im Grundriss eine Fläche von ca. 4.300 m² auf. Es besteht aus einem teilweise in den Hang geschobenen Untergeschoss sowie einem nördlichen, 4-geschossigen Bauteil darüber. Gegenstand dieser Ausschreibung sind die Lieferung und der Aufbau loser Möblierung.",
@@ -2749,6 +2873,72 @@
    "vergabenummer": ""
   },
   {
+   "source": "doe",
+   "source_id": "c5ca20e0-4bc2-4f8e-a79b-96707d8bf518",
+   "title": "Stadtwerke Barsinghausen: Neubau des Wasserwerks Eckerde - VE 6 Energiezentrale (LV20)",
+   "description": "Die Stadtwerke Barsinghausen GmbH hat sich entschieden, ein neues \"Wasserwerk Eckerde\" zu bauen. Die Baustelle, die Gründung befindet sich genau gegenüber der bestehenden Trinkwasseraufbereitungsanlage Eckerde. Das neue Wasserwerk ist nach dem Stand der Technik geplant bzw. verfahrenstechnsich auszurüsten. Der Leistungsumfang dieser Ausschreibung bezieht sich auf die Errichtung einer stationären Netzersatzanlage (Notstromversorgung) einschließlich Lieferung, Montage, Inbetriebnahme und Dokumentation.",
+   "buyer": "Stadtwerke Barsinghausen GmbH",
+   "buyer_city": "Barsinghausen",
+   "nuts": "",
+   "cpv": [
+    "45317000",
+    "45317000",
+    "45311000",
+    "45315600",
+    "09300000",
+    "45311000",
+    "45315600",
+    "09300000"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-20",
+   "deadline": "2026-08-27T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=c5ca20e0-4bc2-4f8e-a79b-96707d8bf518",
+   "documents_url": "https://www.dtvp.de/Satellite/notice/CXP4YBLMXE0/documents",
+   "score": 44,
+   "score_reasons": [
+    "Kernbegriff im Text (netzersatzanlage): +30",
+    "Auftraggeber 'stadt': +6",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "a9fa95407d709a3b",
+   "bucket": "ablage",
+   "summary": "Stadtwerke Barsinghausen GmbH schreibt aus: Stadtwerke Barsinghausen: Neubau des Wasserwerks Eckerde - VE 6 Energiezentrale (LV20). Angebotsfrist: 27.08.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 27.08.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadtwerke Barsinghausen GmbH, Barsinghausen.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45317000, 45317000, 45311000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Kernbegriff im Text (netzersatzanlage): +30 · Auftraggeber 'stadt': +6 · Lieferleistung: +8 — Summe 44 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
    "source": "ted",
    "source_id": "554279-2026",
    "title": "Deutschland – Anhänger – Geräteanhänger Hochwasser (GA HW)",
@@ -2863,6 +3053,65 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "CPV Kerncode 31121000 (Generatoraggregate): +35 · Auftraggeber 'polizei': +8 — Summe 43 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "f8e71a19-d756-4e86-ba54-8ead0c69ea97",
+   "title": "6003101373-BwDLZ Rotenburg Wümme",
+   "description": "6003101373-BwDLZ Rotenburg Wümme",
+   "buyer": "Bundeswehr-Dienstleistungszentrum Rotenburg",
+   "buyer_city": "Rotenburg/Wümme",
+   "nuts": "",
+   "cpv": [
+    "31121100",
+    "31121100"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-20",
+   "deadline": "2026-09-29T13:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=f8e71a19-d756-4e86-ba54-8ead0c69ea97",
+   "documents_url": "https://www.evergabe-online.de/tenderdocuments.html?id=884478",
+   "score": 42,
+   "score_reasons": [
+    "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35",
+    "Auftraggeber 'bundeswehr': +7"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "eaa12a11cc4a0d2e",
+   "bucket": "ablage",
+   "summary": "Bundeswehr-Dienstleistungszentrum Rotenburg schreibt aus: 6003101373-BwDLZ Rotenburg Wümme. Angebotsfrist: 29.09.2026 um 13:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 29.09.2026 um 13:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Bundeswehr-Dienstleistungszentrum Rotenburg, Rotenburg/Wümme.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 31121100, 31121100. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Kerncode 31121100 (Generatoraggregate mit Selbstzuendungsmotor): +35 · Auftraggeber 'bundeswehr': +7 — Summe 42 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -4233,6 +4482,65 @@
   },
   {
    "source": "doe",
+   "source_id": "25734940",
+   "title": "Nachrüstung einer stationären Netzersatzanlage für das Feuerwehrgerätehaus Ziegelhausen -Netzersatzanlage-",
+   "description": "Netzersatzanlage\n\nNetzersatzanlage",
+   "buyer": "Stadt Heidelberg",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "45315100",
+    "45315100"
+   ],
+   "procedure": "de-open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": null,
+   "deadline": "2026-09-15T09:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25734940",
+   "documents_url": "https://vergabe.vmstart.de/NetServer/PublicationControllerServlet?function=Detail&TWOID=54321-Tender-1a01ea60b7b-233a0ee4313d6cc5&PublicationType=0",
+   "score": 36,
+   "score_reasons": [
+    "Kernbegriff im Text (netzersatzanlage): +30",
+    "Auftraggeber 'stadt': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "f745534d90eba349",
+   "bucket": "ablage",
+   "summary": "Stadt Heidelberg schreibt aus: Nachrüstung einer stationären Netzersatzanlage für das Feuerwehrgerätehaus Ziegelhausen -Netzersatzanlage-. Angebotsfrist: 15.09.2026 um 09:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 15.09.2026 um 09:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Heidelberg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45315100, 45315100. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Kernbegriff im Text (netzersatzanlage): +30 · Auftraggeber 'stadt': +6 — Summe 36 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
    "source_id": "25699878",
    "title": "Germanium-68/Gallium-68 Generatoren",
    "description": "Germanium-68/Gallium-68 Generatoren",
@@ -5494,6 +5802,118 @@
    "vergabenummer": ""
   },
   {
+   "source": "doe",
+   "source_id": "b09cff98-bf27-4712-9959-cc5260e87a5c",
+   "title": "Metrology Laboratory Equipment for Libya",
+   "description": "Various metrology laboratory equipment for two laboratories located in Tripoli and near Tripoli",
+   "buyer": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH",
+   "buyer_city": "Eschborn",
+   "nuts": "",
+   "cpv": [
+    "38300000",
+    "38300000",
+    "38410000",
+    "38418000",
+    "38540000",
+    "38410000",
+    "38418000",
+    "38540000"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-10",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=b09cff98-bf27-4712-9959-cc5260e87a5c",
+   "documents_url": "",
+   "score": 30,
+   "score_reasons": [
+    "Kernbegriff im Text (nea): +30"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "9f6b81df7b5ea1b9",
+   "bucket": "ablage",
+   "summary": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH schreibt aus: Metrology Laboratory Equipment for Libya.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, Eschborn.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 38300000, 38300000, 38410000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Kernbegriff im Text (nea): +30 — Summe 30 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "0191aa18-7f7a-4700-bf58-030ad6789610",
+   "title": "Evakuierungsarbeiten von Pipelines zum Gastransport, Abfackeln von Restmengen, Inertisieren von Pipelines zum Gastransport: Stegal Loop",
+   "description": "Evakuierungsarbeiten, Abfackeln von Restmengen, Inertisieren des Pipelineabschnittes Stegal Loop: AS Dürrengleina bis AS Wolfsbehring",
+   "buyer": "GASCADE Gastransport GmbH",
+   "buyer_city": "Kassel",
+   "nuts": "",
+   "cpv": [
+    "76100000",
+    "76100000"
+   ],
+   "procedure": "neg-w-call",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-20",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=0191aa18-7f7a-4700-bf58-030ad6789610",
+   "documents_url": "https://www.dtvp.de/Satellite/notice/CXVHYH0DYY9J6ZLR/documents",
+   "score": 30,
+   "score_reasons": [
+    "Kernbegriff im Text (nea): +30"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "2e04837be830a163",
+   "bucket": "ablage",
+   "summary": "GASCADE Gastransport GmbH schreibt aus: Evakuierungsarbeiten von Pipelines zum Gastransport, Abfackeln von Restmengen, Inertisieren von Pipelines zum Gastransport: Stegal Loop. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "GASCADE Gastransport GmbH, Kassel.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 76100000, 76100000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Kernbegriff im Text (nea): +30 — Summe 30 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
    "source": "ted",
    "source_id": "546261-2026",
    "title": "Deutschland – Elektrische Ausrüstung – Lieferung, Montage, Inbetriebnahme und Instandhaltung von Ladeinfrastruktur 5. BA - TWB",
@@ -5704,6 +6124,66 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "CPV Randcode 45315300: +12 · Kernbegriff im Text (netzersatzanlage): +30 · 800 kVA ausserhalb des Portfolios: -20 · Auftraggeber 'stadt': +6 — Summe 28 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "25738320",
+   "title": "Kreisklinik Wörth an der Donau - Vorbereitende Bauarbeiten für die Aufstellung eines Notstromaggregats in Betonzelle",
+   "description": "Tiefbau- und Pflasterbauarbeiten, Hochbau-/ Maurer-/ Beton- Stahlbetonarbeiten",
+   "buyer": "Kreisklink Wörth an der Donau",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "45200000-9 45200000-9",
+    "45200000-9 45200000-9"
+   ],
+   "procedure": "beabsichtigte Beschränkte Ausschreibung",
+   "kind": "notice",
+   "value_eur": null,
+   "published": null,
+   "deadline": "2026-09-17T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25738320",
+   "documents_url": "https://plattform.aumass.de/Veroeffentlichung/AV2868C5-A",
+   "score": 27,
+   "score_reasons": [
+    "beabsichtigte: -8",
+    "Kernbegriff im Text (notstromaggregat, stromaggregat): +30",
+    "Auftraggeber 'kreis': +5"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "dd642944d2a2e6bf",
+   "bucket": "ablage",
+   "summary": "Kreisklink Wörth an der Donau schreibt aus: Kreisklinik Wörth an der Donau - Vorbereitende Bauarbeiten für die Aufstellung eines Notstromaggregats in Betonzelle. als beschränkte Ausschreibung. Angebotsfrist: 17.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 17.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Kreisklink Wörth an der Donau.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45200000-9 45200000-9, 45200000-9 45200000-9. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "beabsichtigte: -8 · Kernbegriff im Text (notstromaggregat, stromaggregat): +30 · Auftraggeber 'kreis': +5 — Summe 27 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -7087,6 +7567,188 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "CPV Randcode 09134200: +12 · Lieferleistung: +8 — Summe 20 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "89c399c6-0bf9-49a8-a687-b6c077b1af5b",
+   "title": "Kraftstoffe",
+   "description": "Lieferung von Diesel, AdBlue sowie Superkraftstoff E5 für das Jahr 2027.\nOptional für das Jahr 2028.",
+   "buyer": "Rhein-Neckar-Verkehr GmbH",
+   "buyer_city": "Mannheim",
+   "nuts": "",
+   "cpv": [
+    "09134220",
+    "09134220",
+    "09132000",
+    "09134200",
+    "09132000",
+    "09134200"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": 8382966.23,
+   "published": "2026-08-20",
+   "deadline": "2026-09-21T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=89c399c6-0bf9-49a8-a687-b6c077b1af5b",
+   "documents_url": "https://bieterzugang.deutsche-evergabe.de/evergabe.bieter/api/supplier/external/deeplink/subproject/6d45d226-e7ef-4570-bf3b-521b55ada1ae",
+   "score": 20,
+   "score_reasons": [
+    "CPV Randcode 09134200: +12",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "faf6dc55bbcb4ab1",
+   "bucket": "ablage",
+   "summary": "Rhein-Neckar-Verkehr GmbH schreibt aus: Kraftstoffe. Angebotsfrist: 21.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 21.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Rhein-Neckar-Verkehr GmbH, Mannheim.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 09134220, 09134220, 09132000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Randcode 09134200: +12 · Lieferleistung: +8 — Summe 20 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "bbdbbb6e-106f-4e65-bf57-8914826d583c",
+   "title": "Beschaffung von x86-Servern samt Zubehör",
+   "description": "Kauf von Hardware und somit die Beschaffung von Servern\nsamt Zubehör für die Kritis-Infrastruktur der BVG.",
+   "buyer": "Berliner Verkehrsbetriebe, Bereich Einkauf/ Materialwirtschaft",
+   "buyer_city": "Berlin",
+   "nuts": "",
+   "cpv": [
+    "48820000",
+    "48820000",
+    "48820000",
+    "48800000"
+   ],
+   "procedure": "neg-w-call",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2025-12-22",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=bbdbbb6e-106f-4e65-bf57-8914826d583c",
+   "documents_url": "",
+   "score": 20,
+   "score_reasons": [
+    "Randbegriff (kritis): +12",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "741a31e48f2c3171",
+   "bucket": "ablage",
+   "summary": "Berliner Verkehrsbetriebe, Bereich Einkauf/ Materialwirtschaft schreibt aus: Beschaffung von x86-Servern samt Zubehör.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Berliner Verkehrsbetriebe, Bereich Einkauf/ Materialwirtschaft, Berlin.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 48820000, 48820000, 48820000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Randbegriff (kritis): +12 · Lieferleistung: +8 — Summe 20 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "25737896",
+   "title": "Prüfung und Instandhaltung von Hubgeräten",
+   "description": "Im Einzelnen handelt es sich um Maßnahmen wiederkehrender Prüfung (WKP), vorbeugender Instandhaltung (VBI) sowie außerordentlicher Instandsetzung (Störungsbeseitigung) inkl. Beschaffung der benötigten Ersatzteile von Hubgeräten (Handhubwagen, E-Hubwagen, Hochhubwagen, Hubtische, Hebebühnen, Werkstattkrane).\n\nPrüfung und Instandhaltung von Hubgeräten",
+   "buyer": "KTE Kerntechnische Entsorgung Karlsruhe GmbH",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "50800000",
+    "50800000",
+    "50324200",
+    "50532000",
+    "50324200",
+    "50532000"
+   ],
+   "procedure": "de-open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": null,
+   "deadline": "2026-09-21T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25737896",
+   "documents_url": "https://bieterzugang.deutsche-evergabe.de/evergabe.bieter/api/supplier/external/deeplink/subproject/c9360a76-bf30-4f5c-8a65-8b1cad045519",
+   "score": 20,
+   "score_reasons": [
+    "CPV Randcode 50532000: +12",
+    "Lieferleistung: +8"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "b5cee34a1fca66f7",
+   "bucket": "ablage",
+   "summary": "KTE Kerntechnische Entsorgung Karlsruhe GmbH schreibt aus: Prüfung und Instandhaltung von Hubgeräten. Angebotsfrist: 21.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 21.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "KTE Kerntechnische Entsorgung Karlsruhe GmbH.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 50800000, 50800000, 50324200. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Randcode 50532000: +12 · Lieferleistung: +8 — Summe 20 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -8676,6 +9338,121 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "Randbegriff (leuchtturm): +12 · Auftraggeber 'amt': +6 — Summe 18 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "f832f4ff-191e-4386-8307-7b4cfcfb8589",
+   "title": "Generalumbau der zentralen Notaufnahme zum integrierten Notfallzentrum",
+   "description": "Das Reha-Zentrum Bad Frankenhausen ist eines von 22 Reha-Zentren der Deutschen Rentenversicherung Bund und befindet sich am Stadtrand von Bad Frankenhausen in Thüringen. Die Klinik ist spezialisiert auf die Behandlung von orthopädischen und psychosomatischen Krankheiten und bietet neben stationärer und ambulanter Rehabilitation auch Anschlussrehabilitation (AHB) an. Die Rehaklinik befindet sich in einem kompakten Gebäudekomplex aus mehreren Bauteilen, die miteinander baulich verbunden sind und wurde im Jahr 2000 eröffnet. Die Klinik verfügt über die für eine moderne Rehabilitation notwendigen Räumlichkeiten für Diagnose und Therapie inklusive Gymnastikhalle und Bewegungsbad sowie 199 Bettenzimmer und eigener Speisenversorgung. Im Rahmen der Investitionsmaßnahme I sind Maßnahmen zur Sanierung des Bestandsgebäudes vorgesehen. Darüber hinaus besteht ein zusätzlicher Bedarf an Nutzungsflächen, der eine bauliche Erweiterung des Gebäudekomplexes erforderlich macht (Investitionsmaßnahme II). Ergänzend ist die Entwicklung und Umsetzung eines neuen Energiekonzepts vorgesehen, welches die Erreichung der CO₂-Neutralität zum Ziel hat. Dieses umfasst sowohl die energetische Modernisierung des Bestandsgebäudes zur Reduzierung des Energieverbrauchs als auch die schrittweise Umstellung der technischen Anlagen auf erneuerbare Energien.",
+   "buyer": "SRH Zentralklinikum Suhl GmbH",
+   "buyer_city": "Suhl",
+   "nuts": "",
+   "cpv": [
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45262670",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45113000",
+    "45262100",
+    "45000000",
+    "45112700",
+    "45331000",
+    "45331200",
+    "45331200",
+    "45311000",
+    "45311000",
+    "45314000",
+    "45000000",
+    "45000000",
+    "45000000",
+    "45315300",
+    "45232460",
+    "45100000",
+    "45111000",
+    "45223220",
+    "45441000",
+    "45443000",
+    "45262320",
+    "45324000",
+    "45260000",
+    "45420000",
+    "44221200",
+    "44221300",
+    "45341000",
+    "45430000",
+    "45431000",
+    "45431000",
+    "45410000",
+    "45442100",
+    "45442100",
+    "45420000",
+    "44423400",
+    "44520000",
+    "44522000",
+    "90910000",
+    "45112710",
+    "45315300",
+    "42416100",
+    "24111500",
+    "48921000"
+   ],
+   "procedure": "open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-20",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=f832f4ff-191e-4386-8307-7b4cfcfb8589",
+   "documents_url": "",
+   "score": 18,
+   "score_reasons": [
+    "CPV Randcode 45315300: +12",
+    "Auftraggeber 'klinik': +6"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "26e68e5d9c94effd",
+   "bucket": "ablage",
+   "summary": "SRH Zentralklinikum Suhl GmbH schreibt aus: Generalumbau der zentralen Notaufnahme zum integrierten Notfallzentrum.",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "SRH Zentralklinikum Suhl GmbH, Suhl.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 45000000, 45000000, 45000000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Die Bekanntmachung enthält keine Dokumenten-URL — hier ist ein manueller Blick ins Portal nötig.",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "CPV Randcode 45315300: +12 · Auftraggeber 'klinik': +6 — Summe 18 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -10723,6 +11500,85 @@
   },
   {
    "source": "doe",
+   "source_id": "25737300",
+   "title": "Notstromaggregart",
+   "description": "Notstromaggregart",
+   "buyer": "Vermögens- und Hochbauverwaltung Baden-Württemberg",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "50",
+    "50",
+    "51",
+    "55",
+    "66",
+    "70",
+    "71",
+    "75",
+    "77",
+    "79",
+    "80",
+    "85",
+    "90",
+    "92",
+    "98",
+    "51",
+    "55",
+    "66",
+    "70",
+    "71",
+    "75",
+    "77",
+    "79",
+    "80",
+    "85",
+    "90",
+    "92",
+    "98"
+   ],
+   "procedure": "",
+   "kind": "notice",
+   "value_eur": null,
+   "published": "2026-08-20",
+   "deadline": null,
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25737300",
+   "documents_url": "https://bund.vergabe24.de/?hash=711714516e88047daee8879896e9361a",
+   "score": 12,
+   "score_reasons": [
+    "Randbegriff (notstrom): +12"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "8a63419dee4949c3",
+   "bucket": "ablage",
+   "summary": "Vermögens- und Hochbauverwaltung Baden-Württemberg schreibt aus: Notstromaggregart. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Vermögens- und Hochbauverwaltung Baden-Württemberg.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 50, 50, 51. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Randbegriff (notstrom): +12 — Summe 12 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
    "source_id": "25724364",
    "title": "Wartung, Reparatur und Prüfung der Notstromanlagen im MHKW Ruhleben",
    "description": "Zur Erhaltung der sicheren Funktion und Gewährleistung der Verfügbarkeit der Notstromdiesel-Anlagen sind imRahmen der ordnungsgemäßen Instandhaltung regelmäßige Wartungen, Prüfungen, Reparaturen undStörungsbeseitigung durchzuführen.\n\nBitte beachten: Die Bewerbung des Bieters auf das Vergabeverfahren im BSR-Lieferantenportal wird erst nachUnterzeichnung und Übersendung der Geheimhaltungserklärung / Non-Disclosure Agreement (NDA) anEinkauf_Portal_Gruppe_1@BSR.de angenommen. Erst nach Annahme der Bewerbung kann der Bieter die Vergabe-und Vertragsunterlagen herunterladen.\n\n\nWartung, Reparatur und Prüfung der Notstromanlagen im MHKW Ruhleben",
@@ -11296,6 +12152,91 @@
     {
      "q": "Warum wurde das Verfahren so bewertet?",
      "a": "Lieferleistung: +8 — Summe 8 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "25737074",
+   "title": "DLR Standort Berlin - Wartung/Instandhaltung Diesel-Netzersatzanlage",
+   "description": "DLR Standort Berlin - Wartung/Instandhaltung Diesel-Netzersatzanlage\n\nDLR Standort Berlin - Wartung/Instandhaltung Diesel-Netzersatzanlage",
+   "buyer": "Deutsches Zentrum für Luft-und Raumfahrt e. V. | TI-ZVM",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "50",
+    "50",
+    "51",
+    "55",
+    "66",
+    "70",
+    "71",
+    "75",
+    "77",
+    "79",
+    "80",
+    "85",
+    "90",
+    "92",
+    "98",
+    "51",
+    "55",
+    "66",
+    "70",
+    "71",
+    "75",
+    "77",
+    "79",
+    "80",
+    "85",
+    "90",
+    "92",
+    "98"
+   ],
+   "procedure": "de-open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": null,
+   "deadline": "2026-09-21T10:00:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25737074",
+   "documents_url": "https://www.subreport-elvis.de/download/bund/E16445567/1787217403567/bekanntmachung.pdf",
+   "score": 5,
+   "score_reasons": [
+    "Kernbegriff im Text (netzersatzanlage): +30",
+    "reiner Wartungsauftrag ohne Lieferanteil: -25"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "d28f44fdbf537685",
+   "bucket": "ablage",
+   "summary": "Deutsches Zentrum für Luft-und Raumfahrt e. V. | TI-ZVM schreibt aus: DLR Standort Berlin - Wartung/Instandhaltung Diesel-Netzersatzanlage. Angebotsfrist: 21.09.2026 um 10:00 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 21.09.2026 um 10:00 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Deutsches Zentrum für Luft-und Raumfahrt e. V. | TI-ZVM.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 50, 50, 51. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Kernbegriff im Text (netzersatzanlage): +30 · reiner Wartungsauftrag ohne Lieferanteil: -25 — Summe 5 von 100.",
      "c": "Bewertungswerk score.py"
     }
    ],
@@ -15050,9 +15991,219 @@
     }
    ],
    "vergabenummer": ""
+  },
+  {
+   "source": "doe",
+   "source_id": "25738024",
+   "title": "Elektroinstallation PV-Anlage, Karoline-Kaspar-Schule",
+   "description": "Karoline-Kaspar-Schule, Paula-Moderson-Platz 1, 79100 Freiburg. Elektroinstallation: Lieferung und Installation PV-Anlage mit 155kWp.\n\nErrichtung einer netzgekoppelten Photovoltaikanlage mit 343 PV-Modulen und einer installierten Generatorleistung von ca. 155 kWp auf bestehenden Gründächern einer Schul- und Sporthallenanlage. \nDie Leistung umfasst die Lieferung und Montage der ballastierten Unterkonstruktion, Wechselrichteranlagen, eines Batteriespeichersystems mit einer Speicherkapazität von 100 kWh und einer Lade-/Entladeleistung von 50 kW, eines Monitoring-Systems (PLEXLOG), des Netz- und Anlagenschutzes (NA-Schutz), der Fernwirktechnik sowie aller erforderlichen Kabel- und Trassenanlagen. \nWeiterhin umfasst die Leistung die Anpassung des vorhandenen Blitzschutzsystems, die Herstellung eines neuen Netzanschlusses mit Wandlermessung und Niederspannungshauptverteilung (NSHV), die Anbindung eines weiteren Gebäudes über neu zu verlegende Energie- und Kommunikationsleitungen sowie die vollständige Prüfung, Dokumentation und Inbetriebnahme der Gesamtanlage einschließlich Visualisierung der Betriebs- und Ertragsdaten.\n\nElektroinstallation PV-Anlage, Karoline-Kaspar-Schule",
+   "buyer": "Stadt Freiburg i. Br. - Vergabemanagement",
+   "buyer_city": "",
+   "nuts": "",
+   "cpv": [
+    "09331200",
+    "09331200",
+    "32424000",
+    "45311000",
+    "45311100",
+    "45311200",
+    "45315300",
+    "45317000",
+    "32424000",
+    "45311000",
+    "45311100",
+    "45311200",
+    "45315300",
+    "45317000"
+   ],
+   "procedure": "de-open",
+   "kind": "notice",
+   "value_eur": null,
+   "published": null,
+   "deadline": "2026-09-15T09:40:00",
+   "notice_url": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25738024",
+   "documents_url": "https://bieterzugang.deutsche-evergabe.de/evergabe.bieter/api/supplier/external/deeplink/subproject/0a07522f-0608-4b37-ae3a-cc0e24c4a500",
+   "score": 0,
+   "score_reasons": [
+    "Ausschluss: photovoltaik, pv-anlage, batteriespeicher ohne Kernbegriff"
+   ],
+   "matched_product": "",
+   "kva": null,
+   "status": "neu",
+   "uid": "2d19e42401425e65",
+   "bucket": "ablage",
+   "summary": "Stadt Freiburg i. Br. - Vergabemanagement schreibt aus: Elektroinstallation PV-Anlage, Karoline-Kaspar-Schule. Angebotsfrist: 15.09.2026 um 09:40 Uhr. Die Vergabeunterlagen sind über die in der Bekanntmachung angegebene Adresse direkt abrufbar (§ 41 VgV / § 29 UVgO).",
+   "faq": [
+    {
+     "q": "Bis wann läuft die Frist?",
+     "a": "Angebotsfrist ist der 15.09.2026 um 09:40 Uhr.",
+     "c": "Bekanntmachung, Feld Angebotsfrist"
+    },
+    {
+     "q": "Wer ist die Vergabestelle?",
+     "a": "Stadt Freiburg i. Br. - Vergabemanagement.",
+     "c": "Bekanntmachung, Auftraggeber"
+    },
+    {
+     "q": "Wie ist die Leistung klassifiziert?",
+     "a": "CPV 09331200, 09331200, 32424000. Eine Leistungsklasse ist aus dem Bekanntmachungstext nicht ablesbar.",
+     "c": "Bekanntmachung, CPV-Klassifikation"
+    },
+    {
+     "q": "Wo sind die Vergabeunterlagen?",
+     "a": "Direkt abrufbar unter der Dokumentenadresse der Bekanntmachung (ohne Registrierung, § 41 VgV / § 29 UVgO).",
+     "c": "eForms BT-15 Documents URL"
+    },
+    {
+     "q": "Warum wurde das Verfahren so bewertet?",
+     "a": "Ausschluss: photovoltaik, pv-anlage, batteriespeicher ohne Kernbegriff — Summe 0 von 100.",
+     "c": "Bewertungswerk score.py"
+    }
+   ],
+   "vergabenummer": ""
   }
  ],
  "changes": [
+  {
+   "id": "c0064f5ee7d38ecf",
+   "sev": "info",
+   "when": "2026-08-22 04:54:05",
+   "file": "(Erstabzug)",
+   "what": "neu",
+   "diff": [
+    [
+     "ctx",
+     "1 Dateien erfasst"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "8399ff2a32603163",
+   "sev": "info",
+   "when": "2026-08-22 04:54:04",
+   "file": "(Erstabzug)",
+   "what": "neu",
+   "diff": [
+    [
+     "ctx",
+     "1 Dateien erfasst"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32e6a80216cd1e83",
+   "sev": "info",
+   "when": "2026-08-22 04:53:59",
+   "file": "298502",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b5172ebce3365d14",
+   "sev": "info",
+   "when": "2026-08-22 04:53:56",
+   "file": "121016296",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b3bd342a5023ae44",
+   "sev": "info",
+   "when": "2026-08-22 04:53:54",
+   "file": "TenderingProcedureDetails",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "b947ac2751746ae4",
+   "sev": "info",
+   "when": "2026-08-22 04:53:51",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "cc1de1898c70f18d",
+   "sev": "info",
+   "when": "2026-08-22 04:53:50",
+   "file": "PublicationControllerServlet",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "6518e5d06ab9e4f6",
+   "sev": "info",
+   "when": "2026-08-22 04:53:49",
+   "file": "zustellweg-auswaehlen",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "32c6556bc3a86e9d",
+   "sev": "info",
+   "when": "2026-08-22 04:53:48",
+   "file": "documents",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
+  {
+   "id": "a9b65d1298df3e14",
+   "sev": "info",
+   "when": "2026-08-22 04:53:48",
+   "file": "CXPTY6DDGYN",
+   "what": "geaendert",
+   "diff": [
+    [
+     "ctx",
+     "Inhalt geaendert"
+    ]
+   ],
+   "impact": ""
+  },
   {
    "id": "32e6a80216cd1e83",
    "sev": "info",
@@ -15463,146 +16614,6 @@
    "id": "b947ac2751746ae4",
    "sev": "info",
    "when": "2026-08-20 15:53:45",
-   "file": "PublicationControllerServlet",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "6518e5d06ab9e4f6",
-   "sev": "info",
-   "when": "2026-08-20 15:53:44",
-   "file": "zustellweg-auswaehlen",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "cc1de1898c70f18d",
-   "sev": "info",
-   "when": "2026-08-20 15:53:44",
-   "file": "PublicationControllerServlet",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "a9b65d1298df3e14",
-   "sev": "info",
-   "when": "2026-08-20 15:53:43",
-   "file": "CXPTY6DDGYN",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32c6556bc3a86e9d",
-   "sev": "info",
-   "when": "2026-08-20 15:53:42",
-   "file": "documents",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "32e6a80216cd1e83",
-   "sev": "info",
-   "when": "2026-08-20 10:49:31",
-   "file": "298502",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b5172ebce3365d14",
-   "sev": "info",
-   "when": "2026-08-20 10:49:27",
-   "file": "121016296",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b3bd342a5023ae44",
-   "sev": "info",
-   "when": "2026-08-20 10:49:24",
-   "file": "TenderingProcedureDetails",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "b947ac2751746ae4",
-   "sev": "info",
-   "when": "2026-08-20 10:49:21",
-   "file": "PublicationControllerServlet",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "8b2e345002ef0043",
-   "sev": "info",
-   "when": "2026-08-20 10:49:21",
-   "file": "CXW1YYDDYYNNYZE5",
-   "what": "geaendert",
-   "diff": [
-    [
-     "ctx",
-     "Inhalt geaendert"
-    ]
-   ],
-   "impact": ""
-  },
-  {
-   "id": "cc1de1898c70f18d",
-   "sev": "info",
-   "when": "2026-08-20 10:49:20",
    "file": "PublicationControllerServlet",
    "what": "geaendert",
    "diff": [
